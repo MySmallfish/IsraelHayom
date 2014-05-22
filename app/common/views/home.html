@@ -1,3 +1,21 @@
-﻿
-<div class="loading" ng-show="loading"></div>
-<h1>Home</h1>
+﻿<div class="home-page">
+    <div class="loading" ng-show="loading"></div>
+   
+    <div class="navigation-points">
+        <div class="point" ng-repeat="point in points" ng-class="{'selectedPoint': point.selected }"></div>
+    </div>
+
+    <div class="main-article"
+        ng-swipe-left="back()" ng-swipe-right="next()"
+        ng-repeat="article in mainArticles"
+        ng-show="isSelected(article)">
+        <img ng-src="{{article.ImageUrl}}" alt="{{article.title}}" />
+        <div class="articleTitle">
+            <h3>{{article.title}}</h3>
+        </div>
+        <div class="brief">
+            <h4>{{article.brief}}</h4>
+        </div>
+    </div>
+
+</div>

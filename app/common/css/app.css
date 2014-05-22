@@ -1,3 +1,56 @@
-.container-fluid {
+.container-fluid
+{
     margin-top: 4em;
+}
+
+.home-page
+{
+    text-align: center;
+    position: relative;
+}
+
+.main-article
+{
+    position: absolute;
+    top: 30px;
+}
+.main-article img {
+   max-width: 90%; 
+   height: 160px;
+}
+
+.navigation-points
+{
+    position: absolute;
+    height: 48px;
+    font-size: 1pt;
+}
+
+.home-page .navigation-points
+{
+    top: 9px;
+}
+
+.point
+{
+    height: 15px;
+    width: 15px;
+    border-radius: 20px;
+    background-color: #ddd;
+    margin-bottom: 2px;
+}
+
+.selectedPoint
+{
+    height: 17px;
+    width: 17px;
+    border-radius: 10px;
+    background-color: #aaa;
+    margin-bottom: 0;
+}
+
+.point, .selectedPoint
+{
+    margin-right: 5px;
+    display: inline-block;
 }

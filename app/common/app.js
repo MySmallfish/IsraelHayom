@@ -1,7 +1,8 @@
 (function(S, I){
     var app = angular.module("IsraelHayom", ["ngRoute", "ngTouch", "Simple"]);
 
-	app.service("configuration", S.Configuration);
+    app.service("configuration", S.Configuration);
+    //app.service("contentManager", I.ContentManager);
 
 
 	app.controller("AppCtrl", I.AppController);
