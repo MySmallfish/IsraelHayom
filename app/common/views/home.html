@@ -7,7 +7,7 @@
         ng-click="openArticle(article)"
         ng-show="isSelected(article)">
         <img ng-src="{{article.ImageUrl}}" alt="{{article.title}}" />
-        
+
         <div class="navigation-points">
             <div class="point" ng-repeat="point in points" ng-class="{'selectedPoint': isPointSelected(point)}" ng-click="selectArticle(point)"></div>
         </div>
@@ -21,4 +21,11 @@
         </div>
     </div>
 
+    <!--<div class="main-titles">
+        <div c
+    </div>-->
 </div>
+
+    <div class="shortcuts">
+        <shortcuts></shortcuts>
+    </div>

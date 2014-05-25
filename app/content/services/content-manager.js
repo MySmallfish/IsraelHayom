@@ -43,7 +43,7 @@
         function getMainArticles() {
             return getApiArticles().then(mapArticles);
         }
-        
+
         function getArticle(articleId) {
             var article = {
                 Id: 2,
@@ -56,7 +56,7 @@
                     "Authorities had had three contacts with Rodgers in the past year, including one case in which he claimed to be beaten but deputies suspected he was the aggressor. On April 30, officials went to his Isla Vista apartment again to check on him at the request of his family. But deputies reported back that the Santa Barbara community college student was shy, polite and having a difficult social life but did not need to be taken in for mental health reasons, Brown said.",
                 ImageUrl: "app/common/img/pic3.jpg"
             };
-            
+
             var result = $q.defer();
 
             result.resolve(article);
@@ -65,17 +65,13 @@
         }
 
         function getRecentTitles() {
-            var result = $q.defer();
-
-            result.resolve();
-
-            return result.promise;
+            getMainArticles();
         }
-        
+
 
         return {
             getMainArticles: getMainArticles,
-            getArticle:getArticle,
+            getArticle: getArticle,
             getRecentTitles: getRecentTitles
         };
     }];

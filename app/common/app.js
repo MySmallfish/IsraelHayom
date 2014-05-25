@@ -13,6 +13,7 @@
     
 
 	app.directive("appHeader", I.AppHeaderDirective);
+	app.directive("shortcuts", I.ShortcutsDirective);
 	//app.directive("navigation", I.Navigation);
 
 })(Simple, IsraelHayom);

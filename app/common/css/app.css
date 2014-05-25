@@ -1,3 +1,20 @@
+div.shortcuts
+{
+    background-color: #d70010;
+    width: auto;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-height: 4em;
+    color: white;
+}
+
+.shortcuts {
+    text-align: center;
+}
+
 div, i, img
 {
     user-select: none;
@@ -82,7 +99,7 @@ img
     height: 17px;
     width: 17px;
     border-radius: 10px;
-    background-color: maroon;
+    background-color: #d70010;
     margin-bottom: 0;
 }
 
@@ -96,3 +113,16 @@ p
 {
     text-align: justify;
 }
+
+.opinions .fa-user
+{
+    font-size: 60pt;
+    margin-right: 5px;
+}
+
+.other-shortcuts
+{
+    font-size: 30pt;
+}
+
+
