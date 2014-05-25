@@ -1,0 +1,20 @@
+﻿<div class="article">
+    
+    <img ng-src="{{article.ImageUrl}}" alt="{{article.title}}" />
+
+    <div class="article-title">
+        <h3>{{article.title}}</h3>
+    </div>
+
+    <div class="profile">
+        <span ng-repeat="author in articleProfile.Authors">{{author}} </span>
+    </div>
+    
+    <div class="brief">
+        <b>{{article.brief}}</b>
+    </div>
+    
+    <div class="content">
+        <p>{{article.content}}</p>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-IsraelHayom = {};
+
 
 (function (S, I) {
     I.AppController = [

@@ -21,23 +21,15 @@
 
 .navigation-points
 {
-    position: absolute;
-    height: 48px;
+    margin-top: 10px;
     font-size: 1pt;
 }
-
-.home-page .navigation-points
-{
-    top: 9px;
-}
-
 .point
 {
     height: 15px;
     width: 15px;
     border-radius: 20px;
     background-color: #ddd;
-    margin-bottom: 2px;
 }
 
 .selectedPoint
@@ -45,7 +37,7 @@
     height: 17px;
     width: 17px;
     border-radius: 10px;
-    background-color: #aaa;
+    background-color: maroon;
     margin-bottom: 0;
 }
 
