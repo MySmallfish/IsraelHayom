@@ -1,20 +1,27 @@
 ﻿<div class="article">
     
-    <img ng-src="{{article.ImageUrl}}" alt="{{article.title}}" />
+    <span class="user-rating"><i class="fa fa-user"></i></span>
 
-    <div class="article-title">
-        <h3>{{article.title}}</h3>
-    </div>
+    <span class="article-header">
+        
+        <div class="article-title">
+            <h3>{{article.title}}</h3>
+        </div>
 
-    <div class="profile">
-        <span ng-repeat="author in articleProfile.Authors">{{author}} </span>
-    </div>
+        <div class="profile">
+            <span ng-repeat="author in articleProfile.Authors">{{author}} </span>
+            <span>{{articleProfile.Date | date:'MM/dd/yyyy  h:mm'}} </span>
+        </div>
+    </span>
     
+    
+
     <div class="brief">
         <b>{{article.brief}}</b>
     </div>
-    
+
     <div class="content">
+        <img ng-src="{{article.ImageUrl}}" alt="{{article.title}}" />
         <p>{{article.content}}</p>
     </div>
 </div>

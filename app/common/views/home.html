@@ -3,7 +3,7 @@
 
     <div class="main-article"
         ng-swipe-left="back()" ng-swipe-right="next()"
-         ng-repeat="article in mainArticles"
+        ng-repeat="article in mainArticles"
         ng-click="openArticle(article)"
         ng-show="isSelected(article)">
         <img ng-src="{{article.ImageUrl}}" alt="{{article.title}}" />

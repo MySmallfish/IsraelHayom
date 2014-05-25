@@ -54,7 +54,8 @@
 
         function getArticleProfile(articleId) {
             var articleProfile = {
-                Authors: ["Author1", "Author2"]
+                Authors: ["Author1", "Author2"],
+                Date: new Date("1/1/2014")
             };
 
             var result = $q.defer();
