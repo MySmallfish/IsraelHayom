@@ -47,6 +47,10 @@
                 $scope.selectedArticle = $scope.mainArticles[$scope.articleIndex];
                 $scope.points = _.range($scope.mainArticles.length);
             });
+            
+            contentManager.getRecentTitles().then(function (items) {
+                $scope.recentTitles = items;
+            });
 
         }
 

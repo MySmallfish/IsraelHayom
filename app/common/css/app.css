@@ -11,7 +11,8 @@ div.shortcuts
     color: white;
 }
 
-.shortcuts {
+.shortcuts
+{
     text-align: center;
 }
 
@@ -33,11 +34,12 @@ div, i, img
     position: relative;
 }
 
-.main-article
+.main-article, .main-titles
 {
-    position: absolute;
-    top: 30px;
+    position: relative;
+    top: 10px;
 }
+
 
 img
 {
@@ -118,6 +120,7 @@ p
 {
     font-size: 60pt;
     margin-right: 5px;
+    margin-top: 20px;
 }
 
 .other-shortcuts
@@ -125,4 +128,20 @@ p
     font-size: 30pt;
 }
 
+.main-article .article-title
+{
+    position: relative;
+    bottom: 15px;
+}
 
+.main-article .brief
+{
+    position: relative;
+    bottom: 15px;
+}
+
+.main-titles .title
+{
+    font-size: 20pt;
+    border-top: 1px solid #ccc;
+}
