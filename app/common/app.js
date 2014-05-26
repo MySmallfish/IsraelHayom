@@ -13,6 +13,7 @@
 	app.controller("WeatherCtrl", I.WeatherController);
 	app.controller("NewsflashCtrl", I.NewsflashController);
 	app.controller("EntryPageCtrl", I.EntryPageController);
+	app.controller("ProfileCtrl", I.profileController);
     
 
 	app.directive("appHeader", I.AppHeaderDirective);
