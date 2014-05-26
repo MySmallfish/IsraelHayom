@@ -161,3 +161,16 @@ p
     margin-right: 18%;
     color: #777;
 }
+
+.entry-page
+{
+    text-align: center;
+}
+
+    .entry-page button
+    {
+        width: 80%;
+        height: 50px;
+        font-size: 15pt;
+        margin-top: 40px;
+    }

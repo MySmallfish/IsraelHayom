@@ -16,6 +16,10 @@
                         $location.path("/Newsflash");
                     };
 
+                    $scope.openEntryPage = function () {
+                        $location.path("/Entry");
+                    };
+
                 }],
                 link: function(scope) {
                     // bind clicks...     
