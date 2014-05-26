@@ -9,7 +9,7 @@ app.config(function ($routeProvider) {
         .when("/Entry", { templateUrl: "app/users/views/entry-page.html", controller: "EntryPageCtrl" })
         //.when("/Login", { templateUrl: "app/common/views/login.html", controller: "LoginCtrl" })
         .when("/Profile", { templateUrl: "app/users/views/profile.html", controller: "ProfileCtrl" })
-        //.when("/Rating/:id", { templateUrl: "app/content/views/rating.html", controller: "RatingCtrl" })
+        .when("/Rating/:id", { templateUrl: "app/content/views/rating.html", controller: "RatingCtrl" })
 
         .otherwise({ redirectTo: "/" });
 });

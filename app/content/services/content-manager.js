@@ -120,6 +120,20 @@
 
             return result.promise;
         }
+        
+        var articleRating = [
+            { title: "אהבו", value: 555 },
+            { title: "לא אהבו", value: 666 }
+        ];
+        
+        function getApiArticleRating() {
+
+            var result = $q.defer();
+
+            result.resolve(articleRating);
+
+            return result.promise;
+        }
 
 
         return {
@@ -127,7 +141,8 @@
             getArticle: getArticle,
             getRecentTitles: getMainArticles,
             getApiWeather: getApiWeather,
-            getApiNewsflash:getApiNewsflash
+            getApiNewsflash: getApiNewsflash,
+            getApiArticleRating: getApiArticleRating
         };
     }];
 

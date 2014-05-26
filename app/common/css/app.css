@@ -175,26 +175,50 @@ p
         margin-top: 40px;
     }
 
-.profile-page .row {
+.profile-page .row
+{
     font-size: 15pt;
 }
 
-.profile-page h2 {
+.profile-page h2
+{
     text-align: center;
 }
 
-.size-ruler .small-font {
+.size-ruler .small-font
+{
     font-size: 12pt;
 }
 
-.size-ruler .large-font {
+.size-ruler .large-font
+{
     font-size: 25pt;
     margin-top: -13px;
 }
 
-.size-ruler .ruler {
+.size-ruler .ruler
+{
     width: 50%;
     height: 3px;
     background-color: black;
     margin: 10px;
+}
+
+.rating-page
+{
+    text-align: center;
+}
+
+    .rating-page .row
+    {
+        font-size: 15pt;
+        margin-top: 25px;
+        margin-bottom: -50px;
+    }
+
+.chart-area
+{
+    margin-top: 100px;
+    min-height: 240px;
+    direction: ltr;
 }

@@ -1,5 +1,5 @@
 ﻿(function (S, I) {
-    I.ArticleController = ["$scope", "$q", "contentManager", "userProfileManager", function ($scope, $q, contentManager, userProfileManager) {
+    I.ArticleController = ["$scope", "$q", "$location", "contentManager", "userProfileManager", function ($scope, $q, $location, contentManager, userProfileManager) {
 
         
         function load() {
@@ -12,6 +12,11 @@
             });
         }
 
+        $scope.openRating = function (id) {
+            console.log("!!", id);
+            $location.path("/Rating/"+ id);
+        };
+        
         var articleId = 2;
         
         load();
