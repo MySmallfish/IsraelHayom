@@ -71,12 +71,63 @@
 
             return result.promise;
         }
+        
+        var weather = [{
+            city: "תל אביב",
+            FromDegree: 15,
+            ToDegree: 25,
+            status: "מעונן"
+        }, {
+            city: "ירושלים",
+            FromDegree: 20,
+            ToDegree: 30,
+            status: "יבש"
+        }, {
+            city: "ראשון לציון",
+            FromDegree: 5,
+            ToDegree: 15,
+            status: "גשום"
+        }];
+
+        function getApiWeather() {
+            
+            var result = $q.defer();
+
+            result.resolve(weather);
+
+            return result.promise;
+        }
+        
+        var newsflash = [{
+            Date: new Date(), 
+            Title: "חדרה: 4 עובדים זרים מתבצרים על עגורן",
+            By: "סוכנות ידיעות"
+        }, {
+            Date: new Date(),
+            Title: "האפיפיור פרנסיסקוס ביד ושם",
+            By: "סוכנות ידיעות"
+        }, {
+            Date: new Date(),
+            Title: "גבר כבן 70 טבע בבריכה במלון באילת; מצבו קשה מאוד",
+            By: "סוכנות ידיעות"
+        }];
+
+        function getApiNewsflash() {
+
+            var result = $q.defer();
+
+            result.resolve(newsflash);
+
+            return result.promise;
+        }
 
 
         return {
             getMainArticles: getMainArticles,
             getArticle: getArticle,
-            getRecentTitles: getMainArticles
+            getRecentTitles: getMainArticles,
+            getApiWeather: getApiWeather,
+            getApiNewsflash:getApiNewsflash
         };
     }];
 

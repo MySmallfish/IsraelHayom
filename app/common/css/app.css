@@ -140,8 +140,24 @@ p
     bottom: 15px;
 }
 
-.main-titles .title
+.main-titles .title, .weather-item, .newsflash
+{
+    border-top: 1px solid #ccc;
+}
+
+.main-titles .title, .weather-item
 {
     font-size: 20pt;
-    border-top: 1px solid #ccc;
+}
+
+.newsflash
+{
+    font-size: 12pt;
+}
+
+.newsflash-by
+{
+    font-size: 10pt;
+    margin-right: 18%;
+    color: #777;
 }

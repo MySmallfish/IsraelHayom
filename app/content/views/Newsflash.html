@@ -1,0 +1,9 @@
+﻿<div class="newsflash" ng-repeat="item in newsflash">
+    <div class="row">
+        <div class="col-xs-2">{{item.Date | date: 'hh:mm'}}</div>
+        <div class="col-xs-10">{{item.Title}}</div>
+    </div>
+    <div class="newsflash-by">{{item.By}}</div>
+</div>
+
+

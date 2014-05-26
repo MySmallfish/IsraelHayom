@@ -10,6 +10,8 @@
 	app.controller("LoginCtrl", I.LoginController);
 	app.controller("HomeCtrl", I.HomeController);
 	app.controller("ArticleCtrl", I.ArticleController);
+	app.controller("WeatherCtrl", I.WeatherController);
+	app.controller("NewsflashCtrl", I.NewsflashController);
     
 
 	app.directive("appHeader", I.AppHeaderDirective);
