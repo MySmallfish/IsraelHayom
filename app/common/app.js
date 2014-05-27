@@ -15,6 +15,7 @@
 	app.controller("EntryPageCtrl", I.EntryPageController);
 	app.controller("ProfileCtrl", I.profileController);
 	app.controller("RatingCtrl", I.RatingController);
+	app.controller("TalkbacksCtrl", I.TalkbacksController);
     
 
 	app.directive("appHeader", I.AppHeaderDirective);

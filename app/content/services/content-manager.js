@@ -134,6 +134,26 @@
 
             return result.promise;
         }
+        
+        var apiTalkbacks = [
+            {
+                Number:1,
+                Title: "אהבו",
+                Text: 555,
+                Name: "",
+                Date: new Date()
+            },
+            { title: "לא אהבו", value: 666 }
+        ];
+
+        function getApiTalkbacks() {
+
+            var result = $q.defer();
+
+            result.resolve(apiTalkbacks);
+
+            return result.promise;
+        }
 
 
         return {
@@ -142,7 +162,8 @@
             getRecentTitles: getMainArticles,
             getApiWeather: getApiWeather,
             getApiNewsflash: getApiNewsflash,
-            getApiArticleRating: getApiArticleRating
+            getApiArticleRating: getApiArticleRating,
+            getTalkbacks: getApiTalkbacks
         };
     }];
 
