@@ -71,7 +71,7 @@
 
             return result.promise;
         }
-        
+
         var weather = [{
             city: "תל אביב",
             FromDegree: 15,
@@ -90,16 +90,16 @@
         }];
 
         function getApiWeather() {
-            
+
             var result = $q.defer();
 
             result.resolve(weather);
 
             return result.promise;
         }
-        
+
         var newsflash = [{
-            Date: new Date(), 
+            Date: new Date(),
             Title: "חדרה: 4 עובדים זרים מתבצרים על עגורן",
             By: "סוכנות ידיעות"
         }, {
@@ -120,12 +120,12 @@
 
             return result.promise;
         }
-        
+
         var articleRating = [
             { title: "אהבו", value: 555 },
             { title: "לא אהבו", value: 666 }
         ];
-        
+
         function getApiArticleRating() {
 
             var result = $q.defer();
@@ -134,19 +134,36 @@
 
             return result.promise;
         }
-        
+
         var apiTalkbacks = [
             {
-                Number:1,
-                Title: "אהבו",
-                Text: 555,
-                Name: "",
+                Number: 1,
+                Title: "תגובה 1",
+                Text: "ךלחלךחכגגכס כבכ ככ חלחךל",
+                Name: "מגיב 1",
                 Date: new Date()
-            },
-            { title: "לא אהבו", value: 666 }
+            }, {
+                Number: 2,
+                Title: "תגובה 2",
+                Text: "",
+                Name: "מגיב 2",
+                Date: new Date()
+            }, {
+                Number: 3,
+                Title: "תגובה 3",
+                Text: "ךלחלךחכגגכס כבכ ככ חלחךל",
+                Name: "מגיב 3",
+                Date: new Date()
+            }, {
+                Number: 4,
+                Title: "תגובה 4",
+                Text: "ךלחלךחכגגכס כבכ ככ חלחךל",
+                Name: "מגיב 4",
+                Date: new Date()
+            }
         ];
 
-        function getApiTalkbacks() {
+        function getApiTalkbacks(articleId) {
 
             var result = $q.defer();
 

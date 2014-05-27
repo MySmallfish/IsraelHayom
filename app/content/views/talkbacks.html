@@ -1,1 +1,13 @@
-﻿
+﻿<h2>תגובות</h2>
+
+<div class="talkback" ng-repeat="talkback in talkbacks">
+
+    <span class="talkback-number">{{talkback.Number}} </span>
+    <span class="talkback-title">{{talkback.Title}} <span ng-show="talkback.Text === ''">(ל"ת)</span></span>
+
+    <div class="talkback-text">{{talkback.Text}}</div>
+
+    <span class="talkback-name">{{talkback.Name}}, </span>
+    <span class="talkback-date"> {{talkback.Date | date: 'dd/mm/yyyy hh:mm'}}</span>
+
+</div>

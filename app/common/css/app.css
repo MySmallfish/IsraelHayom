@@ -140,7 +140,7 @@ p
     bottom: 15px;
 }
 
-.main-titles .title, .weather-item, .newsflash
+.main-titles .title, .weather-item, .newsflash, .talkback
 {
     border-top: 1px solid #ccc;
 }
@@ -222,3 +222,29 @@ p
     min-height: 240px;
     direction: ltr;
 }
+
+.talkback-number, .talkback-title
+{
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.talkback-title.no-text {
+    color: #666;
+}
+
+.talkback-title span {
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+.talkback-text {
+    font-size: 11pt;
+}
+
+.talkback-name, .talkback-date
+{
+    font-size: 10pt;
+    color: #aaa;
+}
+
