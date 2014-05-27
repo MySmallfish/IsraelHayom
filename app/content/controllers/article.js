@@ -13,7 +13,6 @@
         }
 
         $scope.openRating = function (id) {
-            console.log("!!", id);
             $location.path("/Rating/"+ id);
         };
         

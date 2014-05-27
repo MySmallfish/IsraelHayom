@@ -1,5 +1,5 @@
 (function(S, I){
-    var app = angular.module("IsraelHayom", ["ngRoute", "ngTouch", "Simple"]);
+    var app = angular.module("IsraelHayom", ["ngRoute", "ngTouch", "Simple", "ionic"]);
 
     app.service("configuration", S.Configuration);
     app.service("contentManager", I.ContentManager);
@@ -16,6 +16,7 @@
 	app.controller("ProfileCtrl", I.profileController);
 	app.controller("RatingCtrl", I.RatingController);
 	app.controller("TalkbacksCtrl", I.TalkbacksController);
+	app.controller("NewTalkbackCtrl", I.NewTalkbackController);
     
 
 	app.directive("appHeader", I.AppHeaderDirective);

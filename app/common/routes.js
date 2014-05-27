@@ -11,6 +11,7 @@ app.config(function ($routeProvider) {
         .when("/Profile", { templateUrl: "app/users/views/profile.html", controller: "ProfileCtrl" })
         .when("/Rating/:id", { templateUrl: "app/content/views/rating.html", controller: "RatingCtrl" })
         .when("/Talkbacks/:articleId", { templateUrl: "app/content/views/talkbacks.html", controller: "TalkbacksCtrl" })
+        .when("/NewTalkback", { templateUrl: "app/content/views/new-talkback.html", controller: "NewTalkbackCtrl" })
 
         .otherwise({ redirectTo: "/" });
 });

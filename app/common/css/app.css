@@ -229,16 +229,19 @@ p
     font-weight: bold;
 }
 
-.talkback-title.no-text {
-    color: #666;
-}
+    .talkback-title.no-text
+    {
+        color: #666;
+    }
 
-.talkback-title span {
-    font-size: 10pt;
-    font-weight: normal;
-}
+    .talkback-title span
+    {
+        font-size: 10pt;
+        font-weight: normal;
+    }
 
-.talkback-text {
+.talkback-text
+{
     font-size: 11pt;
 }
 
@@ -248,3 +251,14 @@ p
     color: #aaa;
 }
 
+.talkback-ruler
+{
+    font-size: 21pt;
+    position: relative;
+    top: 15px;
+    color: #666;
+}
+
+.rtl .form-buttons  {
+    text-align: left !important;
+}
