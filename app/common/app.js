@@ -16,14 +16,13 @@
 	app.controller("ProfileCtrl", I.profileController);
 	app.controller("RatingCtrl", I.RatingController);
 	app.controller("TalkbacksCtrl", I.TalkbacksController);
-	app.controller("NewTalkbackCtrl", I.NewTalkbackController);
 	app.controller("CategoryPageCtrl", I.CategoryPageController);
 	app.controller("AllCategoriesPageCtrl", I.AllCategoriesPageController);
-	app.controller("AboutCtrl", I.AboutController);
     
 
 	app.directive("appHeader", I.AppHeaderDirective);
 	app.directive("shortcuts", I.ShortcutsDirective);
+	app.directive("menu", I.MenuDirective);
     //app.directive("navigation", I.Navigation);
     
 	app.directive("appVersion", [function () {

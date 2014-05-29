@@ -11,9 +11,10 @@ div.shortcuts
     color: white;
 }
 
-div.shortcuts a {
-    color: white;
-}
+    div.shortcuts a
+    {
+        color: white;
+    }
 
 .shortcuts
 {
@@ -255,26 +256,35 @@ p
     color: #666;
 }
 
-.rtl .form-buttons  {
+.rtl .form-buttons
+{
     text-align: left !important;
 }
 
-.about-page {
-    text-align: center;
-}
-
-.about-page img {
-    border: none;
-    width: 80%;
-}
-
-.version {
-    margin-top: 40px;
+.about-page
+{
     font-size: 12pt;
     text-align: center;
 }
 
-    .version span {
+    .about-page img
+    {
+        border: none;
+        width: 80%;
+    }
+
+.version
+{
+    margin-top: 40px;
+}
+
+    .version span
+    {
         padding-left: 20px;
         padding-right: 20px;
     }
+
+.last-update
+{
+    margin-top: 10px;
+}

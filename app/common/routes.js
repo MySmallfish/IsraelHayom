@@ -13,8 +13,6 @@ app.config(function ($routeProvider) {
         .when("/Category/:categoryId", { templateUrl: "app/content/views/category-page.html", controller: "CategoryPageCtrl" })
         .when("/Categories", { templateUrl: "app/content/views/all-categories-page.html", controller: "AllCategoriesPageCtrl" })
         .when("/Talkbacks/:articleId", { templateUrl: "app/content/views/talkbacks.html", controller: "TalkbacksCtrl" })
-        .when("/NewTalkback", { templateUrl: "app/content/views/new-talkback.html", controller: "NewTalkbackCtrl" })
-        .when("/About", { templateUrl: "app/common/views/about.html", controller: "AboutCtrl" })
 
         .otherwise({ redirectTo: "/" });
 });
