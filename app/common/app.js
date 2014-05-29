@@ -2,7 +2,7 @@
     var app = angular.module("IsraelHayom", ["ngRoute", "ngTouch", "Simple", "ionic"]);
 
     app.service("configuration", S.Configuration);
-    app.service("contentManager", I.ContentManager);
+    app.service("contentService", I.ContentService);
     app.service("userProfileManager", I.UserProfileManager);
 
 
@@ -17,11 +17,25 @@
 	app.controller("RatingCtrl", I.RatingController);
 	app.controller("TalkbacksCtrl", I.TalkbacksController);
 	app.controller("NewTalkbackCtrl", I.NewTalkbackController);
+	app.controller("CategoryPageCtrl", I.CategoryPageController);
+	app.controller("AllCategoriesPageCtrl", I.AllCategoriesPageController);
+	app.controller("AboutCtrl", I.AboutController);
     
 
 	app.directive("appHeader", I.AppHeaderDirective);
 	app.directive("shortcuts", I.ShortcutsDirective);
-	//app.directive("navigation", I.Navigation);
+    //app.directive("navigation", I.Navigation);
+    
+	app.directive("appVersion", [function () {
+	    return {
+	        restrict: "E",
+	        replace: true,
+	        template: "<span>{{version}}</span>",
+	        link: function (scope) {
+	            scope.version = $("meta[name=version]").attr("content");
+	        }
+	    };
+	}]);
 
 
 	app.directive("donut", function () {

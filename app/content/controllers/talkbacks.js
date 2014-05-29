@@ -1,17 +1,12 @@
 ﻿(function (S, I) {
-    I.TalkbacksController = ["$scope", "$location","$ionicPopup", "contentManager", function ($scope, $location,$ionicPopup, contentManager) {
+    I.TalkbacksController = ["$scope", "$location", "$ionicPopup", "contentService", function ($scope, $location, $ionicPopup, contentService) {
 
 
         function load() {
-            contentManager.getTalkbacks(articleId).then(function (items) {
+            contentService.getTalkbacks(articleId).then(function (items) {
                 $scope.talkbacks = items;
             });
-
         }
-
-        //$scope.newTalkback = function () {
-        //    $location.path("/NewTalkback");
-        //};
         
         $scope.newTalkback = function () {
 

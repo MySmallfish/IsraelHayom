@@ -1,5 +1,5 @@
 (function (S,I) {
-    I.HomeController = ["$scope", "$q", "$location", "contentManager", function ($scope, $q, $location, contentManager) {
+    I.HomeController = ["$scope", "$q", "$location", "contentService", function ($scope, $q, $location, contentService) {
 
         $scope.isPointSelected = function(pointIndex) {
             var result = false;
@@ -41,14 +41,14 @@
 
         function load() {
 
-            contentManager.getMainArticles().then(function (items) {
+            contentService.getMainArticles().then(function (items) {
                 $scope.mainArticles = items;
                 $scope.articleIndex = 0;
                 $scope.selectedArticle = $scope.mainArticles[$scope.articleIndex];
                 $scope.points = _.range($scope.mainArticles.length);
             });
             
-            contentManager.getRecentTitles().then(function (items) {
+            contentService.getRecentTitles().then(function (items) {
                 $scope.recentTitles = items;
             });
 

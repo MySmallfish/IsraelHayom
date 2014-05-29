@@ -10,8 +10,11 @@ app.config(function ($routeProvider) {
         //.when("/Login", { templateUrl: "app/common/views/login.html", controller: "LoginCtrl" })
         .when("/Profile", { templateUrl: "app/users/views/profile.html", controller: "ProfileCtrl" })
         .when("/Rating/:id", { templateUrl: "app/content/views/rating.html", controller: "RatingCtrl" })
+        .when("/Category/:categoryId", { templateUrl: "app/content/views/category-page.html", controller: "CategoryPageCtrl" })
+        .when("/Categories", { templateUrl: "app/content/views/all-categories-page.html", controller: "AllCategoriesPageCtrl" })
         .when("/Talkbacks/:articleId", { templateUrl: "app/content/views/talkbacks.html", controller: "TalkbacksCtrl" })
         .when("/NewTalkback", { templateUrl: "app/content/views/new-talkback.html", controller: "NewTalkbackCtrl" })
+        .when("/About", { templateUrl: "app/common/views/about.html", controller: "AboutCtrl" })
 
         .otherwise({ redirectTo: "/" });
 });

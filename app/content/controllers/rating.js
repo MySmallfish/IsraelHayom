@@ -1,9 +1,9 @@
 ﻿(function (S, I) {
-    I.RatingController = ["$scope", "$q", "contentManager", function ($scope, $q, contentManager) {
+    I.RatingController = ["$scope", "$q", "contentService", function ($scope, $q, contentService) {
 
 
         function load() {
-            contentManager.getApiArticleRating().then(function (items) {
+            contentService.getApiArticleRating().then(function (items) {
                 $scope.articleRating = translate(items);
 
                 $scope.ratersNumber = $scope.articleRating[0].value + $scope.articleRating[1].value;

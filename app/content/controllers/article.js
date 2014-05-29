@@ -1,9 +1,9 @@
 ﻿(function (S, I) {
-    I.ArticleController = ["$scope", "$q", "$location", "contentManager", "userProfileManager", function ($scope, $q, $location, contentManager, userProfileManager) {
+    I.ArticleController = ["$scope", "$q", "$location", "contentService", "userProfileManager", function ($scope, $q, $location, contentService, userProfileManager) {
 
         
         function load() {
-            contentManager.getArticle(articleId).then(function(item) {
+            contentService.getArticle(articleId).then(function (item) {
                 $scope.article = item;
             });
             

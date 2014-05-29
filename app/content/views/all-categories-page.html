@@ -1,0 +1,11 @@
+﻿<h2>קטגוריות</h2>
+
+<div class="list">
+
+    <a class="item item-avatar-right"  ng-repeat="category in categories" ng-href="#/Category/2">
+      <img ng-src="{{category.ImageUrl}}">
+      <h2>{{category.Title}}</h2>
+      <p>{{category.Brief}}</p>
+    </a>
+
+</div>

@@ -1,9 +1,9 @@
 ﻿(function (S, I) {
-    I.NewsflashController = ["$scope", "$q", "contentManager", function ($scope, $q, contentManager) {
+    I.NewsflashController = ["$scope", "$q", "contentService", function ($scope, $q, contentService) {
 
 
         function load() {
-            contentManager.getApiNewsflash().then(function (items) {
+            contentService.getApiNewsflash().then(function (items) {
                 $scope.newsflash = items;
             });
         }

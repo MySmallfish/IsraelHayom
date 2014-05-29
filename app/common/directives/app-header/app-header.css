@@ -11,6 +11,11 @@
     color: white;
 }
 
+    header a, header a:hover
+    {
+        color: white;
+    }
+
     header .title
     {
         font-size: 2em;
@@ -69,7 +74,7 @@
 .mark
 {
     position: absolute;
-    top: 4px;
+    top: 15px;
     right: 10px;
 }
 
@@ -78,29 +83,31 @@
         font-size: 35pt;
     }
 
+.message .fa-envelope-o
+{
+    font-size: 40px;
+}
 
-
-    .message .fa-envelope-o
-    {
-        font-size: 40px;
-    }
-
-.message, .info {
-    margin-right: 15%;
+.message, .info
+{
+    margin-right: 10%;
     margin-top: 5px;
 }
 
-.info .city {
-    margin-left: 15px;
-}
-
-.weather {
-    position: absolute;
-left: 5px;
-top: -5px;
-}
+    .info .city
+    {
+        margin-left: 15px;
+    }
 
 header > div
 {
     display: inline-block;
 }
+
+header .home-button
+{
+    position: absolute;
+    font-size: 35pt;
+    left: 5px;
+}
+

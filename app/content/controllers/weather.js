@@ -1,9 +1,9 @@
 ﻿(function (S, I) {
-    I.WeatherController = ["$scope", "$q", "contentManager", function ($scope, $q, contentManager) {
+    I.WeatherController = ["$scope", "$q", "contentService", function ($scope, $q, contentService) {
 
 
         function load() {
-            contentManager.getApiWeather().then(function(items) {
+            contentService.getApiWeather().then(function (items) {
                 $scope.weather = items;
             });
         }

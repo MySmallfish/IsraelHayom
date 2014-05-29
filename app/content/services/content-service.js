@@ -1,6 +1,6 @@
 ﻿(function (S, I) {
 
-    I.ContentManager = ["$q", function ($q) {
+    I.ContentService = ["$q", function ($q) {
 
         var mainArticles = [{
             Id: 0,
@@ -171,6 +171,32 @@
 
             return result.promise;
         }
+        
+        var categoryArticles = [{
+            Id: 0,
+            Title: "title0",
+            Brief: "bfdmj dfl lkgfdl klfks;le k sldkgl; k sdglkglfj o jhdfjkhd kjg dfhdfjksji ",
+            ImageUrl: "app/common/img/pic1.jpg"
+        }, {
+            Id: 1,
+            Title: "title1",
+            Brief: "bfdmj dfl lkgfdl klfks;le k sldkgl; k sdglkglfj o jhdfjkhd kjg dfhdfjksji ",
+            ImageUrl: "app/common/img/pic2.jpg"
+        }, {
+            Id: 2,
+            Title: "title2",
+            Brief: "bfdmj dfl lkgfdl klfks;le k sldkgl; k sdglkglfj o jhdfjkhd kjg dfhdfjksji ",
+            ImageUrl: "app/common/img/pic3.jpg"
+        }];
+
+        function getApiCategoryArticles(articleId) {
+
+            var result = $q.defer();
+
+            result.resolve(categoryArticles);
+
+            return result.promise;
+        }
 
 
         return {
@@ -180,7 +206,9 @@
             getApiWeather: getApiWeather,
             getApiNewsflash: getApiNewsflash,
             getApiArticleRating: getApiArticleRating,
-            getTalkbacks: getApiTalkbacks
+            getTalkbacks: getApiTalkbacks,
+            getCategoryArticles: getApiCategoryArticles,
+            getCategories: getApiCategoryArticles
         };
     }];
 
