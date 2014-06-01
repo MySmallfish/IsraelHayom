@@ -4,13 +4,14 @@
         function () {
             return {
                 restrict: 'E',
-                templateUrl: 'app/common/directives/menu/menu.html',
+                templateUrl: 'app/common/directives/menu-directive/menu-directive.html',
                 scope: {
-                    commands:"="
+                    commands: "=",
+                    execute: "&"
                 },
                 controller: ["$scope", "$location", "$ionicPopup", function ($scope, $location, $ionicPopup) {
 
-                    
+                    console.log("menu??", $scope);
 
                 }],
                 link: function (scope) {

@@ -1,6 +1,4 @@
-
-
-(function (S, I) {
+ן»¿(function (S, I) {
     I.AppController = [
             "$scope",
             "$q",
@@ -8,82 +6,80 @@
             "textResource",
             "$location",
             "$ionicPopup",
+            "$filter",
             "network",
-            function ($scope, $q, $window, textResource, $location, $ionicPopup, network) {
+            function ($scope, $q, $window, textResource, $location, $ionicPopup, $filter, network) {
 
-                // var commands = {}, builtinCommands = {};
-                var topCommands = [{
-                    title: "כל הקטגוריות",
-                    command: function () {
-                        $location.path("/Categories");
-                    }
-                }, {
-                    title: "פרופיל",
-                    command: function () {
-                        $location.path("/Profile");
-                    }
-                }, {
-                    title: "התחבר",
-                    command: function () {
-                        $location.path("/Entry");
-                    }
-                }];
 
-                var bottomCommands = [{
-                    title: "תנאי שימוש",
-                    command: function () {
+                var commands = {}, builtinCommands = {
+                    "popup": openPopup,
+                    "DisplayAbout": displayAbout
+                };
 
-                    }
-                }, {
-                    title: "אודות",
-                    command: function () {
+                function displayAbout() {
+                    var myPopup = $ionicPopup.show({
+                        templateUrl: 'app/common/views/about.html',
+                        title: $filter("l10n")("About"),
+                        scope: $scope,
+                        buttons: [
+                          { text: $filter("l10n")("Close") }
+                        ]
+                    });
+                    myPopup.then(function (res) {
+                        console.log('Tapped!', res);
+                    });
 
-                        var myPopup = $ionicPopup.show({
-                            templateUrl: 'app/common/views/about.html',
-                            title: 'אודות',
-                            scope: $scope,
-                            buttons: [
-                              { text: 'סגור' }
-                            ]
-                        });
-                        myPopup.then(function (res) {
-                            console.log('Tapped!', res);
-                        });
+                }
 
-                    }
-                }];
 
-                $scope.executeCommand = function (command) {
+                $scope.executeCommand = function (command, args) {
                     if (commands) {
-                        var commandHandler = commands[command];
-                        if (typeof commandHandler === "undefined") {
-                            throw new Error("Command not supported: " + command);
-                        } else if (_.isFunction(commandHandler)) {
+                        var commandName = _.isString(command) ? command : command.commandName,
+                            commandHandler = commands[commandName] || builtinCommands[commandName];
 
-                            return commandHandler(args);
-                        } else {
-                            executeBuiltinCommand(commandHandler, args);
+                        args = command.getArguments ? command.getArguments(args) : args;
+
+                        if (typeof commandHandler === "undefined") {
+                            throw new Error("Command not supported: " + commandName);
+                        } else if (_.isFunction(commandHandler)) {
+                            return executeCommandHandler(commandHandler, args);
+                        } else if (_.isFunction(commandHandler.handler)) {
+                            return executeCommandHandler(commandHandler.handler, args);
                         }
                     } else {
                         throw new Error("Command not supported: " + command + ", no command was registered");
                     }
                 };
 
-
                 $scope.setupCommands = function (childCommands) {
                     commands = childCommands;
                 };
 
-                function executeBuiltinCommand(commandInfo, item) {
-                    var commandHandler = builtinCommands[commandInfo.type];
-                    // if exist...
-                    var args = commandInfo.getArguments(item);
+                $scope.setupContextMenuCommands = function (childCommands) {
+                    var contextCommands;
+                    if (childCommands) {
+                        contextCommands = _.union($scope.topCommands, childCommands, $scope.bottomCommands);
+                    } else {
+                        contextCommands = _.union($scope.topCommands, $scope.bottomCommands);
+                    }
+                    $scope.contextMenuCommands = contextCommands;
+                };
 
+
+                function openPopup(options) {
+                    var defaultOptions = {};
+
+                    options = _.defaults(options || {}, defaultOptions);
+
+                    $modal.open(options);
+
+                }
+
+                function executeCommandHandler(commandHandler, args) {
                     commandHandler(args);
                 }
 
-
-                function stop() {
+               function stop() {
                     event.stopPropagation();
                 };
 

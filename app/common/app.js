@@ -18,11 +18,36 @@
 	app.controller("TalkbacksCtrl", I.TalkbacksController);
 	app.controller("CategoryPageCtrl", I.CategoryPageController);
 	app.controller("AllCategoriesPageCtrl", I.AllCategoriesPageController);
+	app.controller("MenuCtrl", I.MenuController);
     
 
 	app.directive("appHeader", I.AppHeaderDirective);
 	app.directive("shortcuts", I.ShortcutsDirective);
 	app.directive("menu", I.MenuDirective);
+
+	app.run(["$rootScope", "$filter", function ($rootScope, $filter) {
+
+
+	    $rootScope.topCommands = [{
+	        title: "AllCategories",
+	        translate: true,
+	        command: "NavigateToAllCategories"
+	    }, {
+	        title: $filter('l10n')("Profile"),
+	        command: "NavigateToProfile"
+	    }, {
+	        title: $filter('l10n')("Login"),
+	        command: "Login"
+	    }];
+
+	    $rootScope.bottomCommands = [{
+	        title: $filter('l10n')("Terms"),
+	        command: "DisplayTerms"
+	    }, {
+	        title: $filter('l10n')("About"),
+	        command: "DisplayAbout"
+	    }];
+    }]);
     //app.directive("navigation", I.Navigation);
     
 	app.directive("appVersion", [function () {

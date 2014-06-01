@@ -10,6 +10,11 @@
             "Send": "שלח",
             "Talkback": "תגובה",
             "NewTalkback": "תגובה חדשה",
+            "AllCategories": "כל הקטגוריות",
+            "Profile": "פרופיל",
+            "Login": "התחבר",
+            "Terms": "תנאי שימוש",
+            "About":"אודות"
         });
     });
 
