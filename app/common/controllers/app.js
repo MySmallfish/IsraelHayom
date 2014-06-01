@@ -13,8 +13,28 @@
 
                 var commands = {}, builtinCommands = {
                     "popup": openPopup,
-                    "DisplayAbout": displayAbout
+                    "DisplayAbout": displayAbout,
+                    "NavigateToAllCategories": navigateToAllCategories,
+                    "NavigateToProfile": navigateToProfile,
+                    "Login": login,
+                    "DisplayTerms": displayTerms
+                    
                 };
+
+                function displayTerms() {
+                }
+
+                function login() {
+                    $location.path("/Login");
+                }
+
+                function navigateToProfile() {
+                    $location.path("/Profile");
+                }
+
+                function navigateToAllCategories() {
+                    $location.path("/Categories");
+                }
 
                 function displayAbout() {
                     var myPopup = $ionicPopup.show({

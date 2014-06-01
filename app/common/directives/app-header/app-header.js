@@ -31,26 +31,6 @@
                         $location.path("/Newsflash");
                     };
 
-                    //$scope.openEntryPage = function () {
-                    //    $location.path("/Entry");
-                    //};
-
-                    //$scope.openAboutPage = function () {
-
-                    //    var myPopup = $ionicPopup.show({
-                    //        templateUrl: 'app/common/views/about.html',
-                    //        title: 'אודות',
-                    //        scope: $scope,
-                    //        buttons: [
-                    //          { text: 'סגור' }
-                    //        ]
-                    //    });
-                    //    myPopup.then(function (res) {
-                    //        console.log('Tapped!', res);
-                    //    });
-
-                    //};
-                    console.log("com",$scope);
                     $scope.setupContextMenuCommands();
 
                 }],

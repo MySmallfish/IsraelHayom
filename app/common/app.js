@@ -12,7 +12,7 @@
 	app.controller("ArticleCtrl", I.ArticleController);
 	app.controller("WeatherCtrl", I.WeatherController);
 	app.controller("NewsflashCtrl", I.NewsflashController);
-	app.controller("EntryPageCtrl", I.EntryPageController);
+	app.controller("LoginCtrl", I.LoginController);
 	app.controller("ProfileCtrl", I.profileController);
 	app.controller("RatingCtrl", I.RatingController);
 	app.controller("TalkbacksCtrl", I.TalkbacksController);
