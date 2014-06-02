@@ -195,6 +195,10 @@
                 function goHome() {
                     $location.path("/");
                 };
+                
+                function getLastUpdate() {
+                    $scope.lastUpdate = $("meta[name=lastUpdate]").attr("content");
+                }
 
                 _.extend($scope, {
                     changeHeader: changeHeader,
@@ -207,11 +211,13 @@
                     notifyProgressCompleted: notifyProgressCompleted,
                     logError: logError,
                     goBack: goBack,
-                    goHome: goHome
+                    goHome: goHome,
+                    getLastUpdate: getLastUpdate
                 });
 
                 onNetworkStatusChanged();
                 bindEvents();
+                getLastUpdate();
 
 
             }];

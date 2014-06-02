@@ -16,7 +16,9 @@
             "Terms": "תנאי שימוש",
             "About": "אודות",
             "CategoriesRating": "דירוג קטגוריות",
-            "FontSize": "גודל גופן"
+            "FontSize": "גודל גופן",
+            "Version": "גרסה",
+            "LastUpdate": "עדכון אחרון"
         });
     });
 
