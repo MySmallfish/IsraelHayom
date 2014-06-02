@@ -1,5 +1,5 @@
 (function (S,I) {
-    I.HomeController = ["$scope", "$q", "$location", "contentService", function ($scope, $q, $location, contentService) {
+    I.HomeController = ["$scope", "$q", "$location", "geoLocation", "contentService", function ($scope, $q, $location, geoLocation, contentService) {
 
         $scope.isPointSelected = function(pointIndex) {
             var result = false;
@@ -50,6 +50,10 @@
             
             contentService.getRecentTitles().then(function (items) {
                 $scope.recentTitles = items;
+            });
+
+            geoLocation.get().then(function(items) {
+                $scope.weatherLocation = items;
             });
 
         }

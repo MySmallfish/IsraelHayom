@@ -288,3 +288,21 @@ p
 {
     margin-top: 10px;
 }
+
+.scroll-content
+{
+    margin-top: 100px;
+}
+
+.profile-page .list-right-editing .item-right-editable .item-content,
+.profile-page .item-right-editing.item-right-editable .item-content
+{
+    margin-left: 50px;
+    margin-right: 0;
+}
+
+.profile-page .item-right-edit.item-reorder
+{
+    right: auto;
+    left: 10px;
+}

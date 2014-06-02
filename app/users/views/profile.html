@@ -1,50 +1,35 @@
-﻿<div class="profile-page">
+﻿<ion-content>
+    <div class="profile-page">
+          <h2>פרופיל</h2>
 
-    <h2>פרופיל</h2>
+          <div class="list">
+              <div class="item item-divider">
+                  גודל גופן
+              </div>
+              <div class="item">
+          <div class="range font-ruler">
+              <div class="small-font">א</div>
+              <input type="range" name="volume">
+              <div class="large-font">א</div>
+          </div>
+                  </div>
+          </div>
+
+          <div class="item item-divider">
+                דירוג קטגוריות
+          </div>
+
+          <ion-list show-delete="data.showDelete" show-reorder="true" >
+
+              <ion-item class="item item-icon-right" ng-repeat="category in categories" item="category">
+                   
+                  <i class="{{category.Icon}}"></i>
+                  <ion-reorder-button class="ion-navicon" on-reoder="moveItem(category, fromIndex, toIndex)"></ion-reorder-button>
+                  {{ category.Name }}
+              </ion-item>
+
+          </ion-list>
+
     
-    <div class="list">
-        <div class="item item-divider">
-            גודל גופן
-        </div>
     </div>
-
-    <div class="range font-ruler">
-        <div class="small-font">א</div>
-        <input type="range" name="volume">
-        <div class="large-font">א</div>
-    </div>
-
-
-    <div class="list">
-        <div class="item item-divider">
-            דירוג קטגוריות
-        </div>
-
-
-        <div class="item item-icon-left item-icon-right">
-            <i class="icon ion-navicon-round"></i>נדל"ן
-            <i class="icon fa fa-home"></i>
-        </div>
-        <div class="item item-icon-left item-icon-right">
-            <i class="icon ion-navicon-round"></i>היי-טק וטכנולוגיה
-            <i class="icon ion-monitor"></i>
-        </div>
-        <div class="item item-icon-left item-icon-right">
-            <i class="icon ion-navicon-round"></i>כלכלה
-            <i class="icon fa fa-usd"></i>
-        </div>
-        <div class="item item-icon-left item-icon-right">
-            <i class="icon ion-navicon-round"></i>תקשורת
-            <i class="icon ion-ios7-telephone-outline"></i>
-        </div>
-        <div class="item item-icon-left item-icon-right">
-            <i class="icon ion-navicon-round"></i>בעולם
-             <i class="icon ion-earth"></i>   
-        </div>
-        <div class="item item-icon-left item-icon-right">
-            <i class="icon ion-navicon-round"></i>סלבריטי
-            <i class="icon ion-person-stalker"></i>
-        </div>
-
-    </div>
-</div>
+</ion-content>

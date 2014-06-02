@@ -4,6 +4,7 @@
     app.service("configuration", S.Configuration);
     app.service("contentService", I.ContentService);
     app.service("userProfileManager", I.UserProfileManager);
+    app.service("userProfileService", I.UserProfileService);
 
 
 	app.controller("AppCtrl", I.AppController);

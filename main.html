@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="base-url" content="http://inspector.ylm.co.il/InspectorService/Services/InspectorClientApi.svc/js" />
-    <meta name="version" content="0.0.1" />
+    <meta name="version" content="1.0.1" />
     <meta name="format-detection" content="telephone=no" />
     <title>ישראל היום</title>
     <link rel="stylesheet" type="text/css" href="lib/ionic/css/ionic.css" />
@@ -22,16 +22,18 @@
     <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript" src="barcodescanner.js"></script>
 </head>
-<body class="rtl" ng-controller="AppCtrl">
+<body data-tap-disabled="true" class="rtl" ng-controller="AppCtrl">
 
     <div>
+        
         <app-header></app-header>
         <div class="loading-icon" ng-show="isInProgress">
             <div class="loading"></div>
             <h3 ng-bind='("Loading"|l10n) + "..."'></h3>
         </div>
-        <div data-ng-view class="container-fluid">
-        </div>
+        
+            <div data-ng-view class="container-fluid">
+            </div>
     </div>
     <script src="lib/underscore/underscore.1.6.0.min.js"></script>
     <script src="lib/moment/moment.min.js"></script>
@@ -104,7 +106,8 @@
     <!-- Services -->
     <script type="text/javascript" src="app/common/services/login-manager.js"></script>
     <script type="text/javascript" src="app/content/services/content-service.js"></script>
-    <script type="text/javascript" src="app/Users/services/user-profile-manager.js"></script>
+    <script type="text/javascript" src="app/users/services/user-profile-manager.js"></script>
+    <script type="text/javascript" src="app/users/services/user-profile-service.js"></script>
 
 
     <!-- Filters -->
