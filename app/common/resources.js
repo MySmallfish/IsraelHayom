@@ -14,7 +14,9 @@
             "Profile": "פרופיל",
             "Login": "התחבר",
             "Terms": "תנאי שימוש",
-            "About":"אודות"
+            "About": "אודות",
+            "CategoriesRating": "דירוג קטגוריות",
+            "FontSize": "גודל גופן"
         });
     });
 
