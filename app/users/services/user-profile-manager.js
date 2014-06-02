@@ -64,12 +64,25 @@
 
             return result.promise;
         }
+        
+        function getRecentArticle() {
+            var article = {
+                ArticleId: 123,
+                Position: "news"
+            };
 
+            var result = $q.defer();
 
+            result.resolve(article);
+
+            return result.promise;
+        }
+        
         return {
             getUserProfile: getUserProfile,
             getShortcuts: getShortcuts,
-            getArticleProfile: getArticleProfile 
+            getArticleProfile: getArticleProfile,
+            getRecentArticle: getRecentArticle
         };
     }];
 

@@ -25,8 +25,9 @@
 	app.directive("shortcuts", I.ShortcutsDirective);
 	app.directive("menu", I.MenuDirective);
 
-	app.run(["$rootScope", "$filter", function ($rootScope, $filter) {
-
+	
+	app.run(["$rootScope", "$filter", "$templateCache", function ($rootScope, $filter, $templateCache) {
+	    $templateCache.put('termsTemplate.html', 'This is the content of the terms template');
 
 	    $rootScope.topCommands = [{
 	        title: "AllCategories",

@@ -22,6 +22,17 @@
                 };
 
                 function displayTerms() {
+                    var myPopup = $ionicPopup.show({
+                        templateUrl: 'app/common/views/terms.html',
+                        title: $filter("l10n")(" Terms"),
+                        scope: $scope,
+                        buttons: [
+                          { text: $filter("l10n")("Close") }
+                        ]
+                    });
+                    myPopup.then(function (res) {
+                        console.log('Tapped!', res);
+                    });
                 }
 
                 function login() {
@@ -37,7 +48,7 @@
                 }
 
                 function displayAbout() {
-                    var myPopup = $ionicPopup.show({
+                    var myPopup = $ionicPopup.alert({
                         templateUrl: 'app/common/views/about.html',
                         title: $filter("l10n")("About"),
                         scope: $scope,
