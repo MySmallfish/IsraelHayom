@@ -1,7 +1,7 @@
 ﻿
 <div class="list">
     
-   <a class="item"  ng-repeat="command in commands" ng-click="execute({ command: command.command })">{{command.title}}
+   <a class="item"  ng-repeat="command in commands" ng-click="execute({ command: command.command })">{{command.title |l10n}}
     </a>
 
 </div>
