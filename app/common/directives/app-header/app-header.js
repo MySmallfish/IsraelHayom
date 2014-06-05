@@ -9,7 +9,6 @@
                 controller: ["$scope", "$location", "$ionicPopup", function ($scope, $location, $ionicPopup) {
 
                     $scope.openMenu = function () {
-                        console.log("COMMANDS ", $scope.contextMenuCommands);
                         var myPopup = $ionicPopup.show({
                             templateUrl: 'app/common/views/menu.html',
                             title: 'תפריט',

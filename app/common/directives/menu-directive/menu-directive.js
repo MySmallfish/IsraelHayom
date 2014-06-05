@@ -11,7 +11,6 @@
                 },
                 controller: ["$scope", "$location", "$ionicPopup", function ($scope, $location, $ionicPopup) {
 
-                    console.log("menu??", $scope);
 
                 }],
                 link: function (scope) {

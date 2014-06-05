@@ -1,14 +1,10 @@
 ﻿(function (S, I) {
 
-    I.UserProfileManager = ["$q", function ($q) {
+    I.UserProfileManager = ["$q", "userProfileService", function ($q, userProfileService) {
 
         function getUserProfile() {
 
-            var result = $q.defer();
-
-            result.resolve();
-
-            return result.promise;
+            userProfileService.getUserProfile();
         }
 
         function getShortcuts() {

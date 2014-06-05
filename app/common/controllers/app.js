@@ -18,7 +18,7 @@
                     "NavigateToProfile": navigateToProfile,
                     "Login": login,
                     "DisplayTerms": displayTerms
-                    
+
                 };
 
                 function displayTerms() {
@@ -110,7 +110,7 @@
                     commandHandler(args);
                 }
 
-               function stop() {
+                function stop() {
                     event.stopPropagation();
                 };
 
@@ -195,7 +195,7 @@
                 function goHome() {
                     $location.path("/");
                 };
-                
+
                 function getLastUpdate() {
                     $scope.lastUpdate = $("meta[name=lastUpdate]").attr("content");
                 }
