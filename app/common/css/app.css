@@ -30,11 +30,13 @@ div, i, img
 
 .container-fluid
 {
-    margin-top: 5em;
+    margin-top: 4em;
     overflow-y: auto;
     overflow-x: hidden;
     margin-right: 0.25em;
     margin-left: 0.25em;
+    direction: rtl;
+    text-align: right;
 }
 
 .home-page
@@ -63,7 +65,7 @@ img
 
 .article
 {
-    height: 500px;
+    height: 470px;
     position: relative;
     top: 10px;
 }
@@ -145,21 +147,38 @@ p
 }
 
 .talkbacks
-{ 
+{
     height: 360px;
 }
-.main-titles {
+
+.main-titles
+{
     text-align: right;
 }
-.main-titles .title, .newsflash, .talkback
+
+    .main-titles .title, .talkback
+    {
+        border-top: 1px solid #ccc;
+    }
+
+.newsflash, .weather-item
 {
-    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
 .weather-item
 {
-    border-bottom: 1px solid #ccc;
-    /*font-size: 20pt;*/
+    font-size: 18pt;
+}
+
+.row.weather-item
+{
+    margin-top: 5px;
+}
+
+.weather-item .col-20
+{
+    margin-right: -20px;
 }
 
 .newsflash
@@ -170,16 +189,20 @@ p
 .newsflash-by
 {
     font-size: 10pt;
-    margin-right: 18%;
     color: #777;
 }
 
-.entry-page
+.login-page
 {
     text-align: center;
 }
 
-    .entry-page button
+    .login-page h2
+    {
+        margin-top: 20px;
+    }
+
+    .login-page button
     {
         width: 80%;
         height: 50px;
@@ -314,6 +337,11 @@ p
     left: 10px;
 }
 
+.scroll-content
+{
+    margin-top: 60px;
+}
+
 .popup
 {
     width: 80%;
@@ -326,9 +354,10 @@ p
 
 .menu-page .list .item
 {
-    overflow: visible;
+    direction: rtl;
 }
 
-.main-article-content {
+.main-article-content
+{
     text-align: right;
 }

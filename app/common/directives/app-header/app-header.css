@@ -1,5 +1,6 @@
 ﻿header
 {
+    direction: rtl;
     background-color: #d70010;
     width: auto;
     display: block;
@@ -74,13 +75,13 @@
 .mark
 {
     position: absolute;
-    top: 15px;
+    top: 6px;
     right: 10px;
 }
 
     .mark .fa-exclamation, .weather
     {
-        font-size: 35pt;
+        font-size: 33pt;
     }
 
 .message .fa-envelope-o
