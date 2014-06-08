@@ -12,17 +12,21 @@
             <div class="point" ng-repeat="point in points" ng-class="{'selectedPoint': isPointSelected(point)}" ng-click="selectArticle(point)"></div>
         </div>
 
-        <div class="article-title">
-            <h3>{{article.Title}}</h3>
-        </div>
+        <div class="main-article-content">
+            <div class="article-title">
+                <h3>{{article.Title}}</h3>
+            </div>
 
-        <div class="brief">
-            <h4>{{article.Brief}}</h4>
+            <div class="brief">
+                <h4>{{article.Brief}}</h4>
+            </div>
+
+            <a>לקריאה נוספת</a>
         </div>
     </div>
 
     <div class="main-titles">
-        <div class="title" ng-repeat="title in recentTitles" ng-click="openArticle(title)">{{title.Title}}</div>
+        <h3 class="title" ng-repeat="title in recentTitles" ng-click="openArticle(title)">{{title.Title}}</h3>
     </div>
 </div>
 

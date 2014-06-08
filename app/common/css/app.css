@@ -30,11 +30,16 @@ div, i, img
 
 .container-fluid
 {
-    margin-top: 4em;
+    margin-top: 5em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-right: 0.25em;
+    margin-left: 0.25em;
 }
 
 .home-page
 {
+    height: 350px;
     text-align: center;
     position: relative;
 }
@@ -44,7 +49,6 @@ div, i, img
     position: relative;
     top: 10px;
 }
-
 
 img
 {
@@ -59,6 +63,7 @@ img
 
 .article
 {
+    height: 500px;
     position: relative;
     top: 10px;
 }
@@ -136,23 +141,25 @@ p
 .main-article .article-title
 {
     position: relative;
-    bottom: 15px;
+    top: 8px;
 }
 
-.main-article .brief
-{
-    position: relative;
-    bottom: 15px;
+.talkbacks
+{ 
+    height: 360px;
 }
-
-.main-titles .title, .weather-item, .newsflash, .talkback
+.main-titles {
+    text-align: right;
+}
+.main-titles .title, .newsflash, .talkback
 {
     border-top: 1px solid #ccc;
 }
 
-.main-titles .title, .weather-item
+.weather-item
 {
-    font-size: 20pt;
+    border-bottom: 1px solid #ccc;
+    /*font-size: 20pt;*/
 }
 
 .newsflash
@@ -307,14 +314,21 @@ p
     left: 10px;
 }
 
-.popup {
+.popup
+{
     width: 80%;
 }
 
-.popup-buttons {
+.popup-buttons
+{
     margin: 0;
 }
 
-.menu-page .list .item{
+.menu-page .list .item
+{
     overflow: visible;
+}
+
+.main-article-content {
+    text-align: right;
 }
