@@ -11,11 +11,7 @@
                     $scope.openMenu = function () {
                         var myPopup = $ionicPopup.show({
                             templateUrl: 'app/common/views/menu.html',
-                            title: 'תפריט',
-                            scope: $scope,
-                            buttons: [
-                              { text: 'סגור' }
-                            ]
+                            scope: $scope
                         });
                         myPopup.then(function (res) {
                             console.log('Tapped!', res);
