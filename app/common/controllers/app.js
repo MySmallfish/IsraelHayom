@@ -24,16 +24,13 @@
                 };
 
                 function displayTerms() {
-                    var myPopup = $ionicPopup.show({
+                    $ionicPopup.show({
                         templateUrl: 'app/common/views/terms.html',
                         title: $filter("l10n")(" Terms"),
                         scope: $scope,
                         buttons: [
                           { text: $filter("l10n")("Close") }
                         ]
-                    });
-                    myPopup.then(function (res) {
-                        console.log('Tapped!', res);
                     });
                 }
 
