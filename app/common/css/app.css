@@ -16,6 +16,11 @@ div.shortcuts
         color: white;
     }
 
+a
+{
+    color: rgb(7, 75, 219);
+}
+
 .shortcuts
 {
     text-align: center;
@@ -342,11 +347,11 @@ p
     margin-top: 60px;
 }
 
-.asd
+/*.item .menu-item
 {
     background-color: transparent;
     opacity: 0.9;
-}
+}*/
 
 .popup
 {
