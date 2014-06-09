@@ -345,9 +345,17 @@ p
 .popup
 {
     width: 80%;
+    top: 150px;
+    background-color: transparent;
 }
 
-.popup-buttons
+    .popup .item
+    {
+        background-color: transparent;
+        opacity: 0.9;
+    }
+
+.nemu .popup-buttons
 {
     margin: 0;
 }
@@ -355,6 +363,10 @@ p
 .menu-page .list .item
 {
     direction: rtl;
+}
+.popup-head
+{
+    border-bottom: none;
 }
 
 .main-article-content
