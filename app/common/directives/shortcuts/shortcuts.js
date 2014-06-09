@@ -4,7 +4,7 @@
         function () {
             return {
                 restrict: 'E',
-                replace: true,
+                //replace: true,
                 templateUrl: 'app/common/directives/shortcuts/shortcuts.html',
                 scope: true,
                 link: function (scope) {

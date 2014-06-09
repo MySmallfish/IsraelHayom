@@ -6,10 +6,12 @@
         ng-repeat="article in mainArticles"
         ng-click="openArticle(article)"
         ng-show="isSelected(article)">
-        <img ng-src="{{article.ImageUrl}}" alt="{{article.Title}}" />
+        <div>
+            <img ng-src="{{article.ImageUrl}}" alt="{{article.Title}}" />
 
-        <div class="navigation-points">
-            <div class="point" ng-repeat="point in points" ng-class="{'selectedPoint': isPointSelected(point)}" ng-click="selectArticle(point)"></div>
+            <div class="navigation-points">
+                <div class="point" ng-repeat="point in points" ng-class="{'selectedPoint': isPointSelected(point)}" ng-click="selectArticle(point)"></div>
+            </div>
         </div>
 
         <div class="article-title">
