@@ -8,12 +8,21 @@
                 scope: true,
                 controller: ["$scope", "$location", "$ionicPopup", function ($scope, $location, $ionicPopup) {
 
+                    var menuPopup, execute = $scope.executeCommand;
+                    $scope.executeCommand = function(command, args) {
+                        if (menuPopup) {
+                            menuPopup.close();
+                            execute(command, args);
+                        }
+                    };
+                   
+
                     $scope.openMenu = function () {
-                        var myPopup = $ionicPopup.show({
+                        menuPopup = $ionicPopup.show({
                             templateUrl: 'app/common/views/menu.html',
                             scope: $scope
                         });
-                        myPopup.then(function (res) {
+                        menuPopup.then(function (res) {
                             console.log('Tapped!', res);
                         });
                     };

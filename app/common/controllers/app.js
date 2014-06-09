@@ -11,6 +11,8 @@
             function ($scope, $q, $window, textResource, $location, $ionicPopup, $filter, network) {
 
 
+
+
                 var commands = {}, builtinCommands = {
                     "popup": openPopup,
                     "DisplayAbout": displayAbout,
@@ -50,7 +52,6 @@
                 function displayAbout() {
                     var myPopup = $ionicPopup.alert({
                         templateUrl: 'app/common/views/about.html',
-                        title: $filter("l10n")("About"),
                         scope: $scope,
                         buttons: [
                           { text: $filter("l10n")("Close") }

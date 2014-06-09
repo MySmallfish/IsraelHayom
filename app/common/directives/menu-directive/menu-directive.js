@@ -8,14 +8,6 @@
                 scope: {
                     commands: "=",
                     execute: "&"
-                },
-                controller: ["$scope", "$location", "$ionicPopup", function ($scope, $location, $ionicPopup) {
-
-
-                }],
-                link: function (scope) {
-                    // bind clicks...     
-
                 }
             };
         }];

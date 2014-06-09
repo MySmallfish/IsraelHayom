@@ -342,18 +342,16 @@ p
     margin-top: 60px;
 }
 
+.asd
+{
+    background-color: transparent;
+    opacity: 0.9;
+}
+
 .popup
 {
     width: 80%;
-    top: 150px;
-    background-color: transparent;
 }
-
-    .popup .item
-    {
-        background-color: transparent;
-        opacity: 0.9;
-    }
 
 .nemu .popup-buttons
 {
@@ -364,6 +362,7 @@ p
 {
     direction: rtl;
 }
+
 .popup-head
 {
     border-bottom: none;
@@ -374,12 +373,7 @@ p
     text-align: right;
 }
 
-.menu-page .list
+.popup-body
 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-}
+    padding: 0;
 }
