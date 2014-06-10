@@ -1,5 +1,5 @@
 ﻿(function (S, I) {
-    I.TalkbacksController = ["$scope", "$location", "popupService", "contentService", function ($scope, $location, popupService, contentService) {
+    I.TalkbacksController = ["$scope", "$location", "$filter", "popupService", "contentService", function ($scope, $location, $filter, popupService, contentService) {
 
 
         function load() {
@@ -15,9 +15,9 @@
                 title: 'תגובה חדשה',
                 scope: $scope,
                 buttons: [
-                  { text: 'Cancel' },
+                  { text: $filter("l10n")("Cancel")},
                   {
-                      text: '<b>Save</b>',
+                      text: $filter("l10n")("Send"),
                       type: 'button-positive',
                       onTap: function (e) {
 

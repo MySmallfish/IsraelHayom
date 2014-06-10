@@ -227,6 +227,10 @@ p
     font-size: 12pt;
 }
 
+.new-talkback {
+    padding: 10px;
+}
+
 .talkbacks
 {
     border-top: 2px solid #ccc;
@@ -489,4 +493,8 @@ p
 .popup-body
 {
     padding: 0;
+}
+
+.popup-title {
+    font-weight: bold;
 }
