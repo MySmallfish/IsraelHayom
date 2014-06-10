@@ -114,12 +114,9 @@ div, i, img
     bottom: 0;
 }
 
-.main-article
+/*.main-article
 {
-    position: absolute;
-    top: 0;
-    /*height: 205px;*/
-}
+}*/
 
 img
 {
@@ -206,7 +203,7 @@ p
     text-align: justify;
 }
 
-.main-article .article-title h1
+.main-article .article-title h1, .talkbacks-header h1
 {
     font-weight: bold;
     font-size: 14pt;
@@ -232,13 +229,26 @@ p
 
 .talkbacks
 {
-    height: 360px;
+    border-top: 2px solid #ccc;
+    position: absolute;
+    top: 160px;
+    right: 0;
+    left: 0;
+    bottom: 5px;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
-.main-titles .title {
-white-space: nowrap;
-text-overflow: ellipsis;
-overflow: hidden;
+    .talkbacks .talkback
+    {
+        border-bottom: 1px solid #ccc;
+    }
+
+.main-titles .title
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .main-titles
@@ -258,7 +268,7 @@ overflow: hidden;
         font-weight: bold;
     }
 
-    .main-titles .title, .talkback
+    .main-titles .title
     {
         border-top: 1px solid #ccc;
     }
@@ -352,9 +362,14 @@ overflow: hidden;
     direction: ltr;
 }
 
+.talkback-number
+{
+    color: darkred;
+}
+
 .talkback-number, .talkback-title
 {
-    font-size: 12pt;
+    font-size: 11pt;
     font-weight: bold;
 }
 
@@ -380,13 +395,14 @@ overflow: hidden;
     color: #aaa;
 }
 
-.talkback-ruler
+.talkbacks-ruler
 {
     font-size: 21pt;
     position: relative;
     top: 15px;
     color: #666;
 }
+
 
 .rtl .form-buttons
 {
@@ -460,7 +476,7 @@ overflow: hidden;
     margin: 0;
 }
 
-.menu-page .list .item
+.menu-page .list .item, .new-talkback
 {
     direction: rtl;
 }

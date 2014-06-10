@@ -19,7 +19,8 @@
             "CategoriesRating": "דירוג קטגוריות",
             "FontSize": "גודל גופן",
             "Version": "גרסה",
-            "LastUpdate": "עדכון אחרון"
+            "LastUpdate": "עדכון אחרון",
+            "Talkbacks":"תגובות"
         });
     });
 
