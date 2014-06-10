@@ -118,7 +118,7 @@ div, i, img
 {
     position: absolute;
     top: 0;
-    height: 205px;
+    /*height: 205px;*/
 }
 
 img

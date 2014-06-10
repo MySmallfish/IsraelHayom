@@ -8,6 +8,7 @@
             "Content": "תוכן",
             "Cancel": "בטל",
             "Send": "שלח",
+            "Close":"סגור",
             "Talkback": "תגובה",
             "NewTalkback": "תגובה חדשה",
             "AllCategories": "כל הקטגוריות",

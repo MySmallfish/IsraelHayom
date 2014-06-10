@@ -1,5 +1,5 @@
 ﻿(function (S, I) {
-    I.TalkbacksController = ["$scope", "$location", "$ionicPopup", "contentService", function ($scope, $location, $ionicPopup, contentService) {
+    I.TalkbacksController = ["$scope", "$location", "popupService", "contentService", function ($scope, $location, popupService, contentService) {
 
 
         function load() {
@@ -10,7 +10,7 @@
         
         $scope.newTalkback = function () {
 
-            var myPopup = $ionicPopup.show({
+            popupService.openPopup({
                 templateUrl: 'app/content/views/new-talkback.html',
                 title: 'תגובה חדשה',
                 scope: $scope,
@@ -25,10 +25,6 @@
                   }
                 ]
             });
-            myPopup.then(function (res) {
-                console.log('Tapped!', res);
-            });
-
         };
 
         var articleId = 2;

@@ -3,6 +3,7 @@
 
     app.service("configuration", S.Configuration);
     app.service("contentService", I.ContentService);
+    app.service("popupService", I.PopupService);
     app.service("userProfileManager", I.UserProfileManager);
     app.service("userProfileService", I.UserProfileService);
 

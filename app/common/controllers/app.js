@@ -5,10 +5,10 @@
             "$window",
             "textResource",
             "$location",
-            "$ionicPopup",
+            "popupService",
             "$filter",
             "network",
-            function ($scope, $q, $window, textResource, $location, $ionicPopup, $filter, network) {
+            function ($scope, $q, $window, textResource, $location, popupService, $filter, network) {
 
 
 
@@ -24,7 +24,7 @@
                 };
 
                 function displayTerms() {
-                    $ionicPopup.show({
+                    popupService.openPopup({
                         templateUrl: 'app/common/views/terms.html',
                         title: $filter("l10n")(" Terms"),
                         scope: $scope,
@@ -32,6 +32,7 @@
                           { text: $filter("l10n")("Close") }
                         ]
                     });
+                    
                 }
 
                 function login() {
@@ -47,17 +48,13 @@
                 }
 
                 function displayAbout() {
-                    var myPopup = $ionicPopup.alert({
+                    popupService.openPopup({
                         templateUrl: 'app/common/views/about.html',
                         scope: $scope,
                         buttons: [
                           { text: $filter("l10n")("Close") }
                         ]
                     });
-                    myPopup.then(function (res) {
-                        console.log('Tapped!', res);
-                    });
-
                 }
 
 
