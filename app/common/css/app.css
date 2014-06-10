@@ -114,26 +114,31 @@ div, i, img
     bottom: 0;
 }
 
-/*.main-article
-{
-}*/
-
 img
 {
     border: 1px solid #ccc;
 }
 
-.main-article img
+/*.main-article img
 {
     max-width: 300px;
     max-height: 100px;
+}*/
+
+.main-article img
+{
+    width: 300px;
+    height: 100px;
 }
 
 .article
 {
-    height: 470px;
-    position: relative;
-    top: 10px;
+    position: absolute;
+    top: 60px;
+    bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow: auto;
 }
 
     .article img
@@ -142,17 +147,16 @@ img
         max-height: 160px;
     }
 
-.article-header
-{
-    position: relative;
-    right: 20px;
-}
+    .article .article-title h1, .profile-page h2
+    {
+        font-size: 14pt;
+    }
 
 .user-rating
 {
     float: right;
     text-align: center;
-    width: 30pt;
+    width: 50px;
 }
 
     .user-rating .fa-user
@@ -203,7 +207,7 @@ p
     text-align: justify;
 }
 
-.main-article .article-title h1, .talkbacks-header h1
+.main-article .article-title h1, .talkbacks-header h1, .rating-page h1
 {
     font-weight: bold;
     font-size: 14pt;
@@ -227,7 +231,8 @@ p
     font-size: 12pt;
 }
 
-.new-talkback {
+.new-talkback
+{
     padding: 10px;
 }
 
@@ -302,13 +307,15 @@ p
     font-size: 11pt;
 }
 
-.newsflash .row {
-    padding: 0;
-}
+    .newsflash .row
+    {
+        padding: 0;
+    }
 
-.newsflash .newsflash-date {
-    font-weight: bold;
-}
+    .newsflash .newsflash-date
+    {
+        font-weight: bold;
+    }
 
 .newsflash-by
 {
@@ -334,6 +341,10 @@ p
         margin-top: 40px;
     }
 
+.profile-page {
+    position: relative;
+}
+
 .profile-page .row
 {
     font-size: 15pt;
@@ -342,6 +353,18 @@ p
 .profile-page h2
 {
     text-align: center;
+}
+
+/*.profile-page .font-size {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 50px;
+    margin-bottom: 0;
+}*/
+
+.font-ruler {
+    border-bottom:none
 }
 
 .font-ruler .small-font
@@ -353,6 +376,10 @@ p
 {
     font-size: 25pt;
     margin-top: -13px;
+}
+
+.category-list {
+    
 }
 
 .rating-page
@@ -503,6 +530,7 @@ p
     padding: 0;
 }
 
-.popup-title {
+.popup-title
+{
     font-weight: bold;
 }

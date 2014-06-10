@@ -1,17 +1,15 @@
 ﻿<div class="article">
-    
-    <div class="row">
-        
-        <div class="col col-20 user-rating" ng-click="openRating(article.Id)"><i class="fa fa-user"></i></div>
 
-        <div class="col col-80 article-header">
+    <div class="">
 
-            <div class="article-title">
-                <h3>{{article.Title}}</h3>
-            </div>
+        <div class="user-rating" ng-click="openRating(article.Id)"><i class="fa fa-user"></i></div>
 
+        <div class="article-title">
+            <h1>{{article.Title}}</h1>
         </div>
+
     </div>
+
     <div class="profile">
         <span ng-repeat="author in articleProfile.Authors">{{author}} </span>
         <span>{{articleProfile.Date | date:'MM/dd/yyyy  h:mm'}} </span>
@@ -25,8 +23,8 @@
         <img ng-src="{{article.ImageUrl}}" alt="{{article.Title}}" />
         <p>{{article.Content}}</p>
     </div>
-    
+
     <div>
-        <a ng-href="#/Talkbacks/{{article.Id}}">תגובות</a>
+        <a ng-href="#/Talkbacks/{{article.Id}}">{{"Talkbacks"|l10n}}</a>
     </div>
 </div>

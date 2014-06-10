@@ -1,35 +1,39 @@
 ﻿<ion-content>
     <div class="profile-page">
-          <h2>{{"Profile"|l10n}}</h2>
         
-          <div class="list">
-              <div class="item item-divider">
-                  {{"FontSize"|l10n}}
-              </div>
-              <div class="item">
-          <div class="range font-ruler">
-              <div class="small-font">א</div>
-              <input type="range" name="volume">
-              <div class="large-font">א</div>
-          </div>
-                  </div>
-          </div>
+        <div class="list font-size">
+            
+            <div class="item item-divider">
+                {{"FontSize"|l10n}}
+            </div>
 
-        <div class="item item-divider">
-            {{"CategoriesRating"|l10n}}
+            <div class="item font-ruler">
+                <div class="range">
+                    <div class="small-font">א</div>
+                    <input type="range" name="volume">
+                    <div class="large-font">א</div>
+                </div>
+            </div>
         </div>
 
-          <ion-list show-delete="data.showDelete" show-reorder="true" >
+        <div class="category-list">
+            <div class="item item-divider">
+                {{"CategoriesRating"|l10n}}
+            </div>
 
-              <ion-item class="item item-icon-right" ng-repeat="category in categories" item="category">
+            <ion-list show-delete="data.showDelete" show-reorder="true" >
+
+                <ion-item class="item item-icon-right" ng-repeat="category in categories" item="category">
                    
-                  <i class="{{category.Icon}}"></i>
-                  <ion-reorder-button class="ion-navicon" on-reoder="moveItem(category, fromIndex, toIndex)"></ion-reorder-button>
-                  {{ category.Name }}
-              </ion-item>
+                    <i class="{{category.Icon}}"></i>
+                    <ion-reorder-button class="ion-navicon" on-reoder="moveItem(category, fromIndex, toIndex)"></ion-reorder-button>
+                    {{ category.Name }}
+                </ion-item>
 
-          </ion-list>
-
+            </ion-list>
+        </div>
     
     </div>
 </ion-content>
+
+
