@@ -233,9 +233,9 @@ p
 
 .talkbacks
 {
-    border-top: 2px solid #ccc;
+    border-top: 1px solid #ccc;
     position: absolute;
-    top: 160px;
+    top: 155px;
     right: 0;
     left: 0;
     bottom: 5px;
@@ -284,7 +284,7 @@ p
 
 .weather-item
 {
-    font-size: 18pt;
+    font-size: 16pt;
 }
 
 .row.weather-item

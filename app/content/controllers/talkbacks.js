@@ -15,14 +15,15 @@
                 title: 'תגובה חדשה',
                 scope: $scope,
                 buttons: [
-                  { text: $filter("l10n")("Cancel")},
-                  {
-                      text: $filter("l10n")("Send"),
-                      type: 'button-positive',
-                      onTap: function (e) {
+                    {
+                        text: $filter("l10n")("Send"),
+                        type: 'button-positive',
+                        onTap: function (e) {
 
-                      }
-                  }
+                        }
+                    },
+                  { text: $filter("l10n")("Cancel")}
+                  
                 ]
             });
         };
