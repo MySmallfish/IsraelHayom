@@ -299,7 +299,15 @@ p
 
 .newsflash
 {
-    font-size: 12pt;
+    font-size: 11pt;
+}
+
+.newsflash .row {
+    padding: 0;
+}
+
+.newsflash .newsflash-date {
+    font-weight: bold;
 }
 
 .newsflash-by
