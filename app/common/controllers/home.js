@@ -1,6 +1,8 @@
 (function (S,I) {
     I.HomeController = ["$scope", "$q", "$location", "geoLocation", "contentService", function ($scope, $q, $location, geoLocation, contentService) {
 
+        
+
         $scope.isPointSelected = function(pointIndex) {
             var result = false;
             if (pointIndex === $scope.articleIndex) {

@@ -341,19 +341,20 @@ p
         margin-top: 40px;
     }
 
-.profile-page {
+.profile-page
+{
     position: relative;
 }
 
-.profile-page .row
-{
-    font-size: 15pt;
-}
+    .profile-page .row
+    {
+        font-size: 15pt;
+    }
 
-.profile-page h2
-{
-    text-align: center;
-}
+    .profile-page h2
+    {
+        text-align: center;
+    }
 
 /*.profile-page .font-size {
     position: absolute;
@@ -363,23 +364,24 @@ p
     margin-bottom: 0;
 }*/
 
-.font-ruler {
-    border-bottom:none
-}
-
-.font-ruler .small-font
+.font-ruler
 {
-    font-size: 12pt;
+    border-bottom: none;
 }
 
-.font-ruler .large-font
+    .font-ruler .small-font
+    {
+        font-size: 12pt;
+    }
+
+    .font-ruler .large-font
+    {
+        font-size: 25pt;
+        margin-top: -13px;
+    }
+
+.category-list
 {
-    font-size: 25pt;
-    margin-top: -13px;
-}
-
-.category-list {
-    
 }
 
 .rating-page
@@ -533,4 +535,43 @@ p
 .popup-title
 {
     font-weight: bold;
+}
+
+.notification
+{
+    z-index: 1010;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 45px;
+    background-color: black;
+}
+
+    .notification img
+    {
+        width: 70px;
+        height: 30px;
+        margin-top: 8px;
+        margin-right: -34px;
+        border: none;
+    }
+
+.notification-logo
+{
+    width: 40px;
+    position: absolute;
+}
+
+.notification-text
+{
+    margin-top: 11px;
+    margin-right: 50px;
+}
+
+.notification-button
+{
+    width: 55px;
+    border: 1px solid grey;
+    background: red;
 }

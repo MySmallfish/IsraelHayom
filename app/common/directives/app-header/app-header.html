@@ -1,8 +1,11 @@
 ﻿<header>
+    <div class="notification" ng-show="hasNotification">
+        <div class="notification-logo"><img ng-src="app/common/img/logo.png"></div>
+        <div class="notification-text">נשיא מדינת ישראל: ראובן (רובי) ריבלין</div>
+    </div>
+
     <div class="logo"></div>
     
-    <!--<div class="mark" ng-click="openEntryPage()"><i class="fa fa-exclamation"></i></div>-->
-    <!--<div class="mark" ng-click="openAboutPage()"><i class="fa fa-exclamation"></i></div>-->
     <div class="mark" ng-click="openMenu()"><i class="fa fa-exclamation"></i></div>
     <div class="message" ng-click="openNewsflash()"><i class="fa fa-envelope-o"></i></div>
     

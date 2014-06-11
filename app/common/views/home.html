@@ -24,6 +24,10 @@
 
         <div class="article-link"><a>לקריאה נוספת</a></div>
     </div>
+    
+    <div class="notification-button" ng-click="notify()">
+        התראה!
+    </div>
 
     <div class="main-titles">
         <h1 class="title" ng-repeat="title in recentTitles" ng-click="openArticle(title)">{{title.Title}}</h1>

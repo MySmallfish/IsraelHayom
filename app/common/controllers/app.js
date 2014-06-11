@@ -10,7 +10,14 @@
             "network",
             function ($scope, $q, $window, textResource, $location, popupService, $filter, network) {
 
-
+                $scope.notify = function () {
+                    
+                    if ($scope.hasNotification) {
+                        $scope.hasNotification = false;
+                    } else {
+                        $scope.hasNotification = true;
+                    }
+                };
 
 
                 var commands = {}, builtinCommands = {
