@@ -545,7 +545,8 @@ p
     left: 0;
     top: 0;
     height: 45px;
-    background-color: black;
+    background-color: rgb(9, 9, 9);
+    opacity: 0.9;
 }
 
     .notification img
