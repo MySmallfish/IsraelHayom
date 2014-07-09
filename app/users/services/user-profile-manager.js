@@ -4,7 +4,7 @@
 
         function getUserProfile() {
 
-            userProfileService.getUserProfile();
+            return userProfileService.getUserProfile();
         }
 
         function getShortcuts() {

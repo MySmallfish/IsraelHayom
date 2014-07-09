@@ -1,11 +1,20 @@
 (function(S, I){
-    var app = angular.module("IsraelHayom", ["ngRoute", "ngTouch", "Simple", "ionic"]);
+    var app = angular.module("IsraelHayom", ["ngRoute", "ngTouch","ngSanitize", "Simple", "ionic"]);
+    app.config(function () {
+        if ("ontouchstart" in document.documentElement) {
+            // It's a touch screen device.
+        }
+        else {
+            $(document.body).attr("data-tap-disabled", true);
+        }
 
+    });
     app.service("configuration", S.Configuration);
     app.service("contentService", I.ContentService);
     app.service("popupService", I.PopupService);
     app.service("userProfileManager", I.UserProfileManager);
     app.service("userProfileService", I.UserProfileService);
+    app.service("contentApi", I.ContentApiService);
 
 
 	app.controller("AppCtrl", I.AppController);
@@ -24,6 +33,7 @@
     
 
 	app.directive("appHeader", I.AppHeaderDirective);
+	app.directive("articleImage", I.ArticleImageDirective);
 	app.directive("shortcuts", I.ShortcutsDirective);
 	app.directive("menu", I.MenuDirective);
 

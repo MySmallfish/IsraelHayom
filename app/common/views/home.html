@@ -7,7 +7,7 @@
         ng-click="openArticle(article)"
         ng-show="isSelected(article)">
         <div class="main-article-image">
-            <img ng-src="{{article.ImageUrl}}" alt="{{article.Title}}" />
+            <article-image ng-if="article.Images.length" image="article.Images[0]"></article-image>
 
             <div class="navigation-points">
                 <div class="point" ng-repeat="point in points" ng-class="{'selectedPoint': isPointSelected(point)}" ng-click="selectArticle(point)"></div>
@@ -25,12 +25,12 @@
         <div class="article-link"><a>לקריאה נוספת</a></div>
     </div>
     
-    <div class="notification-button" ng-click="notify()">
+    <!--<div class="notification-button" ng-click="notify()">
         התראה!
-    </div>
+    </div-->
 
     <div class="main-titles">
-        <h1 class="title" ng-repeat="title in recentTitles" ng-click="openArticle(title)">{{title.Title}}</h1>
+        <div class="title" ng-repeat="title in recentTitles" ng-click="openArticle(title)">{{title.Title}}</div>
     </div>
 </div>
 

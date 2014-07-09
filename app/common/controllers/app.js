@@ -9,7 +9,7 @@
             "$filter",
             "network",
             function ($scope, $q, $window, textResource, $location, popupService, $filter, network) {
-
+                $scope.today = (new Date());
                 $scope.notify = function () {
                     
                     if ($scope.hasNotification) {

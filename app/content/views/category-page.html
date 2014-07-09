@@ -1,12 +1,12 @@
 ﻿
-<h2>קטגוריה</h2>
+<h2>{{categoryName}}</h2>
 
 <div class="list">
 
-    <a class="item item-thumbnail-right"  ng-repeat="article in categoryArticles" href="#">
-      <img ng-src="{{article.ImageUrl}}">
+    <a class="item item-thumbnail-right"  ng-repeat="article in categoryArticles" ng-href="#/Article/{{article.Id}}">
+        <img ng-src="{{article.Images[0].Url}}" ng-show="article.Images.length">
       <h2>{{article.Title}}</h2>
-      <p>{{article.Brief}}</p>
+      <p class="article-brief">{{article.Brief}}</p>
     </a>
 
 </div>

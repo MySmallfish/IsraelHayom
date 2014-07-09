@@ -10,8 +10,8 @@
     <div class="message" ng-click="openNewsflash()"><i class="fa fa-envelope-o"></i></div>
     
     <div class="info" ng-click="openWeather()">
-        <div>25/5/2014</div>
-        <span class="city">תל אביב</span>
+        <div>{{today|date:"dd/MM/yyyy"}}</div>
+        <span class="city">{{city}}</span>
         <span><i class="fa fa-cloud"></i></span>
     </div>
 

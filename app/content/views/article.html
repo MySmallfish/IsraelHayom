@@ -16,12 +16,13 @@
     </div>
 
     <div class="brief">
-        <b>{{article.brief}}</b>
+        <b>{{article.Brief}}</b>
     </div>
 
     <div class="content">
-        <img ng-src="{{article.ImageUrl}}" alt="{{article.Title}}" />
-        <p>{{article.Content}}</p>
+        <article-image ng-if="article.Images.length" image="article.Images[0]"></article-image>
+        <p ng-bind-html="article.Content"></p>
+        <article-image ng-if="article.Images.length>1" ng-repeat="image in article.Images" image="image"></article-image>
     </div>
 
     <div>
