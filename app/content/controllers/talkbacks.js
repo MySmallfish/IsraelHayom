@@ -9,7 +9,10 @@
                 $scope.talkbacks = items;
             });
 
-            
+            contentService.getArticle(articleId).then(function (item) {
+                console.log("??", item);
+                $scope.articleTitle = item.Title;
+            });
         }
         
         $scope.newTalkback = function () {
