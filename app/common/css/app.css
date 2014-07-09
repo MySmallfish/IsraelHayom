@@ -453,6 +453,18 @@ p {
     direction: rtl;
 }
 
+.list:last-child {
+    margin-bottom: -20px;
+}
+
+.list {
+    position: relative;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    margin-top: -30px;
+}
+
 .popup-head {
     border-bottom: none;
 }

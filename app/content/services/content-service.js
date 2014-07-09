@@ -237,8 +237,10 @@
 
         function getArticle(articleId) {
             if (articlesCache[articleId]) {
+                console.log("if");
                 return $q.when(articlesCache[articleId]);
             } else {
+                console.log("else");
                 return contentApi.getArticle(articleId).then(cacheArticle);
             }
         }
