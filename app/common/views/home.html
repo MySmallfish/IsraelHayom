@@ -7,7 +7,7 @@
         ng-click="openArticle(article)"
         ng-show="isSelected(article)">
         <div class="main-article-image">
-            <article-image ng-if="article.Images.length" image="article.Images[0]"></article-image>
+            <div><article-image ng-if="article.Images.length" image="article.Images[0]"></article-image></div>
 
             <div class="navigation-points">
                 <div class="point" ng-repeat="point in points" ng-class="{'selectedPoint': isPointSelected(point)}" ng-click="selectArticle(point)"></div>
