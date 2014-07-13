@@ -21,7 +21,6 @@
             
             userProfileManager.getArticleProfile(articleId).then(function (items) {
                 $scope.articleProfile = items;
-                console.log("??", items);
 
             });
         }

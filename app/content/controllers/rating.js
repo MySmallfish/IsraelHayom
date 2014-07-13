@@ -3,7 +3,8 @@
 
 
         function load() {
-            contentService.getApiArticleRating().then(function (items) {
+            contentService.getArticleRating().then(function (items) {
+                console.log("articleRating", items);
                 $scope.articleRating = translate(items);
 
                 $scope.ratersNumber = $scope.articleRating[0].value + $scope.articleRating[1].value;

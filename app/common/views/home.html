@@ -1,13 +1,20 @@
 ﻿<div class="home-page">
     <div class="loading" ng-show="loading"></div>
 
+    <div class="newsflash">
+        <span class="time">{{newsflash[newsIndex].Date| date: 'hh:mm'}}: </span>
+        <span class="title">{{newsflash[newsIndex].Title}}</span>
+    </div>
+
     <div class="main-article"
         ng-swipe-left="back()" ng-swipe-right="next()"
         ng-repeat="article in mainArticles"
         ng-click="openArticle(article)"
         ng-show="isSelected(article)">
         <div class="main-article-image">
-            <div><article-image ng-if="article.Images.length" image="article.Images[0]"></article-image></div>
+            <div>
+                <article-image ng-if="article.Images.length" image="article.Images[0]"></article-image>
+            </div>
 
             <div class="navigation-points">
                 <div class="point" ng-repeat="point in points" ng-class="{'selectedPoint': isPointSelected(point)}" ng-click="selectArticle(point)"></div>
@@ -24,7 +31,7 @@
 
         <div class="article-link"><a>לקריאה נוספת</a></div>
     </div>
-    
+
     <!--<div class="notification-button" ng-click="notify()">
         התראה!
     </div-->
