@@ -190,6 +190,7 @@
             { rank: 1, name: "news", title: "רכב", iconCssClass: "fa fa-car" },
             { rank: 2, name: "ביטחוני", title: "ביטחוני", iconCssClass: "fa fa-car" },
             { rank: 4, name: "ספורט", title: "ספורט", iconCssClass: "fa fa-car" },
+            { rank: 4, name: "travel", title: "טיולים", iconCssClass: "fa fa-car" }
         ];
 
 
