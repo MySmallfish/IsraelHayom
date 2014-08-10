@@ -34,10 +34,16 @@
             });
         }
 
+        function getRootPath() {
+            return "http://www.israelhayom.co.il/";
+        }
+
         function convertImagePath(path) {
-            return "http://www.israelhayom.co.il/" + path.replace("[DEFAULT]", "566x349");
+            return getRootPath() + path.replace("[DEFAULT]", "566x349");
         }
         function mapArticle(article) {
+            
+            // article.author.name
             var mappedArticles = {
                 Id: article.nid,
                 Title: article.content.title,
@@ -50,7 +56,7 @@
                     }
                 }),
                 Date: moment(article.date.formatted, "dd/MM/yyyy").toDate(),
-                Content: article.content.raw.body
+                Content:article.content.raw.body.replace(/src="(.*?)"/gi, 'src="' + getRootPath() + '$1"')// article.content.raw.body
             };
             return mappedArticles;
         }
