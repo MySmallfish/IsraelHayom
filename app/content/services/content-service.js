@@ -269,7 +269,6 @@
         }
         function getNewsflash() {
             return contentApi.getNewsFlashItems().then(function (items) {
-                console.log("1234", items);
                 return _.map(items, function (item) {
                     var newsflashItem = {
                         Title: item.content.title,
