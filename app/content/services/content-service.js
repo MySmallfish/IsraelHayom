@@ -237,8 +237,10 @@
 
         function getArticle(articleId) {
             if (articlesCache[articleId]) {
+                console.log("if");
                 return $q.when(articlesCache[articleId]);
             } else {
+                console.log("else");
                 return contentApi.getArticle(articleId).then(cacheArticle);
             }
         }
@@ -284,9 +286,9 @@
         ];
 
         function getArticleRating() {
-
             return $q.when(articleRating);
         }
+
         function getTalkbacks(articleId) {
 
             var result = $q.defer();
@@ -308,7 +310,7 @@
             getRecentTitles: getRecentTitles,
             getApiWeather: getWeather,
             getApiNewsflash: getNewsflash,
-            getApiArticleRating: getArticleRating,
+            getArticleRating: getArticleRating,
             getTalkbacks: getTalkbacks,
             getCategoryArticles: getCategoryArticles,
             getCategories: getCategories

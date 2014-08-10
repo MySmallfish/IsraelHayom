@@ -2,15 +2,16 @@
     <div class="list">
         <label class="item item-input">
             <span class="input-label">{{"Name"|l10n}}</span>
-            <input type="text" ng-model="talkback.Name" required>
+            <input type="text" ng-model="talkback.Name" required maxlength="100">
         </label>
         <label class="item item-input">
             <span class="input-label">{{"Title"|l10n}}</span>
-            <input type="text" ng-model="talkback.Title" required>
+            <input type="text" ng-model="talkback.Title" required maxlength="100">
         </label>
         <label class="item item-input">
             <span class="input-label">{{"Content"|l10n}}</span>
-            <input type="text" ng-model="talkback.Content">
+            <textarea rows="10" cols="50" maxlength="500"
+                ng-model="talkback.Content"></textarea>
         </label>
     </div>
 

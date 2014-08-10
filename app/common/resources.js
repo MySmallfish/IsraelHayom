@@ -20,7 +20,8 @@
             "FontSize": "גודל גופן",
             "Version": "גרסה",
             "LastUpdate": "עדכון אחרון",
-            "Talkbacks":"תגובות"
+            "Talkbacks": "תגובות",
+            "BackToArticle":  "חזרה לכתבה"
         });
     });
 

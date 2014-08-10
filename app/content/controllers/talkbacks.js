@@ -1,10 +1,17 @@
 ﻿(function (S, I) {
-    I.TalkbacksController = ["$scope", "$location", "$filter", "popupService", "contentService", function ($scope, $location, $filter, popupService, contentService) {
+    I.TalkbacksController = ["$scope", "$location", "$filter", "$routeParams", "popupService", "contentService",
+        function ($scope, $location, $filter, $routeParams, popupService, contentService) {
 
+            $scope.articleId = $routeParams.articleId;
 
         function load() {
             contentService.getTalkbacks(articleId).then(function (items) {
                 $scope.talkbacks = items;
+            });
+
+            contentService.getArticle(articleId).then(function (item) {
+                console.log("??", item);
+                $scope.articleTitle = item.Title;
             });
         }
         
