@@ -16,7 +16,7 @@
             // "api.app.israelhayom.co.il"
             return $q.when({
                 url: ["http://",
-                    "localhost/IsraelHayomProxy", relativeUrl].join("/"),
+                    "me.simpl.co.il/IsraelHayomProxy", relativeUrl].join("/"),
                 args: _.extend(args || {}, { key: "920129nhuf" })
             });
         }
