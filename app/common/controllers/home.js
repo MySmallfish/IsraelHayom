@@ -10,15 +10,12 @@
                 } else {
                     $scope.newsIndex = 0;
                 }
-
-                console.log("index", $scope.newsIndex);
             }
 
             $timeout(switchNewsflash, 1000);
 
             contentService.getApiNewsflash().then(function (items) {
                 $scope.newsflash = items;
-                console.log("contentService", $scope.newsflash);
             });
 
             $scope.isPointSelected = function (pointIndex) {

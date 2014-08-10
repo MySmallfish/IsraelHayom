@@ -22,7 +22,8 @@
             "LastUpdate": "עדכון אחרון",
             "Talkbacks": "תגובות",
             "BackToArticle": "חזרה לכתבה",
-            "Raters": "מדרגים"
+            "Raters": "מדרגים",
+            "Save": "שמור"
         });
     });
 

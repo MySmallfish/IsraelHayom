@@ -25,7 +25,6 @@
 	app.controller("NewsflashCtrl", I.NewsflashController);
 	app.controller("LoginCtrl", I.LoginController);
 	app.controller("ProfileCtrl", I.profileController);
-	app.controller("RatingCtrl", I.RatingController);
 	app.controller("TalkbacksCtrl", I.TalkbacksController);
 	app.controller("CategoryPageCtrl", I.CategoryPageController);
 	app.controller("AllCategoriesPageCtrl", I.AllCategoriesPageController);

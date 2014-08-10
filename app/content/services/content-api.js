@@ -61,6 +61,7 @@
             return mappedArticles;
         }
         function filterArticle(article) { return article.content; }
+
         function mapArticles(articles) {
             return _.map(_.filter(articles, filterArticle), mapArticle);
         }

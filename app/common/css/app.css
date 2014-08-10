@@ -379,6 +379,7 @@ p
 .font-ruler
 {
     border-bottom: none;
+    background: transparent;
 }
 
     .font-ruler .small-font
@@ -392,8 +393,9 @@ p
         margin-top: -13px;
     }
 
-.category-list
+.article-date
 {
+    font-size: 10pt;
 }
 
 .rating-page
@@ -452,7 +454,6 @@ p
 {
     font-size: 21pt;
     position: relative;
-    top: 15px;
     color: #666;
 }
 
@@ -555,6 +556,7 @@ p
 .popup-head
 {
     border-bottom: none;
+    display: none;
 }
 
 .popup-body

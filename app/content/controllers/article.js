@@ -16,7 +16,6 @@
                 contentService.getArticle(articleId).then(function (item) {
                     $scope.article = _.clone(item);
                     $scope.article.Content = $sce.trustAsHtml($sanitize($scope.article.Content));
-
                 });
 
                 userProfileManager.getArticleProfile(articleId).then(function (items) {
