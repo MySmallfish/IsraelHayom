@@ -4,13 +4,12 @@
 
     <div class="row">
        
-        <div class="col col-25"><i class="fa fa-thumbs-o-up"></i></div>
-        <div class="col col-50">{{ratersNumber}}</div>
-        <div class="col col-25"><i class="fa fa-thumbs-o-down"></i></div>
+        <div class="col col-25" ng-click="like()"><i class="fa fa-thumbs-o-up"></i></div>
+        <div class="col col-50">{{ratersNumber}} {{"Raters"|l10n}}</div>
+        <div class="col col-25" ng-click="unLike()"><i class="fa fa-thumbs-o-down"></i></div>
     </div>
 
     <div class="rating-donut">
-        {{articleRating}}
         <donut id="articleRating" data="articleRating"></donut>
     </div>
 </div>

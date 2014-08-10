@@ -286,7 +286,8 @@
             { title: "לא אהבו", value: 666 }
         ];
 
-        function getArticleRating() {
+        function getArticleRating(articleId) {
+            console.log("getArticleRating", articleId);
             return $q.when(articleRating);
         }
 
@@ -303,7 +304,7 @@
             limit = limit || 200;
             return contentApi.getCategoryArticles(categoryId, limit);
         }
-
+        
 
         return {
             getMainArticles: getMainArticles,
