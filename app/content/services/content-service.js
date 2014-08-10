@@ -269,10 +269,12 @@
         }
         function getNewsflash() {
             return contentApi.getNewsFlashItems().then(function (items) {
+                console.log("1234", items);
                 return _.map(items, function (item) {
                     var newsflashItem = {
                         Title: item.content.title,
-                        Date: moment(item.date.formatted, "dd/MM/yyyy").toDate()
+                        Date: new Date(item.date.timestamp * 1000),
+                        By: item
                     };
                     return newsflashItem;
                 });

@@ -27,6 +27,10 @@
                 return result;
             };
 
+            $scope.openNewsflash = function () {
+                $location.path("/Newsflash");
+            };
+
             $scope.selectArticle = function (pointIndex) {
                 $scope.articleIndex = pointIndex;
                 $scope.switchArticle(pointIndex);

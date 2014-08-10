@@ -327,6 +327,7 @@ p
     .newsflash .newsflash-date
     {
         font-weight: bold;
+        font-size: 9pt;
     }
 
 .newsflash-by
@@ -695,14 +696,13 @@ p.article-brief
 
 .newsflash
 {
-    background-color: #eee;
     border-bottom: 1px solid #ccc;
-    max-height: 21px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.main-article
+.newsflash-ticker
 {
+    background-color: #eee;
 }
