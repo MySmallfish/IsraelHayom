@@ -381,7 +381,7 @@ p {
 .talkbacks-ruler {
     font-size: 21pt;
     position: relative;
-    top: 0;
+    top: 15px;
     color: #666;
 }
 

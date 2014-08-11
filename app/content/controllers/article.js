@@ -15,7 +15,6 @@
         function load() {
             contentService.getArticle(articleId).then(function (item) {
                 $scope.article = _.clone(item);
-                console.log("getArticle", $scope.article);
                 $scope.article.Content = $sce.trustAsHtml($sanitize($scope.article.Content));
                 
             });
