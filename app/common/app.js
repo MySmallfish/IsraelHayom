@@ -58,6 +58,9 @@
 	    }, {
 	        title: $filter('l10n')("About"),
 	        command: "DisplayAbout"
+	    }, {
+	        title: $filter('l10n')("Close"),
+	        command: "CloseMenu"
 	    }];
     }]);
     //app.directive("navigation", I.Navigation);

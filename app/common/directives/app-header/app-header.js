@@ -16,6 +16,10 @@
                         }
                     };
 
+                    $scope.closeMenu = function() {
+                        menuPopup.close();
+                    };
+
                     $scope.openMenu = function () {
                         menuPopup = popupService.openPopup({
                             templateUrl: 'app/common/views/menu.html',
