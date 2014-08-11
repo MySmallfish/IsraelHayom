@@ -155,45 +155,26 @@
         ];
 
 
-        var categoryArticles = [{
-            Id: 0,
-            Title: "title0",
-            Brief: "bfdmj dfl lkgfdl klfks;le k sldkgl; k sdglkglfj o jhdfjkhd kjg dfhdfjksji ",
-            ImageUrl: "app/common/img/pic1.jpg"
-        }, {
-            Id: 1,
-            Title: "title1",
-            Brief: "bfdmj dfl lkgfdl klfks;le k sldkgl; k sdglkglfj o jhdfjkhd kjg dfhdfjksji ",
-            ImageUrl: "app/common/img/pic2.jpg"
-        }, {
-            Id: 2,
-            Title: "title2",
-            Brief: "bfdmj dfl lkgfdl klfks;le k sldkgl; k sdglkglfj o jhdfjkhd kjg dfhdfjksji ",
-            ImageUrl: "app/common/img/pic3.jpg"
-        }];
-
         var builtinCategories = [
-            { name: "auto", title: "רכב", iconCssClass: "fa fa-car"},
-            { name: "real estate", title: 'נדל"ן', iconCssClass: "fa fa-home"},
-            { rank: 3, name: "economy", title: "כלכלה", iconCssClass: "fa fa-car" },
-            { name: "caricatures", title: "קריקטורה", iconCssClass: "fa fa-car" },
-            { name: "books", title: "רכב", iconCssClass: "fa fa-car"},
-            { name: "crime", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "consumer news", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "culture", title: "רכב", iconCssClass: "fa fa-car" },
-            { rank:5, name: "education", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "environment", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "fashion", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "gossip", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "lifestyle", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "legal", title: "רכב", iconCssClass: "fa fa-car" },
-            { rank: 1, name: "news", title: "רכב", iconCssClass: "fa fa-car" },
-            { rank: 2, name: "ביטחוני", title: "ביטחוני", iconCssClass: "fa fa-car" },
-            { rank: 4, name: "ספורט", title: "ספורט", iconCssClass: "fa fa-car" },
-            { rank: 4, name: "travel", title: "טיולים", iconCssClass: "fa fa-car" }
+            { rank: 1, name: "auto", title: "רכב", iconCssClass: "ion-model-s" },
+            { rank: 2, name: "real estate", title: 'נדל"ן', iconCssClass: "ion-ios7-home" },
+            { rank: 3, name: "economy", title: "כלכלה", iconCssClass: "ion-social-usd" },
+            { rank: 4, name: "caricatures", title: "קריקטורת היום", iconCssClass: "ion-happy" },
+            { rank: 5, name: "books", title: "ספרים", iconCssClass: "ion-android-book" },
+            { rank: 6, name: "crime", title: "פלילים", iconCssClass: "fa fa-cab" },
+            { rank: 7, name: "consumer news", title: "צרכנות", iconCssClass: "ion-ios7-cart" },
+            { rank: 8, name: "culture", title: "תרבות", iconCssClass: "fa fa-question-circle" },
+            { rank: 9, name: "education", title: "חינוך", iconCssClass: "fa fa-graduation-cap" },
+            { rank: 10, name: "environment", title: "רכב", iconCssClass: "fa fa-question-circle" },
+            { rank: 11, name: "fashion", title: "אופנה", iconCssClass: "ion-woman" },
+            { rank: 12, name: "gossip", title: "רכילות", iconCssClass: "ion-person-stalker" },
+            { rank: 13, name: "lifestyle", title: "לייף סטייל", iconCssClass: "fa fa-question-circle" },
+            { rank: 14, name: "legal", title: "משפט", iconCssClass: "fa fa-university" },
+            { rank: 15, name: "news", title: "חדשות", iconCssClass: "fa fa-question-circle" },
+            { rank: 16, name: "security", title: "ביטחוני", iconCssClass: "fa fa-question-circle" },
+            { rank: 17, name: "sport", title: "ספורט", iconCssClass: "ion-ios7-football-outline" },
+            { rank: 18, name: "travel", title: "טיולים", iconCssClass: "fa fa-question-circle" }
         ];
-
-
 
         var articlesCache = {};
         function cacheArticle(article) {
