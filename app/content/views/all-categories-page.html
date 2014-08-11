@@ -2,9 +2,15 @@
 
 <div class="list">
 
-    <a class="item item-avatar-right"  ng-repeat="category in categories" ng-href="{{category.Url}}">
-      
-      <h2>{{category.Title}}</h2>
+    <a class="item item-icon-right" ng-repeat="category in categories" ng-href="{{category.Url}}">
+        <div class="row">
+            <div class="col col-25 category-icon">
+                <i class="{{category.iconCssClass}}"></i>
+            </div>
+            <div class="col col-75">
+                <h2>{{category.title}}</h2>
+            </div>
+        </div>
     </a>
 
 </div>
