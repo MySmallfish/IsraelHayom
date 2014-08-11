@@ -694,7 +694,7 @@ p.article-brief
 
 }
 
-.newsflash
+.newsflash, .newsflash-ticker
 {
     border-bottom: 1px solid #ccc;
     overflow: hidden;
