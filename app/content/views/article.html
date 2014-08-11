@@ -11,8 +11,8 @@
     </div>
 
     <div class="profile">
-        <span ng-repeat="author in articleProfile.Authors">{{author}} </span>
-        <span>{{articleProfile.Date | date:'MM/dd/yyyy  h:mm'}} </span>
+        <span> {{article.Author.Name}} </span>
+        <span>{{article.Date | date:'MM/dd/yyyy  HH:mm'}} </span>
     </div>
 
     <div class="brief">
@@ -26,6 +26,6 @@
     </div>
 
     <div>
-        <a ng-href="#/Talkbacks/{{article.Id}}">{{"Talkbacks"|l10n}}</a>
+        <a ng-href="#/Talkbacks/{{article.Id}}">{{"Talkbacks"|l10n}} </a>
     </div>
 </div>

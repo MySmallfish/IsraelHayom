@@ -2,24 +2,20 @@
     I.HomeController = ["$scope", "$q", "$location", "$timeout", "geoLocation", "contentService",
         function ($scope, $q, $location, $timeout, geoLocation, contentService) {
 
-            var news = ["1", "2", "3", "4"];
-
-            function switchNewsflash() {
-                if ($scope.newsIndex) {
-                    $scope.newsIndex++;
-                } else {
-                    $scope.newsIndex = 0;
-                }
-
-                console.log("index", $scope.newsIndex);
-            }
-
-            $timeout(switchNewsflash, 1000);
-
             contentService.getApiNewsflash().then(function (items) {
                 $scope.newsflash = items;
-                console.log("contentService", $scope.newsflash);
             });
+            
+            $scope.newsIndex = 0;
+            $scope.newsCount = 10;
+
+            function switchNewsflash() {
+                $scope.newsIndex++;
+                $scope.newsIndex = $scope.newsIndex % $scope.newsCount;
+                $timeout(switchNewsflash, 3000);
+            };
+
+            $timeout(switchNewsflash, 3000);
 
             $scope.isPointSelected = function (pointIndex) {
                 var result = false;
@@ -28,6 +24,10 @@
                 }
 
                 return result;
+            };
+
+            $scope.openNewsflash = function () {
+                $location.path("/Newsflash");
             };
 
             $scope.selectArticle = function (pointIndex) {

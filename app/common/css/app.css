@@ -1,9 +1,11 @@
-body {
+body
+{
     direction: rtl;
     text-align: right;
 }
 
-div.shortcuts {
+div.shortcuts
+{
     border-top: 1px solid #ccc;
     background-color: #eee;
     width: auto;
@@ -16,15 +18,18 @@ div.shortcuts {
     color: white;
 }
 
-    div.shortcuts a {
+    div.shortcuts a
+    {
         color: white;
     }
 
-.shortcuts-categories li {
+.shortcuts-categories li
+{
     display: inline-block;
 }
 
-.shortcuts-categories li {
+.shortcuts-categories li
+{
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 40px;
@@ -34,7 +39,8 @@ div.shortcuts {
     height: 46px;
 }
 
-    .shortcuts-categories li:first-child {
+    .shortcuts-categories li:first-child
+    {
         font-size: 90px;
         width: 25%;
         height: 94px;
@@ -44,48 +50,58 @@ div.shortcuts {
         margin-top: 2px;
     }
 
-.opinions {
+.opinions
+{
     background-color: tomato;
 }
 
-.home-category {
+.home-category
+{
     background-color: rgb(94, 197, 255);
 }
 
-.high-tech {
+.high-tech
+{
     background-color: coral;
     padding-top: 4px;
 }
 
-.economy {
+.economy
+{
     background-color: cornflowerblue;
     padding-top: 2px;
 }
 
-.communication {
+.communication
+{
     background-color: sandybrown;
 }
 
-.world-news {
+.world-news
+{
     background-color: mediumaquamarine;
 }
 
-.celebs {
+.celebs
+{
     background-color: goldenrod;
     padding-top: 2px;
 }
 
-a {
+a
+{
     color: rgb(7, 75, 219);
 }
 
-div, i, img {
+div, i, img
+{
     user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
 }
 
-.container-fluid {
+.container-fluid
+{
     position: absolute;
     top: 3.5em;
     overflow-y: auto;
@@ -95,7 +111,8 @@ div, i, img {
     bottom: 0;
 }
 
-.home-page {
+.home-page
+{
     position: absolute;
     right: 0;
     left: 0;
@@ -103,7 +120,8 @@ div, i, img {
     bottom: 0;
 }
 
-img {
+img
+{
     border: 1px solid #ccc;
 }
 
@@ -113,11 +131,13 @@ img {
     max-height: 100px;
 }*/
 
-.main-article .article-image img {
+.main-article .article-image img
+{
     max-height: 200px;
 }
 
-.article {
+.article
+{
     position: absolute;
     top: 0px;
     bottom: 10px;
@@ -127,50 +147,60 @@ img {
     overflow-x: hidden;
 }
 
-    .article img {
+    .article img
+    {
         max-width: 100%;
         max-height: 320px;
     }
 
-    .article .article-title h1, .profile-page h2 {
+    .article-title h1, .profile-page h2
+    {
         font-size: 18pt;
     }
 
-.user-rating {
+.user-rating
+{
     float: right;
     text-align: center;
     width: 50px;
 }
 
-    .user-rating .fa-user {
+    .user-rating .fa-user
+    {
         font-size: 40pt;
     }
 
-.article-link {
+.article-link
+{
     font-size: 9pt;
 }
 
-.article-link {
+.article-link
+{
     text-align: left;
     margin-left: 17px;
 }
 
-.navigation-points {
+.navigation-points
+{
     position: absolute;
     left: 65px;
     top: 22px;
 }
 
-.point {
+.point
+{
     background-color: #ddd;
 }
 
-.selectedPoint {
+.selectedPoint
+{
     background-color: #d70010;
     margin-bottom: 0;
 }
 
-.point, .selectedPoint {
+.point, .selectedPoint
+{
     height: 12px;
     width: 12px;
     border-radius: 20px;
@@ -178,65 +208,67 @@ img {
     display: inline-block;
 }
 
-p {
+p
+{
     text-align: justify;
 }
 
-.main-article .article-title h1, .talkbacks h1, .talkbacks-header h1, .rating-page h1 {
+.main-article .article-title h1, .talkbacks h1, .talkbacks-header h1, .rating-page h1
+{
     font-weight: bold;
     font-size: 13pt;
     margin-bottom: 0;
 }
 
-.main-article .article-title, .main-article .brief, .main-titles .title, .talkback {
+.main-article .article-title, .main-article .brief, .main-titles .title, .talkback
+{
     padding-right: 5px;
     padding-left: 5px;
 }
 
-.main-article-image {
+.main-article-image
+{
     text-align: center;
     width: 100%;
 }
 
-.main-article .brief {
+.main-article .brief
+{
     font-size: 12pt;
 }
 
-.new-talkback {
+.new-talkback
+{
     padding: 10px;
 }
 
-.back-to-article {
-    position: absolute;
-    top: 80px;
-}
 
-.talkbacks-header .title {
+.talkbacks-header .title
+{
     margin-top: 15px;
 }
 
-.talkbacks {
+.talkbacks
+{
     border-top: 1px solid #ccc;
-    position: absolute;
-    top: 105px;
-    right: 0;
-    left: 0;
-    bottom: 5px;
     overflow: auto;
     overflow-x: hidden;
 }
 
-    .talkbacks .talkback {
+    .talkbacks .talkback
+    {
         border-bottom: 1px solid #ccc;
     }
 
-.main-titles .title {
+.main-titles .title
+{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
 
-.main-titles {
+.main-titles
+{
     position: absolute;
     top: 292px;
     right: 0;
@@ -246,68 +278,84 @@ p {
     overflow-x: hidden;
 }
 
-    .main-titles .title {
+    .main-titles .title
+    {
         border-top: 1px solid #ccc;
         line-height: 32px;
     }
 
-.newsflash-item, .weather-item {
+.newsflash-item, .weather-item
+{
     border-bottom: 1px solid #ccc;
 }
 
-.weather-item {
+.weather-item
+{
     font-size: 16pt;
 }
 
-.row.weather-item {
+.row.weather-item
+{
     margin-top: 5px;
 }
 
-.weather-item .col-20 {
+.weather-item .col-20
+{
     margin-right: -20px;
 }
 
-.newsflash {
+.newsflash
+{
     font-size: 11pt;
 }
 
-    .newsflash .row {
+    .newsflash .row
+    {
         padding: 0;
     }
 
-    .newsflash .newsflash-date {
+    .newsflash .newsflash-date
+    {
         font-weight: bold;
+        font-size: 9pt;
     }
 
-.newsflash-by {
+.newsflash-by
+{
     font-size: 10pt;
     color: #777;
 }
 
-.login-page {
+.login-page
+{
     text-align: center;
 }
 
-    .login-page h2 {
+    .login-page h2
+    {
         margin-top: 20px;
     }
 
-    .login-page button {
+    .login-page button
+    {
         width: 80%;
         height: 50px;
         font-size: 15pt;
         margin-top: 40px;
     }
 
-.profile-page {
+.profile-page
+{
     position: relative;
 }
 
-    .profile-page .row {
+    .profile-page .row
+    {
         font-size: 15pt;
     }
 
-    .profile-page h2 {
+    .profile-page h2
+    {
         text-align: center;
     }
 
@@ -319,169 +367,206 @@ p {
     margin-bottom: 0;
 }*/
 
-.font-ruler {
+.font-ruler
+{
     border-bottom: none;
+    background: transparent;
 }
 
-    .font-ruler .small-font {
+    .font-ruler .small-font
+    {
         font-size: 12pt;
     }
 
-    .font-ruler .large-font {
+    .font-ruler .large-font
+    {
         font-size: 25pt;
         margin-top: -13px;
     }
 
-.category-list {
+.article-date
+{
+    font-size: 10pt;
 }
 
-.rating-page {
+.rating-page
+{
     text-align: center;
 }
 
-    .rating-page .row {
+    .rating-page .row
+    {
         font-size: 15pt;
         margin-top: 25px;
         margin-bottom: -50px;
     }
 
-.chart-area {
+.chart-area
+{
     margin-top: 100px;
     min-height: 240px;
     direction: ltr;
 }
 
-.talkback-number {
+.talkback-number
+{
     color: darkred;
 }
 
-.talkback-number, .talkback-title {
+.talkback-number, .talkback-title
+{
     font-size: 11pt;
     font-weight: bold;
 }
 
-    .talkback-title.no-text {
+    .talkback-title.no-text
+    {
         color: #666;
     }
 
-    .talkback-title span {
+    .talkback-title span
+    {
         font-size: 10pt;
         font-weight: normal;
     }
 
-.talkback-text {
+.talkback-text
+{
     font-size: 11pt;
 }
 
-.talkback-name, .talkback-date {
+.talkback-name, .talkback-date
+{
     font-size: 10pt;
     color: #aaa;
 }
 
-.talkbacks-ruler {
+.talkbacks-ruler
+{
     font-size: 21pt;
     position: relative;
-    top: 15px;
     color: #666;
 }
 
-    .talkbacks-ruler a {
+    .talkbacks-ruler a
+    {
         color: #666;
     }
 
 
-.rtl .form-buttons {
+.rtl .form-buttons
+{
     text-align: left !important;
 }
 
-.about-page {
+.about-page
+{
     font-size: 12pt;
     text-align: center;
 }
 
-    .about-page img {
+    .about-page img
+    {
         border: none;
         width: 80%;
     }
 
-.version {
+.version
+{
     margin-top: 40px;
 }
 
-    .version span {
+    .version span
+    {
         padding-left: 20px;
         padding-right: 20px;
     }
 
-.last-update {
+.last-update
+{
     margin-top: 10px;
 }
 
-.scroll-content {
+.scroll-content
+{
     margin-top: 100px;
 }
 
 .profile-page .list-right-editing .item-right-editable .item-content,
-.profile-page .item-right-editing.item-right-editable .item-content {
+.profile-page .item-right-editing.item-right-editable .item-content
+{
     margin-left: 50px;
     margin-right: 0;
 }
 
-.profile-page .item-right-edit.item-reorder {
+.profile-page .item-right-edit.item-reorder
+{
     right: auto;
     left: 10px;
 }
 
-.scroll-content {
+.scroll-content
+{
     margin-top: 60px;
 }
 
-.item.menu-item {
+.item.menu-item
+{
     background-color: transparent;
     opacity: 0.9;
 }
 
-.popup {
+.popup
+{
     width: 80%;
 }
 
-.nemu .popup-buttons {
+.nemu .popup-buttons
+{
     margin: 0;
 }
 
-.menu-page .list .item, .new-talkback {
+.menu-page .list .item, .new-talkback
+{
     direction: rtl;
 }
 
-.list:last-child {
+.list:last-child
+{
     margin-bottom: -20px;
 }
 
-.list {
+.list
+{
     position: relative;
     padding-top: 1px;
     padding-bottom: 1px;
     padding-left: 1px;
-    margin-top: -30px;
 }
 
-.popup-head {
+.popup-head
+{
     border-bottom: none;
+    display: none;
 }
 
-.popup-body {
+.popup-body
+{
     padding: 0;
 }
 
-.popup-title {
+.popup-title
+{
     font-weight: bold;
 }
 
-.popup-buttons .button:first-child {
+.popup-buttons .button:first-child
+{
     margin-left: 15px;
 }
 
-.notification {
+.notification
+{
     z-index: 1010;
     position: absolute;
     right: 0;
@@ -492,7 +577,8 @@ p {
     opacity: 0.9;
 }
 
-    .notification img {
+    .notification img
+    {
         width: 70px;
         height: 30px;
         margin-top: 8px;
@@ -500,37 +586,44 @@ p {
         border: none;
     }
 
-.notification-logo {
+.notification-logo
+{
     width: 40px;
     position: absolute;
 }
 
-.notification-text {
+.notification-text
+{
     margin-top: 11px;
     margin-right: 50px;
 }
 
-.notification-button {
+.notification-button
+{
     width: 55px;
     border: 1px solid grey;
     background: red;
 }
 
-p.article-brief {
+p.article-brief
+{
     white-space: normal;
 }
 
-.article-image {
+.article-image
+{
     position: relative;
 }
 
-.article-image-title-back {
+.article-image-title-back
+{
     opacity: 0.75;
     background-color: #444444;
     height: 1.5em;
 }
 
-.article-image-credit {
+.article-image-credit
+{
     position: absolute;
     bottom: 0;
     left: 4px;
@@ -541,10 +634,11 @@ p.article-brief {
 }
 
 .article-image-title,
-.article-image-title-back {
+.article-image-title-back
+{
     padding-right: 4px;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0px;
     right: 0;
     color: white;
@@ -552,21 +646,24 @@ p.article-brief {
 
 .article-image-credit,
 .article-image-title-text,
-.main-article .brief {
+.main-article .brief
+{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     text-align: right;
 }
 
-.article-image-title-text {
+.article-image-title-text
+{
     display: block;
     float: right;
     max-width: 260px;
     margin-top: 2px;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 600px)
+{
     .main-article .brief;
 
 {
@@ -575,19 +672,31 @@ p.article-brief {
     max-height: 48px;
 }
 
-.main-article .article-image img {
+.main-article .article-image img
+{
     max-height: 160px;
 }
 
-.main-titles {
+.main-titles
+{
     top: 224px;
 }
+
 }
-.newsflash {
-    background-color:#eee;
+
+.newsflash, .newsflash-ticker
+{
     border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.main-article {
+.newsflash-ticker
+{
+    background-color: #eee;
+}
 
+.category-icon {
+    font-size: 20pt;
 }

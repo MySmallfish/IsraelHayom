@@ -21,7 +21,9 @@
             "Version": "גרסה",
             "LastUpdate": "עדכון אחרון",
             "Talkbacks": "תגובות",
-            "BackToArticle":  "חזרה לכתבה"
+            "BackToArticle": "חזרה לכתבה",
+            "Raters": "מדרגים",
+            "Save": "שמור"
         });
     });
 

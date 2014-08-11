@@ -26,7 +26,8 @@
                     "NavigateToAllCategories": navigateToAllCategories,
                     "NavigateToProfile": navigateToProfile,
                     "Login": login,
-                    "DisplayTerms": displayTerms
+                    "DisplayTerms": displayTerms,
+                    "CloseMenu": closeMenu
 
                 };
 
@@ -64,6 +65,9 @@
                     });
                 }
 
+                function closeMenu() {
+                    console.log("close", $scope);
+                }
 
                 $scope.executeCommand = function (command, args) {
                     if (commands) {

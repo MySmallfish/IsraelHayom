@@ -3,22 +3,37 @@
     I.UserProfileService = ["$q", "storageService", function ($q, storageService) {
 
         function saveUserProfile(userName, profile) {
-            
-            return storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName, profile);
-        }
-        
-        function getUserProfile(userName) {
             var result;
             
-            if (storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName, value)) {
-                result = storageService.prefix("IsraelHayom").local("specificUserProfile", value);
-            } else if (storageService.prefix("IsraelHayom").local("storedProfile", value)) {
-                result = storageService.prefix("IsraelHayom").local("storedProfile", value);
-            } else {
-                result = storageService.prefix("IsraelHayom").local("defaultProfile", value);
+            if (profile) {
+                if (!userName) {
+                    result = storageService.prefix("IsraelHayom").local("storedProfile", profile);
+                } else {
+                    result = storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName, profile);
+                }
             }
-            
+            return result;
+        }
 
+        var defaultProfile = {
+            FontSize: 12,
+            PreferredCategories: [],
+            RecentArticle: null,
+            RecentArticleLocation: 0
+        };
+
+        function getUserProfile(userName) {
+            var result;
+
+            if (storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName)) {
+                result = storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName);
+            }
+            else if (storageService.prefix("IsraelHayom").local("storedProfile")) {
+                result = storageService.prefix("IsraelHayom").local("storedProfile");
+            }
+            else {
+                result = $q.when(defaultProfile);
+            }
             return result;
         }
 

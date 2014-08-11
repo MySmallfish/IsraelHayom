@@ -1,45 +1,66 @@
 ﻿(function (S, I) {
     I.TalkbacksController = ["$scope", "$location", "$filter", "$routeParams", "popupService", "contentService",
         function ($scope, $location, $filter, $routeParams, popupService, contentService) {
-
+            
             $scope.articleId = $routeParams.articleId;
 
-        function load() {
-            contentService.getTalkbacks(articleId).then(function (items) {
-                $scope.talkbacks = items;
-            });
+            function load() {
+                contentService.getTalkbacks($scope.articleId).then(function (items) {
+                    $scope.talkbacks = items;
+                });
 
-            contentService.getArticle(articleId).then(function (item) {
-                console.log("??", item);
-                $scope.articleTitle = item.Title;
-            });
-        }
-        
-        $scope.newTalkback = function () {
+                contentService.getArticle($scope.articleId).then(function (item) {
+                    $scope.article = item;
+                });
+            }
 
-            popupService.openPopup({
-                templateUrl: 'app/content/views/new-talkback.html',
-                title: 'תגובה חדשה',
-                scope: $scope,
-                buttons: [
-                    {
-                        text: $filter("l10n")("Send"),
-                        type: 'button-positive',
-                        onTap: function (e) {
+            $scope.openFontRuler = function () {
 
+                if (!$scope.data) {
+                    $scope.data = {};
+                } 
+                
+                popupService.openPopup({
+                    templateUrl: 'app/users/views/font-ruler.html',
+                    scope: $scope,
+                    buttons: [
+                        { text: $filter("l10n")("Cancel") },
+                        {
+                            text: $filter("l10n")("Save"),
+                            type: 'button-positive',
+                            onTap: function (e) {
+                                console.log("???", $scope.data.fontSize, e);
+                                return $scope.data.fontSize;
+                            }
                         }
-                    },
-                  { text: $filter("l10n")("Cancel")}
-                  
-                ]
-            });
-        };
+                    ]
+                });
+            };
 
-        var articleId = 2;
+            $scope.newTalkback = function () {
 
-        load();
+                popupService.openPopup({
+                    templateUrl: 'app/content/views/new-talkback.html',
+                    title: 'תגובה חדשה',
+                    scope: $scope,
+                    buttons: [
+                        {
+                            text: $filter("l10n")("Send"),
+                            type: 'button-positive',
+                            onTap: function (e) {
+                                
+                            }
+                            
+                        },
+                      { text: $filter("l10n")("Cancel") }
 
-    }];
+                    ]
+                });
+            };
+
+            load();
+
+        }];
 })(Simple, IsraelHayom);
 
 

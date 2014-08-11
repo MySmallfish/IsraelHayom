@@ -154,45 +154,27 @@
      }
         ];
 
-
-        var categoryArticles = [{
-            Id: 0,
-            Title: "title0",
-            Brief: "bfdmj dfl lkgfdl klfks;le k sldkgl; k sdglkglfj o jhdfjkhd kjg dfhdfjksji ",
-            ImageUrl: "app/common/img/pic1.jpg"
-        }, {
-            Id: 1,
-            Title: "title1",
-            Brief: "bfdmj dfl lkgfdl klfks;le k sldkgl; k sdglkglfj o jhdfjkhd kjg dfhdfjksji ",
-            ImageUrl: "app/common/img/pic2.jpg"
-        }, {
-            Id: 2,
-            Title: "title2",
-            Brief: "bfdmj dfl lkgfdl klfks;le k sldkgl; k sdglkglfj o jhdfjkhd kjg dfhdfjksji ",
-            ImageUrl: "app/common/img/pic3.jpg"
-        }];
-
         var builtinCategories = [
-            { name: "auto", title: "רכב", iconCssClass: "fa fa-car"},
-            { name: "real estate", title: 'נדל"ן', iconCssClass: "fa fa-home"},
-            { rank: 3, name: "economy", title: "כלכלה", iconCssClass: "fa fa-car" },
-            { name: "caricatures", title: "קריקטורה", iconCssClass: "fa fa-car" },
-            { name: "books", title: "רכב", iconCssClass: "fa fa-car"},
-            { name: "crime", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "consumer news", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "culture", title: "רכב", iconCssClass: "fa fa-car" },
-            { rank:5, name: "education", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "environment", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "fashion", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "gossip", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "lifestyle", title: "רכב", iconCssClass: "fa fa-car" },
-            { name: "legal", title: "רכב", iconCssClass: "fa fa-car" },
-            { rank: 1, name: "news", title: "רכב", iconCssClass: "fa fa-car" },
-            { rank: 2, name: "ביטחוני", title: "ביטחוני", iconCssClass: "fa fa-car" },
-            { rank: 4, name: "ספורט", title: "ספורט", iconCssClass: "fa fa-car" },
+            { rank: 1, name: "auto", title: "רכב", iconCssClass: "ion-model-s" },
+            { rank: 2, name: "real estate", title: 'נדל"ן', iconCssClass: "fa fa-home" },
+            { rank: 3, name: "economy", title: "כלכלה", iconCssClass: "fa fa-usd" },
+            { rank: 4, name: "caricatures", title: "קריקטורת היום", iconCssClass: "ion-happy" },
+            { rank: 5, name: "ספרים", title: "ספרים", iconCssClass: "ion-android-book" },
+            { rank: 6, name: "crime", title: "פלילים", iconCssClass: "fa fa-cab" },
+            { rank: 7, name: "consumer news", title: "צרכנות", iconCssClass: "ion-ios7-cart" },
+            { rank: 8, name: "culture", title: "תרבות", iconCssClass: "fa fa-question-circle" },
+            { rank: 9, name: "education", title: "חינוך", iconCssClass: "fa fa-graduation-cap" },
+            { rank: 10, name: "environment", title: "רכב", iconCssClass: "fa fa-question-circle" },
+            { rank: 11, name: "fashion", title: "אופנה", iconCssClass: "ion-woman" },
+            { rank: 12, name: "gossip", title: "רכילות", iconCssClass: "ion-person-stalker" },
+            { rank: 13, name: "lifestyle", title: "לייף סטייל", iconCssClass: "fa fa-question-circle" },
+            { rank: 14, name: "legal", title: "משפט", iconCssClass: "fa fa-university" },
+            { rank: 15, name: "news", title: "חדשות", iconCssClass: "fa fa-question-circle" },
+            { rank: 16, name: "ביטחוני", title: "ביטחוני", iconCssClass: "fa fa-question-circle" },
+            { rank: 17, name: "travel", title: "טיולים", iconCssClass: "fa fa-question-circle" },
+            { rank: 18, name: "health and wellness", title: "בריאות וכושר", iconCssClass: "fa fa-question-circle" },
+            { rank: 19, name: "internet", title: "אינטרנט", iconCssClass: "fa fa-question-circle" }
         ];
-
-
 
         var articlesCache = {};
         function cacheArticle(article) {
@@ -207,7 +189,7 @@
         }
 
         function getMainArticles() {
-            return getTopRatedCategoryArticles(3,1);
+            return getTopRatedCategoryArticles(3, 1);
         }
 
         function getTopRatedCategoryArticles(upToRank, limit) {
@@ -232,15 +214,13 @@
         }
 
         function getRecentTitles() {
-            return getTopRatedCategoryArticles(5,5);
+            return getTopRatedCategoryArticles(5, 5);
         }
 
         function getArticle(articleId) {
             if (articlesCache[articleId]) {
-                console.log("if");
                 return $q.when(articlesCache[articleId]);
             } else {
-                console.log("else");
                 return contentApi.getArticle(articleId).then(cacheArticle);
             }
         }
@@ -256,24 +236,37 @@
 
 
         function getCategories() {
-            return contentApi.getCategories().then(function (categories) {
-                var keys = _.keys(categories);
-                var items = _.map(keys, function (key) {
-                    return {
-                        Id: categories[key].code,
-                        Title: key
-                    };
+            
+            //var categories = _.sortBy(builtinCategories, "rank");
 
-                });
-                return items;
-            });
+            //console.log("categories??", categories);
+            
+            var result = $q.defer();
+
+            result.resolve(_.sortBy(builtinCategories, "rank"));
+
+            return result.promise;
+
+            //return contentApi.getCategories().then(function (categories) {
+            //    var keys = _.keys(categories);
+            //    var items = _.map(keys, function (key) {
+            //        return {
+            //            Id: categories[key].code,
+            //            Title: key
+            //        };
+
+            //    });
+            //    return items;
+            //});
         }
+        
         function getNewsflash() {
             return contentApi.getNewsFlashItems().then(function (items) {
                 return _.map(items, function (item) {
                     var newsflashItem = {
                         Title: item.content.title,
-                        Date: moment(item.date.formatted, "dd/MM/yyyy").toDate()
+                        Date: new Date(item.date.timestamp * 1000),
+                        By: item
                     };
                     return newsflashItem;
                 });
@@ -285,7 +278,7 @@
             { title: "לא אהבו", value: 666 }
         ];
 
-        function getArticleRating() {
+        function getArticleRating(articleId) {
             return $q.when(articleRating);
         }
 
