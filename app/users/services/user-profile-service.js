@@ -2,7 +2,7 @@
 
     I.UserProfileService = ["$q", "storageService", function ($q, storageService) {
 
-        function saveUserProfile(userName, profile) {
+        function saveUserProfile(profile, userName) {
             var result;
 
             if (profile) {
@@ -29,7 +29,7 @@
             function getDefaultProfile() {
                 return $q.when(defaultProfile).then(function (item) {
                     profile = item;
-                    
+                    console.log("getDefaultProfile", profile);
                 });
             }
 
@@ -37,6 +37,7 @@
                 storageService.prefix("IsraelHayom").local("storedProfile")
                     .then(function (item) {
                         profile = _.defaults(item, profile);
+                        console.log("getStoredProfile", profile);
                     });
             }
 
@@ -44,16 +45,20 @@
                 storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName)
                     .then(function (item) {
                         profile = _.defaults(item, profile);
+                        console.log("getSpecificUserProfile", profile);
                     });
             }
 
             var profile = {};
 
-            getDefaultProfile()
-                .then(getStoredProfile)
-                .then(getSpecificUserProfile);
+            return getDefaultProfile()
+               .then(getStoredProfile)
+               //.then(getSpecificUserProfile)
+               .then(function () {
+                    console.log("PRO", profile);
+                    return profile;
+            });
 
-            return profile;
         }
 
         function removeProfile(userName) {

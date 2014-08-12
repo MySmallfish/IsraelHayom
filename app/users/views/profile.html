@@ -10,9 +10,12 @@
             <div class="item font-ruler">
                 <div class="range">
                     <div class="small-font">א</div>
-                    <input type="range" name="volume">
+                    <input type="range" name="volume" ng-model="data.fontSize">
                     <div class="large-font">א</div>
                 </div>
+                <button class="button button-light" ng-click="saveFontSize()">
+                    {{"Save"|l10n}}
+                </button>
             </div>
         </div>
 

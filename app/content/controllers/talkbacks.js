@@ -1,6 +1,6 @@
 ﻿(function (S, I) {
-    I.TalkbacksController = ["$scope", "$location", "$filter", "$routeParams", "popupService", "contentService",
-        function ($scope, $location, $filter, $routeParams, popupService, contentService) {
+    I.TalkbacksController = ["$scope", "$location", "$filter", "$routeParams", "popupService", "contentService", "userProfileService",
+        function ($scope, $location, $filter, $routeParams, popupService, contentService, userProfileService) {
             
             $scope.articleId = $routeParams.articleId;
 
@@ -11,6 +11,13 @@
 
                 contentService.getArticle($scope.articleId).then(function (item) {
                     $scope.article = item;
+                });
+
+                userProfileService.getUserProfile().then(function (item) {
+                    if (!$scope.data) {
+                        $scope.data = {};
+                    }
+                    $scope.data.fontSize = item.FontSize;
                 });
             }
 
@@ -29,8 +36,7 @@
                             text: $filter("l10n")("Save"),
                             type: 'button-positive',
                             onTap: function (e) {
-                                console.log("???", $scope.data.fontSize, e);
-                                return $scope.data.fontSize;
+                                userProfileService.saveUserProfile({ FontSize: $scope.data.fontSize });
                             }
                         }
                     ]

@@ -1,5 +1,20 @@
 ﻿(function (S, I) {
-    I.profileController = ["$scope", "$q", function ($scope, $q) {
+    I.profileController = ["$scope", "$q", "userProfileService", function ($scope, $q, userProfileService) {
+
+        userProfileService.getUserProfile().then(function (item) {
+            if (!$scope.data) {
+                $scope.data = {};
+            }
+            $scope.data.fontSize = item.FontSize;
+            console.log("talkbacks", item);
+        });
+
+        $scope.saveFontSize = function () {
+            userProfileService.saveUserProfile({ FontSize: $scope.data.fontSize })
+                .then(function (item) {
+                    console.log("!@#", item);
+                });
+        };
 
         $scope.categories = [{
             Id: 1,
@@ -9,7 +24,7 @@
             Id: 2,
             Name: "כלכלה",
             Icon: "icon fa fa-usd"
-            
+
         }, {
             Id: 3,
             Name: "הייטק",
