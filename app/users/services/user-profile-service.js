@@ -4,7 +4,7 @@
 
         function saveUserProfile(userName, profile) {
             var result;
-            
+
             if (profile) {
                 if (!userName) {
                     result = storageService.prefix("IsraelHayom").local("storedProfile", profile);
@@ -22,25 +22,44 @@
             RecentArticleLocation: 0
         };
 
-        function getUserProfile(userName) {
-            var result;
 
-            if (storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName)) {
-                result = storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName);
+
+        function getUserProfile(userName) {
+
+            function getDefaultProfile() {
+                return $q.when(defaultProfile).then(function (item) {
+                    profile = item;
+                    
+                });
             }
-            else if (storageService.prefix("IsraelHayom").local("storedProfile")) {
-                result = storageService.prefix("IsraelHayom").local("storedProfile");
+
+            function getStoredProfile() {
+                storageService.prefix("IsraelHayom").local("storedProfile")
+                    .then(function (item) {
+                        profile = _.defaults(item, profile);
+                    });
             }
-            else {
-                result = $q.when(defaultProfile);
+
+            function getSpecificUserProfile() {
+                storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName)
+                    .then(function (item) {
+                        profile = _.defaults(item, profile);
+                    });
             }
-            return result;
+
+            var profile = {};
+
+            getDefaultProfile()
+                .then(getStoredProfile)
+                .then(getSpecificUserProfile);
+
+            return profile;
         }
 
         function removeProfile(userName) {
-            
+
         }
-        
+
         return {
             saveUserProfile: saveUserProfile,
             getUserProfile: getUserProfile,

@@ -1,6 +1,7 @@
 (function (S, I) {
-    I.HomeController = ["$scope", "$q", "$location", "$timeout", "geoLocation", "contentService",
-        function ($scope, $q, $location, $timeout, geoLocation, contentService) {
+    I.HomeController = ["$scope", "$q", "$location", "$timeout", "geoLocation", "contentService", "userProfileService",
+        function ($scope, $q, $location, $timeout, geoLocation, contentService, userProfileService) {
+            userProfileService.getUserProfile();
 
             contentService.getApiNewsflash().then(function (items) {
                 $scope.newsflash = items;
