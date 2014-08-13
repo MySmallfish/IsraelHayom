@@ -1,6 +1,7 @@
 ﻿(function (S, I) {
     I.AllCategoriesPageController = ["$scope", "$q", "contentService", function ($scope, $q, contentService) {
 
+        
 
         function load() {
             contentService.getCategories().then(function (items) {

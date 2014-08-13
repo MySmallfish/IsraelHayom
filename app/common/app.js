@@ -35,6 +35,7 @@
 	app.directive("articleImage", I.ArticleImageDirective);
 	app.directive("shortcuts", I.ShortcutsDirective);
 	app.directive("menu", I.MenuDirective);
+	app.directive("scrollTracker", I.ScrollTracker);
 
 	
 	app.run(["$rootScope", "$filter", "$templateCache", function ($rootScope, $filter, $templateCache) {

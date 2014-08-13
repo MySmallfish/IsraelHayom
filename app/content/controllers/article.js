@@ -3,14 +3,14 @@
         "$scope",
         "$q",
         "$location",
+        "$timeout",
         "contentService",
         "userProfileManager",
         "popupService",
         "$routeParams",
         "$sanitize",
         "$sce",
-        function ($scope, $q, $location, contentService, userProfileManager, popupService, $routeParams, $sanitize, $sce) {
-
+        function ($scope, $q, $location, $timeout, contentService, userProfileManager, popupService, $routeParams, $sanitize, $sce) {
 
             function load() {
                 contentService.getArticle(articleId).then(function (item) {

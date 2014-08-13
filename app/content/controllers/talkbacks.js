@@ -19,7 +19,38 @@
                     }
                     $scope.data.fontSize = item.FontSize;
                 });
+                
+                contentService.getArticleRating(1).then(function (items) {
+                    $scope.articleRating = translate(items);
+
+                    $scope.ratersNumber = $scope.articleRating[0].value + $scope.articleRating[1].value;
+                });
             }
+            
+            function translate(items) {
+                return _.map(items, function (item) {
+                    var mappedItem = {
+                        title: item.title,
+                        value: item.value
+                    };
+                    return mappedItem;
+                });
+            }
+            
+            $scope.openRating = function () {
+                popupService.openPopup({
+                    templateUrl: 'app/content/views/rating.html',
+                    scope: $scope
+                });
+            };
+            
+            $scope.like = function () {
+                console.log("like");
+            };
+
+            $scope.unLike = function () {
+                console.log("unLike");
+            };
 
             $scope.openFontRuler = function () {
 

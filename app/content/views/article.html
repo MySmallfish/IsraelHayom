@@ -1,31 +1,30 @@
-﻿<div class="article">
-
-    <div class="">
-
-        <div class="user-rating" ng-click="openRating(article.Id)"><i class="fa fa-user"></i></div>
-
-        <div class="article-title">
-            <h1>{{article.Title}}</h1>
+﻿<scroll-tracker scroll-position="scrollPosition" wrapper-class="'article'">
+    
+    <div>
+        <div>
+            <div class="user-rating" ng-click="openRating(article.Id)"><i class="fa fa-user"></i></div>
+            <div class="article-title">
+                <h1>{{article.Title}}</h1>
+            </div>
         </div>
 
-    </div>
+        <div class="profile">
+            <span> {{article.Author.Name}} </span>
+            <span>{{article.Date | date:'MM/dd/yyyy  HH:mm'}} </span>
+        </div>
 
-    <div class="profile">
-        <span> {{article.Author.Name}} </span>
-        <span>{{article.Date | date:'MM/dd/yyyy  HH:mm'}} </span>
-    </div>
+        <div class="brief">
+            <b>{{article.Brief}}</b>
+        </div>
 
-    <div class="brief">
-        <b>{{article.Brief}}</b>
-    </div>
+        <div class="content">
+            <article-image ng-if="article.Images.length" image="article.Images[0]"></article-image>
+            <p ng-bind-html="article.Content"></p>
+            <article-image ng-if="article.Images.length>1" ng-repeat="image in article.Images" image="image"></article-image>
+        </div>
 
-    <div class="content">
-        <article-image ng-if="article.Images.length" image="article.Images[0]"></article-image>
-        <p ng-bind-html="article.Content"></p>
-        <article-image ng-if="article.Images.length>1" ng-repeat="image in article.Images" image="image"></article-image>
+        <div>
+            <a ng-href="#/Talkbacks/{{article.Id}}">{{"Talkbacks"|l10n}} </a>
+        </div>
     </div>
-
-    <div>
-        <a ng-href="#/Talkbacks/{{article.Id}}">{{"Talkbacks"|l10n}} </a>
-    </div>
-</div>
+</scroll-tracker>

@@ -5,7 +5,7 @@
         <span class="time"><b>{{newsflash[newsIndex].Date| date: 'HH:mm'}} </b></span>
         <span class="title">{{newsflash[newsIndex].Title}}</span>
     </div>
-
+    
     <div class="main-article"
         ng-swipe-left="back()" ng-swipe-right="next()"
         ng-repeat="article in mainArticles"
