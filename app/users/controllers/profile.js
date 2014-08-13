@@ -6,14 +6,10 @@
                 $scope.data = {};
             }
             $scope.data.fontSize = item.FontSize;
-            console.log("talkbacks", item);
         });
 
         $scope.saveFontSize = function () {
-            userProfileService.saveUserProfile({ FontSize: $scope.data.fontSize })
-                .then(function (item) {
-                    console.log("!@#", item);
-                });
+            userProfileService.saveUserProfile({ FontSize: $scope.data.fontSize });
         };
 
         $scope.categories = [{

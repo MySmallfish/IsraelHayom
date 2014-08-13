@@ -22,30 +22,29 @@
             RecentArticleLocation: 0
         };
 
-
-
         function getUserProfile(userName) {
 
             function getDefaultProfile() {
                 return $q.when(defaultProfile).then(function (item) {
                     profile = item;
-                    console.log("getDefaultProfile", profile);
                 });
             }
 
             function getStoredProfile() {
                 storageService.prefix("IsraelHayom").local("storedProfile")
                     .then(function (item) {
-                        profile = _.defaults(item, profile);
-                        console.log("getStoredProfile", profile);
+                        if (item) {
+                            profile = _.defaults(item, profile);
+                        }
                     });
             }
 
             function getSpecificUserProfile() {
                 storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName)
                     .then(function (item) {
-                        profile = _.defaults(item, profile);
-                        console.log("getSpecificUserProfile", profile);
+                        if (item && userName) {
+                            profile = _.defaults(item, profile);
+                        }
                     });
             }
 
@@ -53,9 +52,8 @@
 
             return getDefaultProfile()
                .then(getStoredProfile)
-               //.then(getSpecificUserProfile)
+               .then(getSpecificUserProfile)
                .then(function () {
-                    console.log("PRO", profile);
                     return profile;
             });
 

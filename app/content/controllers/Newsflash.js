@@ -5,7 +5,6 @@
         function load() {
             contentService.getApiNewsflash().then(function (items) {
                 $scope.newsflash = items;
-                console.log("!!!", $scope.newsflash);
             });
         }
 

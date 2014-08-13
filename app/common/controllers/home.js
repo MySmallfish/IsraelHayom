@@ -1,7 +1,10 @@
 (function (S, I) {
     I.HomeController = ["$scope", "$q", "$location", "$timeout", "geoLocation", "contentService", "userProfileService",
         function ($scope, $q, $location, $timeout, geoLocation, contentService, userProfileService) {
-            userProfileService.getUserProfile();
+
+            //userProfileService.saveUserProfile({FontSize:7, RecentArticleLocation:7}, "shir");
+
+            //userProfileService.getUserProfile();
 
             contentService.getApiNewsflash().then(function (items) {
                 $scope.newsflash = items;
@@ -23,7 +26,6 @@
                 if (pointIndex === $scope.articleIndex) {
                     result = true;
                 }
-
                 return result;
             };
 

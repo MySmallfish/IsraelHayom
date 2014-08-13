@@ -7,7 +7,6 @@
                 $scope.categories = _.map(items, function (item) {
                     return _.extend(item, { Url: "#/Category/" + encodeURIComponent(item.Title) });
                 });
-                console.log("111", $scope.categories);
             });
 
             //contentService.getTopRatedCategoryArticles().then(function (items) {
