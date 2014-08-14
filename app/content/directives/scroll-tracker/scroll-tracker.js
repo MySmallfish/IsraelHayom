@@ -1,6 +1,5 @@
 ﻿(function (S, I) {
-    I.ScrollTracker = [
-        function () {
+    I.ScrollTracker = ["userProfileService", function (userProfileService) {
             return {
                 restrict: 'E',
                 templateUrl: 'app/content/directives/scroll-tracker/scroll-tracker.html',
@@ -11,15 +10,19 @@
                 transclude: true,
                 link: function (scope, element) {
 
+                    scope.$watch("scrollPosition", function(newValue) {
+                        $("div.scrollable").animate({ scrollTop: scope.scrollPosition }, 'slow');
+                    });
+                    
+                    
+                    var throttled = _.throttle(onScroll, 500);
+                    $("div.scrollable").on('scroll', throttled);
                     
                     function onScroll() {
-                        console.log("scrolllll");
+                        var scrolled = $("div.scrollable").scrollTop();
+                        
+                        userProfileService.saveUserProfile({ RecentArticleLocation: scrolled });
                     };
-
-                    //var scrolled = $("div.scrollable").scrollTop();
-
-                    var scrolled = $("div.scrollable");
-                    scrolled.onscroll = onScroll;
 
                     
                 }

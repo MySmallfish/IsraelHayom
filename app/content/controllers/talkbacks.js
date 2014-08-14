@@ -38,7 +38,7 @@
             }
             
             $scope.openRating = function () {
-                popupService.openPopup({
+                $scope.ratingPopup = popupService.openPopup({
                     templateUrl: 'app/content/views/rating.html',
                     scope: $scope
                 });
@@ -46,10 +46,12 @@
             
             $scope.like = function () {
                 console.log("like");
+                $scope.ratingPopup.close();
             };
 
             $scope.unLike = function () {
                 console.log("unLike");
+                $scope.ratingPopup.close();
             };
 
             $scope.openFontRuler = function () {

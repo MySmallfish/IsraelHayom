@@ -7,9 +7,21 @@
 
             if (profile) {
                 if (!userName) {
-                    result = storageService.prefix("IsraelHayom").local("storedProfile", profile);
+                    storageService.prefix("IsraelHayom").local("storedProfile").then(function (item) {
+                        if (item) {
+                            profile = _.defaults(profile, item);
+                        }
+                        result = storageService.prefix("IsraelHayom").local("storedProfile", profile);
+                    });
+                    
                 } else {
-                    result = storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName, profile);
+                    storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName)
+                    .then(function (item) {
+                        if (item && userName) {
+                            profile = _.defaults(profile, item);
+                        }
+                        result = storageService.prefix("IsraelHayom").local("specificUserProfile::" + userName, profile);
+                    });
                 }
             }
             return result;
