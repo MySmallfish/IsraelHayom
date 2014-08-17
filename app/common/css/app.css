@@ -217,18 +217,23 @@ p
     text-align: justify;
 }
 
-.main-article .article-title h1, .talkbacks h1, .talkbacks-header h1, .rating-page h1
+.main-article
 {
-    font-weight: bold;
-    font-size: 13pt;
-    margin-bottom: 0;
+    border-bottom: 1px solid #ccc;
 }
 
-.main-article .article-title, .main-article .brief, .main-titles .title, .talkback
-{
-    padding-right: 5px;
-    padding-left: 5px;
-}
+    .main-article .article-title h1, .talkbacks h1, .talkbacks-header h1, .rating-page h1
+    {
+        font-weight: bold;
+        font-size: 13pt;
+        margin-bottom: 0;
+    }
+
+    .main-article .article-title, .main-article .brief, .main-titles .title, .talkback
+    {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
 
 .main-article-image
 {
@@ -486,11 +491,6 @@ p
     margin-top: 10px;
 }
 
-.scroll-content
-{
-    margin-top: 100px;
-}
-
 .profile-page .list-right-editing .item-right-editable .item-content,
 .profile-page .item-right-editing.item-right-editable .item-content
 {
@@ -506,7 +506,7 @@ p
 
 .scroll-content
 {
-    margin-top: 60px;
+    margin-top: 1px;
 }
 
 .item.menu-item
@@ -614,13 +614,6 @@ p.article-brief
     position: relative;
 }
 
-.article-image-title-back
-{
-    opacity: 0.75;
-    background-color: #444444;
-    height: 1.5em;
-}
-
 .article-image-credit
 {
     position: absolute;
@@ -635,16 +628,21 @@ p.article-brief
 .article-image-title,
 .article-image-title-back
 {
+    opacity: 0.75;
+    background-color: #444444;
     padding-right: 4px;
     position: absolute;
     bottom: 5px;
-    left: 0px;
+    left: 0;
     right: 0;
     color: white;
 }
 
+.article-image-title-text {
+    text-align: right;
+}
+
 .article-image-credit,
-.article-image-title-text,
 .main-article .brief
 {
     overflow: hidden;
@@ -700,3 +698,16 @@ p.article-brief
 {
     font-size: 20pt;
 }
+
+.main-titles .title:first-child
+{
+    border-top: none;
+}
+
+.font-size {
+    margin-bottom: 0;
+}
+
+.categories-list .item {
+    padding-right: 10px;
+} 
