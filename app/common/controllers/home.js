@@ -6,6 +6,12 @@
 
             //userProfileService.getUserProfile();
 
+            contentService.getCategories().then(function (items) {
+                $scope.categories = $filter('limitTo')(_.map(items, function (item) {
+                    return _.extend(item, { Url: "#/Category/" + encodeURIComponent(item.Title) });
+                }), 6);
+            });
+
             contentService.getApiNewsflash().then(function (items) {
                 $scope.newsflash = items;
             });

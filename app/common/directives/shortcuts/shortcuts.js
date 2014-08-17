@@ -6,7 +6,9 @@
                 restrict: 'E',
                 //replace: true,
                 templateUrl: 'app/common/directives/shortcuts/shortcuts.html',
-                scope: true,
+                scope: {
+                    categories: "="
+                },
                 link: function (scope) {
                     // bind clicks...            
                 }

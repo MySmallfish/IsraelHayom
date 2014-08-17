@@ -1,11 +1,10 @@
 ﻿(function (S, I) {
-    I.profileController = ["$scope", "$q", "userProfileService", "contentService", function ($scope, $q, userProfileService, contentService) {
+    I.profileController = ["$scope", "$q", "$filter", "userProfileService", "contentService", function ($scope, $q, $filter, userProfileService, contentService) {
 
         contentService.getCategories().then(function (items) {
-            $scope.categories = _.map(items, function (item) {
-                console.log("??", item);
+            $scope.categories = $filter('limitTo')(_.map(items, function (item) {
                 return _.extend(item, { Url: "#/Category/" + encodeURIComponent(item.Title) });
-            });
+            }), 6);
         });
 
         userProfileService.getUserProfile().then(function (item) {
