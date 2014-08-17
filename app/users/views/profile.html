@@ -28,9 +28,9 @@
 
                 <ion-item class="item item-icon-right" ng-repeat="category in categories" item="category">
                    
-                    <i class="{{category.Icon}}"></i>
+                    <i class="{{category.iconCssClass}}"></i>
                     <ion-reorder-button class="ion-navicon" on-reoder="moveItem(category, fromIndex, toIndex)"></ion-reorder-button>
-                    {{ category.Name }}
+                    {{ category.title }}
                 </ion-item>
 
             </ion-list>

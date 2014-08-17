@@ -155,7 +155,7 @@
         ];
 
         var builtinCategories = [
-            { rank: 1, name: "auto", title: "רכב", iconCssClass: "ion-model-s" },
+            { rank: 14, name: "auto", title: "רכב", iconCssClass: "ion-model-s" },
             { rank: 2, name: "real estate", title: 'נדל"ן', iconCssClass: "fa fa-home" },
             { rank: 3, name: "economy", title: "כלכלה", iconCssClass: "fa fa-usd" },
             { rank: 4, name: "caricatures", title: "קריקטורת היום", iconCssClass: "fa fa-smile-o" },
@@ -168,7 +168,7 @@
             { rank: 11, name: "gossip", title: "רכילות", iconCssClass: "ion-person-stalker" },
             { rank: 12, name: "lifestyle", title: "לייף סטייל", iconCssClass: "fa fa-glass" },
             { rank: 13, name: "legal", title: "משפט", iconCssClass: "fa fa-gavel" },
-            { rank: 14, name: "news", title: "חדשות", iconCssClass: "fa fa-question-circle" },
+            { rank: 1, name: "news", title: "חדשות", iconCssClass: "fa fa-question-circle" },
             { rank: 15, name: "ביטחוני", title: "ביטחוני", iconCssClass: "fa fa-question-circle" },
             { rank: 16, name: "travel", title: "טיולים", iconCssClass: "fa fa-globe" },
             { rank: 17, name: "health and wellness", title: "בריאות וכושר", iconCssClass: "fa fa-stethoscope" },
@@ -236,15 +236,15 @@
 
         function getCategories() {
             
-            //var categories = _.sortBy(builtinCategories, "rank");
-
-            //console.log("categories??", categories);
-            
             var result = $q.defer();
 
             result.resolve(_.sortBy(builtinCategories, "rank"));
 
             return result.promise;
+
+            //var categories = _.sortBy(builtinCategories, "rank");
+
+            //console.log("categories??", categories);
 
             //return contentApi.getCategories().then(function (categories) {
             //    var keys = _.keys(categories);

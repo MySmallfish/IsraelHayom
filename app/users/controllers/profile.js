@@ -1,5 +1,12 @@
 ﻿(function (S, I) {
-    I.profileController = ["$scope", "$q", "userProfileService", function ($scope, $q, userProfileService) {
+    I.profileController = ["$scope", "$q", "userProfileService", "contentService", function ($scope, $q, userProfileService, contentService) {
+
+        contentService.getCategories().then(function (items) {
+            $scope.categories = _.map(items, function (item) {
+                console.log("??", item);
+                return _.extend(item, { Url: "#/Category/" + encodeURIComponent(item.Title) });
+            });
+        });
 
         userProfileService.getUserProfile().then(function (item) {
             if (!$scope.data) {
@@ -12,32 +19,32 @@
             userProfileService.saveUserProfile({ FontSize: $scope.data.fontSize });
         };
 
-        $scope.categories = [{
-            Id: 1,
-            Name: 'נדל"ן',
-            Icon: "icon fa fa-home"
-        }, {
-            Id: 2,
-            Name: "כלכלה",
-            Icon: "icon fa fa-usd"
+        //$scope.categories = [{
+        //    Id: 1,
+        //    Name: 'נדל"ן',
+        //    Icon: "icon fa fa-home"
+        //}, {
+        //    Id: 2,
+        //    Name: "כלכלה",
+        //    Icon: "icon fa fa-usd"
 
-        }, {
-            Id: 3,
-            Name: "הייטק",
-            Icon: "icon ion-monitor"
-        }, {
-            Id: 4,
-            Name: "תקשורת",
-            Icon: "icon ion-ios7-telephone-outline"
-        }, {
-            Id: 5,
-            Name: "בעולם",
-            Icon: "icon ion-earth"
-        }, {
-            Id: 6,
-            Name: "סלבריקט",
-            Icon: "icon ion-person-stalker"
-        }];
+        //}, {
+        //    Id: 3,
+        //    Name: "הייטק",
+        //    Icon: "icon ion-monitor"
+        //}, {
+        //    Id: 4,
+        //    Name: "תקשורת",
+        //    Icon: "icon ion-ios7-telephone-outline"
+        //}, {
+        //    Id: 5,
+        //    Name: "בעולם",
+        //    Icon: "icon ion-earth"
+        //}, {
+        //    Id: 6,
+        //    Name: "סלבריקט",
+        //    Icon: "icon ion-person-stalker"
+        //}];
 
         $scope.reorderItem = function (item, fromIndex, toIndex) {
 

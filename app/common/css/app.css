@@ -269,20 +269,9 @@ p
         border-bottom: 1px solid #ccc;
     }
 
-.main-titles .title
-{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
 .main-titles
 {
-    position: absolute;
-    top: 292px;
-    right: 0;
-    left: 0;
-    bottom: 100px;
+    position: relative;
     overflow: auto;
     overflow-x: hidden;
 }
@@ -291,7 +280,15 @@ p
     {
         border-top: 1px solid #ccc;
         line-height: 32px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
+
+        .main-titles .title:first-child
+        {
+            border-top: none;
+        }
 
 .newsflash-item, .weather-item
 {
@@ -316,6 +313,9 @@ p
 .newsflash
 {
     font-size: 11pt;
+    position: relative;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
     .newsflash .row
@@ -638,7 +638,8 @@ p.article-brief
     color: white;
 }
 
-.article-image-title-text {
+.article-image-title-text
+{
     text-align: right;
 }
 
@@ -674,19 +675,19 @@ p.article-brief
     max-height: 160px;
 }
 
-.main-titles
-{
-    top: 245px;
-}
-
 }
 
 .newsflash-item, .newsflash-ticker
 {
     border-bottom: 1px solid #ccc;
-    overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.newsflash-item
+{
+    line-height: 32px;
 }
 
 .newsflash-ticker
@@ -699,15 +700,12 @@ p.article-brief
     font-size: 20pt;
 }
 
-.main-titles .title:first-child
+.font-size
 {
-    border-top: none;
-}
-
-.font-size {
     margin-bottom: 0;
 }
 
-.categories-list .item {
+.categories-list .item
+{
     padding-right: 10px;
-} 
+}
