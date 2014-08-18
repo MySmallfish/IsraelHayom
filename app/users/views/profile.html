@@ -28,7 +28,7 @@
 
                 <ion-item class="item item-icon-right" ng-repeat="category in categories" item="category">
                    
-                    <i class="{{category.iconCssClass}}"></i>
+                    <span class="profile-category-item {{category.backgroundCssClass}}"><i class="{{category.iconCssClass}}"></i></span>
                     <ion-reorder-button class="ion-navicon" on-reoder="moveItem(category, fromIndex, toIndex)"></ion-reorder-button>
                     {{ category.title }}
                 </ion-item>

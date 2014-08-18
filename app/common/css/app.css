@@ -18,21 +18,26 @@ div.shortcuts
     color: white;
 }
 
-    div.shortcuts a
+    div.shortcuts a, .profile-category-item
     {
         color: white;
     }
 
-.shortcuts-categories li
-{
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 30px;
-    width: 23%;
+    .shortcuts-categories li {
+        border: 1px solid #ccc;
+        width: 23%;
     text-align: center;
     vertical-align: text-top;
     height: 46px;
     display: inline-block;
+    }
+
+.shortcuts-categories li, .profile-category-item
+{
+    
+    border-radius: 5px;
+    font-size: 30px;
+    
 }
 
     .shortcuts-categories li:first-child
@@ -49,6 +54,14 @@ div.shortcuts
 .shortcuts-item
 {
     padding-top: 8px;
+}
+
+.profile-category-item {
+    height: 32px;
+width: 32px;
+display: inline-block;
+line-height: 32px;
+
 }
 
 .opinions
