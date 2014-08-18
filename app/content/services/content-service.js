@@ -84,7 +84,7 @@
         //        'אתמול הודיע ח"כ בנימין בן־אליעזר כי הוא פורש מההתמודדות בשל החקירה המשטרתית המתנהלת נגדו. בהודעה מיוחדת שפירסם בסוף השבוע אמר: "השבתי על כל מה שנשאלתי ואף התחייבתי לשוב ולגבות את דבריי במסמכים ובהוכחות. כל שקל ששולם לקניית הדירה שקוף וידוע. ב־24 השעות האחרונות חשבתי והתלבטתי האם להיכנע ולתת למי שעומד מאחורי הדבר הזה את מבוקשם? ויש גם מי שיגידו שהפרישה היא הודאה באשמה, דבר שאין בכוונתי לעשות. להפך, אין לי ספק כי בזמן הקרוב האמת תצא לאור. אלחם על כך שייבדקו כל השאלות החשובות: כמה זמן היה המידע בידי רשויות המדינה השונות? מדוע הוחלט להתחיל בחקירה דווקא עכשיו, ימים ספורים לפני סוף ההתמודדות, כאשר אני מתגורר בדירתי כבר למעלה משנה? כמי שנלחם כל חייו, אין בכוונתי להפסיק גם הפעם, עד שאביא לחקר האמת. ואולי המקרה הזה יוביל לחשבון נפש ולהפסקת התרבות הקלוקלת של, שהפכו חלק משיגרת חיינו והתנהלותנו כמדינה".',
         //    ImageUrl: "app/common/img/pic3.jpg"
         //};
-        
+
         var weather = [{
             city: "תל אביב",
             FromDegree: 15,
@@ -155,24 +155,24 @@
         ];
 
         var builtinCategories = [
-            { rank: 14, name: "auto", title: "רכב", iconCssClass: "ion-model-s" },
-            { rank: 2, name: "real estate", title: 'נדל"ן', iconCssClass: "fa fa-home" },
-            { rank: 3, name: "economy", title: "כלכלה", iconCssClass: "fa fa-usd" },
-            { rank: 4, name: "caricatures", title: "קריקטורת היום", iconCssClass: "fa fa-smile-o" },
-            { rank: 5, name: "ספרים", title: "ספרים", iconCssClass: "ion-android-book" },
-            { rank: 6, name: "crime", title: "פלילים", iconCssClass: "fa fa-link" },
-            { rank: 7, name: "consumer news", title: "צרכנות", iconCssClass: "ion-ios7-cart" },
-            { rank: 8, name: "culture", title: "תרבות", iconCssClass: "fa fa-question-circle" },
-            { rank: 9, name: "education", title: "חינוך", iconCssClass: "ion-ios7-glasses-outline" },
-            { rank: 10, name: "fashion", title: "אופנה", iconCssClass: "ion-woman" },
-            { rank: 11, name: "gossip", title: "רכילות", iconCssClass: "ion-person-stalker" },
-            { rank: 12, name: "lifestyle", title: "לייף סטייל", iconCssClass: "fa fa-glass" },
-            { rank: 13, name: "legal", title: "משפט", iconCssClass: "fa fa-gavel" },
-            { rank: 1, name: "news", title: "חדשות", iconCssClass: "fa fa-question-circle" },
-            { rank: 15, name: "ביטחוני", title: "ביטחוני", iconCssClass: "fa fa-question-circle" },
-            { rank: 16, name: "travel", title: "טיולים", iconCssClass: "fa fa-globe" },
-            { rank: 17, name: "health and wellness", title: "בריאות וכושר", iconCssClass: "fa fa-stethoscope" },
-            { rank: 18, name: "internet", title: "אינטרנט", iconCssClass: "fa fa-laptop" }
+            { rank: 14, name: "auto", title: "רכב", iconCssClass: "ion-model-s", backgroundCssClass: "auto" },
+            { rank: 17, name: "real estate", title: 'נדל"ן', iconCssClass: "fa fa-home", backgroundCssClass: "real-estate" },
+            { rank: 3, name: "economy", title: "כלכלה", iconCssClass: "fa fa-usd", backgroundCssClass: "economy" },
+            { rank: 4, name: "caricatures", title: "קריקטורת היום", iconCssClass: "fa fa-smile-o", backgroundCssClass: "caricatures" },
+            { rank: 5, name: "ספרים", title: "ספרים", iconCssClass: "ion-android-book", backgroundCssClass: "books" },
+            { rank: 6, name: "crime", title: "פלילים", iconCssClass: "fa fa-link", backgroundCssClass: "crime" },
+            { rank: 7, name: "consumer news", title: "צרכנות", iconCssClass: "ion-ios7-cart", backgroundCssClass: "consumer-news" },
+            { rank: 8, name: "culture", title: "תרבות", iconCssClass: "fa fa-question-circle", backgroundCssClass: "culture" },
+            { rank: 9, name: "education", title: "חינוך", iconCssClass: "ion-ios7-glasses-outline", backgroundCssClass: "education" },
+            { rank: 10, name: "fashion", title: "אופנה", iconCssClass: "ion-woman", backgroundCssClass: "fashion" },
+            { rank: 11, name: "gossip", title: "רכילות", iconCssClass: "ion-person-stalker", backgroundCssClass: "gossip" },
+            { rank: 12, name: "lifestyle", title: "לייף סטייל", iconCssClass: "fa fa-glass", backgroundCssClass: "lifestyle" },
+            { rank: 13, name: "legal", title: "משפט", iconCssClass: "fa fa-gavel", backgroundCssClass: "legal" },
+            { rank: 2, name: "news", title: "חדשות", iconCssClass: "fa fa-question-circle", backgroundCssClass: "news" },
+            { rank: 15, name: "ביטחוני", title: "ביטחוני", iconCssClass: "fa fa-question-circle", backgroundCssClass: "security" },
+            { rank: 16, name: "travel", title: "טיולים", iconCssClass: "fa fa-globe", backgroundCssClass: "travel" },
+            { rank: 1, name: "health and wellness", title: "בריאות וכושר", iconCssClass: "fa fa-stethoscope", backgroundCssClass: "health-and-wellness" },
+            { rank: 18, name: "internet", title: "אינטרנט", iconCssClass: "fa fa-laptop", backgroundCssClass: "internet" }
         ];
 
         var articlesCache = {};
@@ -235,30 +235,40 @@
 
 
         function getCategories() {
+
+            //var result = $q.defer();
+            //result.resolve(_.sortBy(builtinCategories, "rank"));
+            //return result.promise;
+
+
+            builtinCategories = _.sortBy(builtinCategories, "rank");
+
+            var categories = _.map(builtinCategories, function (builtinCategory) {
+                return {
+                    name: builtinCategory.name,
+                    title: builtinCategory.title,
+                    rank: builtinCategory.rank,
+                    iconCssClass: builtinCategory.iconCssClass,
+                    backgroundCssClass: builtinCategory.backgroundCssClass
+                };
+            });
             
-            var result = $q.defer();
-
-            result.resolve(_.sortBy(builtinCategories, "rank"));
-
-            return result.promise;
-
-            //var categories = _.sortBy(builtinCategories, "rank");
-
-            //console.log("categories??", categories);
+            return $q.when(categories);
 
             //return contentApi.getCategories().then(function (categories) {
             //    var keys = _.keys(categories);
             //    var items = _.map(keys, function (key) {
+            //        console.log("!!", categories[key]);
             //        return {
             //            Id: categories[key].code,
             //            Title: key
             //        };
-
             //    });
+            //    console.log("categories??", items);
             //    return items;
             //});
         }
-        
+
         function getNewsflash() {
             return contentApi.getNewsFlashItems().then(function (items) {
                 return _.map(items, function (item) {

@@ -1,6 +1,6 @@
 (function (S, I) {
-    I.HomeController = ["$scope", "$q", "$location", "$timeout", "geoLocation", "contentService", "userProfileService",
-        function ($scope, $q, $location, $timeout, geoLocation, contentService, userProfileService) {
+    I.HomeController = ["$scope", "$q", "$location", "$filter","$timeout", "geoLocation", "contentService", "userProfileService",
+        function ($scope, $q, $location, $filter, $timeout, geoLocation, contentService, userProfileService) {
 
             //userProfileService.saveUserProfile({FontSize:7, RecentArticleLocation:7}, "shir");
 
@@ -8,7 +8,7 @@
 
             contentService.getCategories().then(function (items) {
                 $scope.categories = $filter('limitTo')(_.map(items, function (item) {
-                    return _.extend(item, { Url: "#/Category/" + encodeURIComponent(item.Title) });
+                    return _.extend(item, { Url: "#/Category/" + encodeURIComponent(item.name) });
                 }), 6);
             });
 

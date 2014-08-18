@@ -2,9 +2,7 @@
     I.profileController = ["$scope", "$q", "$filter", "userProfileService", "contentService", function ($scope, $q, $filter, userProfileService, contentService) {
 
         contentService.getCategories().then(function (items) {
-            $scope.categories = $filter('limitTo')(_.map(items, function (item) {
-                return _.extend(item, { Url: "#/Category/" + encodeURIComponent(item.Title) });
-            }), 6);
+            $scope.categories = items;
         });
 
         userProfileService.getUserProfile().then(function (item) {
@@ -46,7 +44,6 @@
         //}];
 
         $scope.reorderItem = function (item, fromIndex, toIndex) {
-
             $scope.categories.splice(fromIndex, 1);
             $scope.categories.splice(toIndex, 0, item);
         };

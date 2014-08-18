@@ -10,7 +10,8 @@
                     categories: "="
                 },
                 link: function (scope) {
-                    // bind clicks...            
+                    // bind clicks...  
+                    console.log("shorts", scope.categories);
                 }
             };
         }];

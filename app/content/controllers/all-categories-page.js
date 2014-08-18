@@ -4,7 +4,7 @@
         function load() {
             contentService.getCategories().then(function (items) {
                 $scope.categories = _.map(items, function (item) {
-                    return _.extend(item, { Url: "#/Category/" + encodeURIComponent(item.Title) });
+                    return _.extend(item, { Url: "#/Category/" + encodeURIComponent(item.name) });
                 });
             });
         }
