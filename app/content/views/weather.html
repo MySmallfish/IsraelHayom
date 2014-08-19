@@ -1,7 +1,7 @@
 ﻿
 <div class="row weather-item" ng-repeat="item in weather">
     <div class="col col-50">{{item.city}}</div>
-    <div class="col col-20"><i class="fa fa-cloud"></i></div>
-    <div class="col">{{item.ToDegree}}° - {{item.FromDegree}}°</div>
+    <div class="col col-20"><img src="{{item.weather[0].icon_url}}"></img></div>
+    <div class="col">{{item.weather[0].high}}° - {{item.weather[0].low}}°</div>
 </div>
 

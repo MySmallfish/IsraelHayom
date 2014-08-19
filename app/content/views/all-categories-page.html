@@ -4,7 +4,7 @@
     
     <a class="item item-icon-right" ng-repeat="category in categories" ng-href="{{category.Url}}">
         <div class="row">
-            <div class="col col-25 category-icon">
+            <div class="col col-25 category-icon {{category.backgroundCssClass}}">
                 <i class="{{category.iconCssClass}}"></i>
             </div>
             <div class="col col-75">

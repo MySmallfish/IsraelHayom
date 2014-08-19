@@ -33,7 +33,7 @@ div.shortcuts
     display: inline-block;
 }
 
-.shortcuts-categories li, .profile-category-item
+.shortcuts-categories li, .profile-category-item, .category-icon
 {
     border-radius: 5px;
     font-size: 30px;
@@ -57,10 +57,11 @@ div.shortcuts
 
 .profile-category-item
 {
-    height: 32px;
-    width: 32px;
+    height: 35px;
+    width: 35px;
     display: inline-block;
-    line-height: 32px;
+    line-height: 38px;
+    text-align: center;
 }
 
 .opinions
@@ -772,6 +773,8 @@ p.article-brief
 .category-icon
 {
     font-size: 20pt;
+    height: 35px;
+    max-width: 35px;
 }
 
 .font-size
@@ -782,4 +785,10 @@ p.article-brief
 .categories-list .item
 {
     padding-right: 10px;
+}
+
+.weather-item img
+{
+    max-height: 30px;
+    vertical-align: text-bottom;
 }

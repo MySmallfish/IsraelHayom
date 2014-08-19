@@ -81,10 +81,20 @@
             });
         }
         
+        function mapWeather(items) {
+            return _.map(items, function (item) {
+                var mappeItem = {
+                    city: item.city,
+                    weather: item.weather
+                };
+                return mappeItem;
+            });
+        }
+        
         function getWeather(weekly) {
             return run("content/weather/" + (weekly ? "week" : "day")).then(function(results) {
                 return results.data;
-            });
+            }).then(mapWeather);
         }
         
         function getCategories() {

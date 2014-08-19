@@ -15,6 +15,7 @@
     app.service("userProfileManager", I.UserProfileManager);
     app.service("userProfileService", I.UserProfileService);
     app.service("contentApi", I.ContentApiService);
+    app.service("weatherService", I.WeatherService);
 
 
 	app.controller("AppCtrl", I.AppController);
