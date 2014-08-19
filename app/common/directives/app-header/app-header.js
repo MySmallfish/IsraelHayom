@@ -27,8 +27,8 @@
                         });
                     };
 
-                    $scope.openWeather = function () {
-                        $location.path("/Weather");
+                    $scope.goBack = function() {
+                        history.back();
                     };
 
                     $scope.openNewsflash = function () {

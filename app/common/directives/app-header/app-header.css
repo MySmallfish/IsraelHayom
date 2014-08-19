@@ -76,7 +76,6 @@
 {
     position: absolute;
     top: 6px;
-    right: 10px;
 }
 
     .mark .fa-exclamation, .weather
@@ -84,7 +83,13 @@
         font-size: 33pt;
     }
 
-.message .fa-envelope-o
+.back-button
+{
+    font-size: 30pt;
+    margin-left: 10px;
+}
+
+.fa-envelope-o
 {
     font-size: 40px;
 }
