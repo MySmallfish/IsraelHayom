@@ -32,7 +32,7 @@
 <div class="talkbacks">
     <div class="talkback" ng-repeat="talkback in talkbacks">
 
-        <span class="talkback-number">{{talkback.Number}} </span>
+        <span class="talkback-number">{{$index+1}} </span>
         <span class="talkback-title">{{talkback.Title}} <span ng-show="talkback.Text === ''">(ל"ת)</span></span>
 
         <div class="talkback-text">{{talkback.Text}}</div>

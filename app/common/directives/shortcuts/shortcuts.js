@@ -11,7 +11,6 @@
                 },
                 link: function (scope) {
                     // bind clicks...  
-                    console.log("shorts", scope.categories);
                 }
             };
         }];

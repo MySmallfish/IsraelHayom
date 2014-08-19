@@ -7,7 +7,8 @@
             getCategories: getCategories,
             getCategoryArticles: getCategoryArticles,
             getWeather: getWeather,
-            getArticle: getArticle
+            getArticle: getArticle,
+            getComments: getComments
         };
 
 
@@ -60,14 +61,13 @@
             };
             return mappedArticles;
         }
+        
         function filterArticle(article) { return article.content; }
 
         function mapArticles(articles) {
             return _.map(_.filter(articles, filterArticle), mapArticle);
         }
-
-
-
+        
         function getCategoryArticles(categoryId, limit) {
             return run("category/" + categoryId, {limit: limit}).then(function (results) {
                 return results.data;
@@ -80,20 +80,41 @@
                 return results.data;
             });
         }
+        
         function getWeather(weekly) {
             return run("content/weather/" + (weekly ? "week" : "day")).then(function(results) {
                 return results.data;
             });
         }
+        
         function getCategories() {
             return run("category").then(function(results) {
                 return results.data;
             });
         }
+        
         function getArticle(articleId) {
             return run("content/article/" + articleId).then(function(results) {
                 return results.data;
             }).then(mapArticle);
+        }
+        
+        function mapComments(comments) {
+            return _.map(comments.comments, function (comment) {
+                var mappedComment = {
+                    Title: comment.subject,
+                    Text: comment.body,
+                    Name: comment.author.name,
+                    Date: new Date(comment.date.timestamp * 1000)
+                };
+                return mappedComment;
+            });
+        }
+
+        function getComments(articleId) {
+            return run("comment/" + articleId).then(function(results) {
+                return results.data;
+            }).then(mapComments);
         }
 
     }];

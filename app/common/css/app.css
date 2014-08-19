@@ -23,21 +23,20 @@ div.shortcuts
         color: white;
     }
 
-    .shortcuts-categories li {
-        border: 1px solid #ccc;
-        width: 23%;
+.shortcuts-categories li
+{
+    border: 1px solid #ccc;
+    width: 23%;
     text-align: center;
     vertical-align: text-top;
     height: 46px;
     display: inline-block;
-    }
+}
 
 .shortcuts-categories li, .profile-category-item
 {
-    
     border-radius: 5px;
     font-size: 30px;
-    
 }
 
     .shortcuts-categories li:first-child
@@ -56,12 +55,12 @@ div.shortcuts
     padding-top: 8px;
 }
 
-.profile-category-item {
+.profile-category-item
+{
     height: 32px;
-width: 32px;
-display: inline-block;
-line-height: 32px;
-
+    width: 32px;
+    display: inline-block;
+    line-height: 32px;
 }
 
 .opinions
@@ -99,62 +98,62 @@ line-height: 32px;
     background-color: crimson;
 }
 
-.consumer-news 
+.consumer-news
 {
     background-color: aquamarine;
 }
 
-.culture 
+.culture
 {
     background-color: darkkhaki;
 }
 
-.education 
+.education
 {
     background-color: gray;
 }
 
-.fashion 
+.fashion
 {
     background-color: hotpink;
 }
 
-.gossip 
+.gossip
 {
     background-color: cadetblue;
 }
 
-.lifestyle 
+.lifestyle
 {
     background-color: lightcoral;
 }
 
-.legal 
+.legal
 {
     background-color: lightskyblue;
 }
 
-.news 
+.news
 {
     background-color: darkorange;
 }
 
-.security 
+.security
 {
     background-color: goldenrod;
 }
 
-.travel 
+.travel
 {
     background-color: darkseagreen;
 }
 
-.health-and-wellness 
+.health-and-wellness
 {
     background-color: darkslateblue;
 }
 
-.internet 
+.internet
 {
     background-color: lightseagreen;
 }
@@ -508,6 +507,10 @@ p
 .talkback-text
 {
     font-size: 11pt;
+    /*max-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;*/
 }
 
 .talkback-name, .talkback-date

@@ -252,7 +252,7 @@
                     backgroundCssClass: builtinCategory.backgroundCssClass
                 };
             });
-            
+
             return $q.when(categories);
 
             //return contentApi.getCategories().then(function (categories) {
@@ -292,12 +292,11 @@
         }
 
         function getTalkbacks(articleId) {
+            return contentApi.getComments(articleId);
 
-            var result = $q.defer();
-
-            result.resolve(apiTalkbacks);
-
-            return result.promise;
+            //var result = $q.defer();
+            //result.resolve(apiTalkbacks);
+            //return result.promise;
         }
 
         function getCategoryArticles(categoryId, limit) {
