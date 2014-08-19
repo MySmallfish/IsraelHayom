@@ -792,3 +792,9 @@ p.article-brief
     max-height: 30px;
     vertical-align: text-bottom;
 }
+
+.article
+{
+    padding-right: 5px;
+    padding-left: 5px;
+}
