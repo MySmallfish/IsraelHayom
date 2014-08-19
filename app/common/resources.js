@@ -23,7 +23,25 @@
             "Talkbacks": "תגובות",
             "BackToArticle": "חזרה לכתבה",
             "Raters": "מדרגים",
-            "Save": "שמור"
+            "Save": "שמור",
+            "auto": "רכב",
+            "real estate": 'נדל"ן',
+            "economy": "כלכלה",
+            "caricatures": "קריקטורת היום",
+            "books": "ספרים",
+            "crime": "פלילים",
+            "consumer news": "צרכנות",
+            "culture": "תרבות",
+            "education": "חינוך",
+            "fashion": "אופנה",
+            "gossip": "רכילות",
+            "lifestyle": "לייף סטייל",
+            "legal": "משפט",
+            "news": "חדשות",
+            "travel": "טיולים",
+            "health and wellness": "בריאות וכושר",
+            "internet": "אינטרנט",
+            
         });
     });
 
