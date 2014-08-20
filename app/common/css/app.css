@@ -197,12 +197,6 @@ img
     border: 1px solid #ccc;
 }
 
-/*.main-article img
-{
-    max-width: 300px;
-    max-height: 100px;
-}*/
-
 .main-article .article-image img
 {
     max-height: 200px;
@@ -806,4 +800,12 @@ p.article-brief
 {
     position: absolute;
     top: 7px;
+}
+
+@media (min-width: 720px)
+{
+    .main-article .article-image img
+    {
+        max-height: 200px;
+    }
 }
