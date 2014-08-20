@@ -7,7 +7,8 @@
     <div class="logo"></div>
 
     <div class="back-button" ng-click="goBack()"><i class="fa fa-arrow-right"></i></div>
-    <div class="mark" ng-click="openMenu()"><i class="fa fa-exclamation"></i></div>
+    <div class="home-button"><a ng-href="#"><i class="fa fa-home"></i></a></div>
+    
     
     
     <div class="info" ng-click="openWeather()">
@@ -17,8 +18,8 @@
     </div>
 
     <div class="weather" ng-click="openWeather()">20°</div>
-    <div class="home-button"><a ng-href="#"><i class="fa fa-home"></i></a></div>
-
+    
+    <div class="mark" ng-click="openMenu()"><i class="fa fa-exclamation"></i></div>
 
     <div class="header-button header-back fa fa-3x fa-arrow-right" ng-show="commands.back" simple-back></div>
     <div class="title" ng-class="{'short': !commands.back }">{{header}}</div>

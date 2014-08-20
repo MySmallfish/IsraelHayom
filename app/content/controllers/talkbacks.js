@@ -89,11 +89,8 @@
                             onTap: function (e) {
                                 
                             }
-                            
                         },
-                      { text: $filter("l10n")("Cancel") }
-
-                    ]
+                      { text: $filter("l10n")("Cancel") }]
                 });
             };
 

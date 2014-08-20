@@ -2,6 +2,7 @@
     I.ArticleController = [
         "$scope",
         "$q",
+        "$filter",
         "$location",
         "$timeout",
         "contentService",
@@ -11,7 +12,7 @@
         "$routeParams",
         "$sanitize",
         "$sce",
-        function ($scope, $q, $location, $timeout, contentService, userProfileManager, userProfileService, popupService, $routeParams, $sanitize, $sce) {
+        function ($scope, $q, $filter, $location, $timeout, contentService, userProfileManager, userProfileService, popupService, $routeParams, $sanitize, $sce) {
 
             function load() {
                 userProfileService.getUserProfile().then(function (item) {
@@ -61,6 +62,46 @@
                 $scope.ratingPopup = popupService.openPopup({
                     templateUrl: 'app/content/views/rating.html',
                     scope: $scope
+                });
+            };
+            
+            $scope.openFontRuler = function () {
+
+                if (!$scope.data) {
+                    $scope.data = {};
+                }
+
+                popupService.openPopup({
+                    templateUrl: 'app/users/views/font-ruler.html',
+                    scope: $scope,
+                    buttons: [
+                        { text: $filter("l10n")("Cancel") },
+                        {
+                            text: $filter("l10n")("Save"),
+                            type: 'button-positive',
+                            onTap: function (e) {
+                                userProfileService.saveUserProfile({ FontSize: $scope.data.fontSize });
+                            }
+                        }
+                    ]
+                });
+            };
+
+            $scope.newTalkback = function () {
+
+                popupService.openPopup({
+                    templateUrl: 'app/content/views/new-talkback.html',
+                    title: 'תגובה חדשה',
+                    scope: $scope,
+                    buttons: [
+                        {
+                            text: $filter("l10n")("Send"),
+                            type: 'button-positive',
+                            onTap: function (e) {
+
+                            }
+                        },
+                      { text: $filter("l10n")("Cancel") }]
                 });
             };
 

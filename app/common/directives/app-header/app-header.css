@@ -74,8 +74,9 @@
 
 .mark
 {
-    position: absolute;
     top: 6px;
+    position: absolute;
+    left: 15px;
 }
 
     .mark .fa-exclamation, .weather
@@ -87,11 +88,6 @@
 {
     font-size: 30pt;
     margin-left: 10px;
-}
-
-.fa-envelope-o
-{
-    font-size: 40px;
 }
 
 .message, .info
@@ -112,7 +108,5 @@ header > div
 
 header .home-button
 {
-    position: absolute;
     font-size: 35pt;
-    left: 5px;
 }

@@ -169,9 +169,9 @@
             { rank: 12, name: "lifestyle", title: "לייף סטייל", iconCssClass: "fa fa-glass", backgroundCssClass: "lifestyle" },
             { rank: 13, name: "legal", title: "משפט", iconCssClass: "fa fa-gavel", backgroundCssClass: "legal" },
             { rank: 2, name: "news", title: "חדשות", iconCssClass: "fa fa-question-circle", backgroundCssClass: "news" },
-            { rank: 15, name: "ביטחוני", title: "ביטחוני", iconCssClass: "fa fa-question-circle", backgroundCssClass: "security" },
+            { rank: 1, name: "ביטחוני", title: "ביטחוני", iconCssClass: "fa fa-question-circle", backgroundCssClass: "security" },
             { rank: 16, name: "travel", title: "טיולים", iconCssClass: "fa fa-globe", backgroundCssClass: "travel" },
-            { rank: 1, name: "health and wellness", title: "בריאות וכושר", iconCssClass: "fa fa-stethoscope", backgroundCssClass: "health-and-wellness" },
+            { rank: 15, name: "health and wellness", title: "בריאות וכושר", iconCssClass: "fa fa-stethoscope", backgroundCssClass: "health-and-wellness" },
             { rank: 18, name: "internet", title: "אינטרנט", iconCssClass: "fa fa-laptop", backgroundCssClass: "internet" }
         ];
 

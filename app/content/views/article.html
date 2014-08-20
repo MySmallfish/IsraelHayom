@@ -16,6 +16,14 @@
         <div class="brief">
             <b>{{article.Brief}}</b>
         </div>
+        
+        <div class="row talkbacks-ruler">
+            <div class="col"><a ng-href="#/Talkbacks/{{article.Id}}"></a><i class="fa fa-plus-square"></i></div>
+        <div class="col" ng-click="openFontRuler()">Aa</div>
+        <div class="col"><a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=#url"><i class="fa fa-facebook-square"></i></a></div>
+        <div class="col"><a target="_blank" href="https://twitter.com/share"><i class="fa fa-twitter-square"></i></a></div>
+        <div class="col"><a target="_blank" href="mailto:shirdidi88@gmail.com"><i class="fa fa-envelope-o"></i></a></div>
+    </div>
 
         <div class="content">
             <article-image ng-if="article.Images.length" image="article.Images[0]"></article-image>

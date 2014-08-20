@@ -792,10 +792,17 @@ p.article-brief
 {
     max-height: 30px;
     vertical-align: text-bottom;
+    border: none;
 }
 
 .article
 {
     padding-right: 5px;
     padding-left: 5px;
+}
+
+.talkbacks-ruler .fa-envelope-o
+{
+    position: absolute;
+    top: 7px;
 }
