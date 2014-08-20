@@ -10,7 +10,7 @@
             <div class="item font-ruler">
                 <div class="range">
                     <div class="small-font">א</div>
-                    <input type="range" name="volume" ng-model="data.fontSize">
+                    <input type="range" name="volume" min="10" max="20" ng-model="data.fontSize">
                     <div class="large-font">א</div>
                 </div>
                 <button class="button button-light" ng-click="saveFontSize()">
@@ -29,7 +29,7 @@
                 <ion-item class="item item-icon-right" ng-repeat="category in categories" item="category">
                    
                     <span class="profile-category-item {{category.backgroundCssClass}}"><i class="{{category.iconCssClass}}"></i></span>
-                    <ion-reorder-button class="ion-navicon" on-reoder="moveItem(category, fromIndex, toIndex)"></ion-reorder-button>
+                    <ion-reorder-button class="ion-navicon" on-reorder="moveItem(category, $fromIndex, $toIndex)"></ion-reorder-button>
                     {{ category.title }}
                 </ion-item>
 

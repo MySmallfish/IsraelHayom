@@ -42,7 +42,7 @@
 
         var defaultProfile = {
             FontSize: 12,
-            PreferredCategories: [],
+            PreferredCategories: {},
             RecentArticle: null,
             RecentArticleLocation: 0
         };

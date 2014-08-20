@@ -25,7 +25,7 @@
         <div class="col"><a target="_blank" href="mailto:shirdidi88@gmail.com"><i class="fa fa-envelope-o"></i></a></div>
     </div>
 
-        <div class="content">
+        <div class="content" ng-style="{'font-size': fontSize + 'pt'}">
             <article-image ng-if="article.Images.length" image="article.Images[0]"></article-image>
             <p ng-bind-html="article.Content"></p>
             <article-image ng-if="article.Images.length>1" ng-repeat="image in article.Images" image="image"></article-image>

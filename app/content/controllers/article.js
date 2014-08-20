@@ -16,6 +16,8 @@
 
             function load() {
                 userProfileService.getUserProfile().then(function (item) {
+                    $scope.fontSize = item.FontSize;
+                    
                     if (item.RecentArticle == articleId) {
                         $scope.scrollPosition = item.RecentArticleLocation;
                     }
@@ -81,6 +83,7 @@
                             type: 'button-positive',
                             onTap: function (e) {
                                 userProfileService.saveUserProfile({ FontSize: $scope.data.fontSize });
+                                load();
                             }
                         }
                     ]
