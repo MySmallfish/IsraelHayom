@@ -1,21 +1,52 @@
 (function (S, I) {
-    I.HomeController = ["$scope", "$q", "$location", "$filter","$timeout", "geoLocation", "contentService", "userProfileService",
+    I.HomeController = ["$scope", "$q", "$location", "$filter", "$timeout", "geoLocation", "contentService", "userProfileService",
         function ($scope, $q, $location, $filter, $timeout, geoLocation, contentService, userProfileService) {
 
             //userProfileService.saveUserProfile({FontSize:7, RecentArticleLocation:7}, "shir");
 
-            //userProfileService.getUserProfile();
 
-            contentService.getCategories().then(function (items) {
-                $scope.categories = $filter('limitTo')(_.map(items, function (item) {
-                    return _.extend(item, { Url: "#/Category/" + encodeURIComponent(item.name) });
-                }), 6);
-            });
+            function load() {
 
-            contentService.getApiNewsflash().then(function (items) {
-                $scope.newsflash = items;
-            });
-            
+                userProfileService.getUserProfile().then(function (item) {
+                    var firstEntryIndicator = userProfileService.getFirstEntryIndicator();
+                    if (firstEntryIndicator) {
+                        if (item.RecentArticle) {
+                            var id = parseInt(item.RecentArticle);
+                            $location.path("/Article/" + id);
+                        }
+                    } else {
+                        userProfileService.saveUserProfile({ RecentArticle: null, RecentArticleLocation: 0 });
+                    }
+                });
+
+                contentService.getMainArticles().then(function (items) {
+                    $scope.mainArticles = items;
+                    $scope.articleIndex = 0;
+                    $scope.selectedArticle = $scope.mainArticles[$scope.articleIndex];
+                    $scope.points = _.range($scope.mainArticles.length);
+                });
+
+                contentService.getRecentTitles().then(function (items) {
+                    $scope.recentTitles = items;
+                });
+
+                geoLocation.get().then(function (items) {
+                    $scope.weatherLocation = items;
+                });
+
+                contentService.getCategories().then(function (items) {
+                    $scope.categories = $filter('limitTo')(_.map(items, function (item) {
+                        return _.extend(item, { Url: "#/Category/" + encodeURIComponent(item.name) });
+                    }), 6);
+                });
+
+                contentService.getApiNewsflash().then(function (items) {
+                    $scope.newsflash = items;
+                });
+
+            }
+
+
             $scope.newsIndex = 0;
             $scope.newsCount = 10;
 
@@ -68,24 +99,7 @@
                 $location.path("/Article/" + article.Id);
             };
 
-            function load() {
 
-                contentService.getMainArticles().then(function (items) {
-                    $scope.mainArticles = items;
-                    $scope.articleIndex = 0;
-                    $scope.selectedArticle = $scope.mainArticles[$scope.articleIndex];
-                    $scope.points = _.range($scope.mainArticles.length);
-                });
-
-                contentService.getRecentTitles().then(function (items) {
-                    $scope.recentTitles = items;
-                });
-
-                geoLocation.get().then(function (items) {
-                    $scope.weatherLocation = items;
-                });
-
-            }
 
             load();
 

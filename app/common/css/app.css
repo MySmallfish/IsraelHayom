@@ -687,6 +687,7 @@ p.article-brief
 .article-image
 {
     position: relative;
+    text-align: center;
 }
 
 .article-image-credit

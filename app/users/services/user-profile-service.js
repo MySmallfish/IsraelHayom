@@ -2,6 +2,19 @@
 
     I.UserProfileService = ["$q", "storageService", function ($q, storageService) {
 
+        var firstEntryIndicator = true;
+        
+        function getFirstEntryIndicator() {
+            var result = true;
+            if (firstEntryIndicator) {
+                firstEntryIndicator = false;
+            } else {
+                result = false;
+            }
+            
+            return result;
+        }
+
         function saveUserProfile(profile, userName) {
             var result;
 
@@ -78,7 +91,8 @@
         return {
             saveUserProfile: saveUserProfile,
             getUserProfile: getUserProfile,
-            removeProfile: removeProfile
+            removeProfile: removeProfile,
+            getFirstEntryIndicator: getFirstEntryIndicator
         };
     }];
 

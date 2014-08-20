@@ -34,6 +34,10 @@
                     $scope.openNewsflash = function () {
                         $location.path("/Newsflash");
                     };
+                    
+                    $scope.openWeather = function () {
+                        $location.path("/Weather");
+                    };
 
                     $scope.setupContextMenuCommands();
 
