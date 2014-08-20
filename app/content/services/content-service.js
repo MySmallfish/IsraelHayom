@@ -1,6 +1,6 @@
 ﻿(function (S, I) {
 
-    I.ContentService = ["$q", "contentApi", function ($q, contentApi) {
+    I.ContentService = ["$q", "contentApi", "userProfileService", function ($q, contentApi, userProfileService) {
 
         var builtinCategories = [
             { rank: 14, name: "auto", title: "רכב", iconCssClass: "ion-model-s", backgroundCssClass: "auto" },
@@ -20,7 +20,9 @@
             { rank: 1, name: "ביטחוני", title: "ביטחוני", iconCssClass: "fa fa-question-circle", backgroundCssClass: "security" },
             { rank: 16, name: "travel", title: "טיולים", iconCssClass: "fa fa-globe", backgroundCssClass: "travel" },
             { rank: 15, name: "health and wellness", title: "בריאות וכושר", iconCssClass: "fa fa-stethoscope", backgroundCssClass: "health-and-wellness" },
-            { rank: 18, name: "internet", title: "אינטרנט", iconCssClass: "fa fa-laptop", backgroundCssClass: "internet" }
+            { rank: 18, name: "internet", title: "אינטרנט", iconCssClass: "fa fa-laptop", backgroundCssClass: "internet" },
+            { rank: 19, name: "opinions", title: "דעות", iconCssClass: "fa fa-question-circle", backgroundCssClass: "opinions" },
+            
         ];
 
         var articlesCache = {};
@@ -82,33 +84,30 @@
 
 
         function getCategories() {
+            var rankings = null;
+            
+            return userProfileService.getUserProfile().then(function (items) {
+                
+                if (items.PreferredCategories) {
+                    rankings = items.PreferredCategories;
+                } else {
+                    builtinCategories = _.sortBy(builtinCategories, "rank");
+                }
+                
+                var categories = _.map(builtinCategories, function (builtinCategory) {
+                    return {
+                        name: builtinCategory.name,
+                        title: builtinCategory.title,
+                        rank: rankings ? rankings[builtinCategory.name] : builtinCategory.rank,
+                        iconCssClass: builtinCategory.iconCssClass,
+                        backgroundCssClass: builtinCategory.backgroundCssClass
+                    };
+                });
 
-            builtinCategories = _.sortBy(builtinCategories, "rank");
-
-            var categories = _.map(builtinCategories, function (builtinCategory) {
-                return {
-                    name: builtinCategory.name,
-                    title: builtinCategory.title,
-                    rank: builtinCategory.rank,
-                    iconCssClass: builtinCategory.iconCssClass,
-                    backgroundCssClass: builtinCategory.backgroundCssClass
-                };
+                categories = _.sortBy(categories, "rank");
+                return $q.when(categories);
             });
 
-            return $q.when(categories);
-
-            //return contentApi.getCategories().then(function (categories) {
-            //    var keys = _.keys(categories);
-            //    var items = _.map(keys, function (key) {
-            //        console.log("!!", categories[key]);
-            //        return {
-            //            Id: categories[key].code,
-            //            Title: key
-            //        };
-            //    });
-            //    console.log("categories??", items);
-            //    return items;
-            //});
         }
 
         function getNewsflash() {

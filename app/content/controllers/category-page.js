@@ -10,9 +10,9 @@
             
             contentService.getCategories().then(function (items) {
                 $scope.categories = items;
-                var category = _.find($scope.categories, function(iten) { return iten.name === $scope.categoryName });
+                var category = _.find($scope.categories, function (iten) { return iten.name === $scope.categoryName; });
+                
                 $scope.categoryTitle = category.title;
-                console.log("??", category, $scope.categories);
             });
         }
 

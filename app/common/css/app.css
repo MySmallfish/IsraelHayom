@@ -18,7 +18,7 @@ div.shortcuts
     color: white;
 }
 
-    div.shortcuts a, .profile-category-item
+    div.shortcuts a, .profile-category-item, .category-icon
     {
         color: white;
     }
@@ -188,7 +188,8 @@ div, i, img
     right: 0;
     left: 0;
     top: 0;
-    bottom: 0;
+    bottom: 100px;
+    overflow: auto;
 }
 
 img

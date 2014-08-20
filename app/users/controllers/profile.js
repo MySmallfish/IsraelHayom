@@ -9,13 +9,12 @@
                 }
                 $scope.data.fontSize = item.FontSize;
 
-                if (item.PreferredCategories) {
-                    $scope.categories = item.PreferredCategories;
-                } else {
-                    contentService.getCategories().then(function (items) {
-                        $scope.categories = items;
-                    });
-                }
+                contentService.getCategories().then(function (items) {
+                    $scope.categories = items;
+
+                    
+                });
+
             });
         }
 
@@ -29,7 +28,7 @@
                 rankings[item.name] = index + 1;
             });
             
-            userProfileService.saveUserProfile({ PreferredCategories: $scope.categories });
+            userProfileService.saveUserProfile({ PreferredCategories: rankings });
         };
 
         $scope.moveItem = function (item, fromIndex, toIndex) {

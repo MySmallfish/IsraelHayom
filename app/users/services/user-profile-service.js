@@ -42,13 +42,13 @@
 
         var defaultProfile = {
             FontSize: 12,
-            PreferredCategories: {},
+            PreferredCategories: null,
             RecentArticle: null,
             RecentArticleLocation: 0
         };
 
         function getUserProfile(userName) {
-
+            
             function getDefaultProfile() {
                 return $q.when(defaultProfile).then(function (item) {
                     profile = item;
